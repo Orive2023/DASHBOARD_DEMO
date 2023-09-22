@@ -17,6 +17,10 @@
 
     <meta name="description" content="" />
 
+    <link rel="stylesheet" href="Custom-Customer-Add.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="Custom-Customer-Add.js" defer></script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
 
@@ -42,6 +46,8 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <link rel="stylesheet" href="index.css">
+
+    <!-- <link rel="stylesheet" href="Custom-Customer-Add.css"> -->
     
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -49,6 +55,8 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
   </head>
 
   <body>
@@ -826,81 +834,93 @@
               <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Customer-Vendor /Customer-Information /</span> Add Custom-Customer</p>
               </div>
             </div>
-            <!--Form Design-->
-            <div class="container">
-                <header>SignUp Form</header>
-                <div class="form-outer">
-                 <form action="#">
-                    <div class="page">
-                        <div class="title">Basic Info:</div>
-                        <div class="field">
-                            <div class="label">First Name</div>
-                            <input type="text">
-                        </div>
-                        <div class="field">
-                            <div class="label">Last Name</div>
-                            <input type="text">
-                        </div>
-                        <div class="field">
-                            <button>Next</button>
-                        </div>
-                    </div>
-                     
-                    <div class="page">
-                        <div class="title">Contact Info:</div>
-                        <div class="field">
-                            <div class="label">Email Address</div>
-                            <input type="text">
-                        </div>
-                        <div class="field">
-                            <div class="label">Phone Number</div>
-                            <input type="text">
-                        </div>
-                        <div class="field btns">
-                            <button class="prev-1 prev">Previous</button>
-                            <button class="next-1 next">Next</button>
+            <!--Lay Out of Form Design-->
+            <form action="#" class="form">
+              <h1 class="text-center">Registration Form</h1>
+              <!-- Progress bar -->
+              <div class="progressbar">
+                <div class="progress" id="progress"></div>
+                <div class="progress-step progress-step-active" data-title="General Information"></div>
+                <div class="progress-step" data-title="Address Deatils"></div>
+                <div class="progress-step" data-title="Bank Details"></div>
+                <div class="progress-step" data-title="Terms & Conditions"></div>
+              </div>
+        
+              <!-- Steps -->
+            <div class="form-step form-step-active">
+                <div class="row">
+                    <div class="col w-50">
+                        <div class="input-group">
+                            <label for="username">Business Name</label>
+                             <input type="text" name="businessName" id="businessName" />
                         </div>
                     </div>
-                      
-                    <div class="page">
-                        <div class="title">Date Of Birth:</div>
-                        <div class="field">
-                            <div class="label">Date</div>
-                            <input type="text">
-                        </div>
-                        <div class="field">
-                            <div class="label">Gender</div>
-                            <select>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="field btns">
-                            <button class="prev-2 prev">Previous</button>
-                            <button class="next-2 next">Next</button>
+                    <div class="col">
+                        <div class="input-group">
+                            <label for="username">Supplier Name</label>
+                            <input type="text" name="supplierName" id="supplierName" />
                         </div>
                     </div>
-
-                    <div class="page">
-                        <div class="title">Login Details:</div>
-                        <div class="field">
-                            <div class="label">Username</div>
-                            <input type="text">
-                        </div>
-                        <div class="field">
-                            <div class="label">Password</div>
-                            <input type="password">
-                        </div>
-                        <div class="field btns">
-                            <button class="prev-3 prev">Previous</button>
-                            <button class="Submit">Submit</button>
-                        </div>
-                    </div>    
-
-                 </form>
+                </div>
+                <div class="input-group">
+                    <label for="username">Email Address</label>
+                    <input type="text" name="supplierName" id="supplierName" />
+                </div>
+                <div class="input-group">
+                  <label for="position">Position</label>
+                  <input type="text" name="position" id="position" />
+                </div>
+                <div class="">
+                    <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
                 </div>
             </div>
+            <div class="form-step">
+                <div class="input-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone" id="phone" />
+                </div>
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="btns-group">
+                  <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
+                  <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
+                </div>
+              </div>
+              <div class="form-step">
+                <div class="input-group">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" name="dob" id="dob" />
+                </div>
+                <div class="input-group">
+                  <label for="ID">National ID</label>
+                  <input type="number" name="ID" id="ID" />
+                </div>
+                <div class="btns-group">
+                  <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
+                  <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
+                </div>
+              </div>
+              <div class="form-step">
+                <div class="input-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" />
+                </div>
+                <div class="input-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                  />
+                </div>
+                <div class="btns-group">
+                  <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
+                  <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
+                </div>
+              </div>
+            </form>
            <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
