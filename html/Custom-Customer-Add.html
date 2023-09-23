@@ -837,7 +837,7 @@
             </div>
             <!--Lay Out of Form Design-->
             <form action="#" class="form">
-              <h1 class="text-center">Registration Form</h1>
+              <h1 class="text-center" style="color: rgb(38, 0, 152);">Customer Registartion Form</h1>
               <!-- Progress bar -->
               <div class="progressbar">
                 <div class="progress" id="progress"></div>
@@ -852,59 +852,150 @@
                 <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="username">Business Name</label>
+                            <label for="businessName">Business Name</label>
                              <input type="text" name="businessName" id="businessName" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="username">Customer Name</label>
+                            <label for="customerName">Customer Name</label>
                             <input type="text" name="customerName" id="customerName" />
                         </div>
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="username">Email Address</label>
-                    <input type="text" name="supplierName" id="supplierName" />
+                    <label for="emailAddress">Email Address</label>
+                    <input type="text" name="emailAddress" id="emailAddress" />
                 </div>
                 <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <input type="text" name="gender" id="gender" />
+                </div>
+                <div class="input-group">
+                    <label for="webUrl">Web Url</label>
+                    <input type="text" name="webUrl" id="webUrl" />
+                </div>
+                <div class="input-group">
+                    <label for="fax">Fax</label>
+                    <input type="text" name="fax" id="fax" />
+                </div>
+                <div class="input-group">
+                    <label for="gstIn">GST In</label>
+                    <input type="text" name="gstIn" id="gstIn" />
+                </div>
+                <div class="input-group">
+                    <label for="mobileNumber">Mobile No</label>
+                    <input type="text" name="mobileNumber" id="mobileNumber" />
+                </div>
+                <div class="input-group">
+                    <label for="panNumber">Pan No</label>
+                    <input type="text" name="panNumber" id="panNumber" />
+                </div>
+                <div class="input-group">
+                    <label for="adharNumber">Adhar No</label>
+                    <input type="text" name="adharNumber" id="adharNumber" />
+                </div>
+                <!-- <div class="input-group">
                   <label for="position">Position</label>
                   <input type="text" name="position" id="position" />
-                </div>
+                </div> -->
                 <div class="">
                     <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
                 </div>
             </div>
             <div class="form-step">
                 <div class="input-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" name="phone" id="phone" />
+                  <label for="streetAddress1">Street Address 1</label>
+                  <input type="text" name="streetAddress1" id="streetAddress1" />
                 </div>
                 <div class="input-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <label for="streetAddress2">Street Address 2</label>
+                  <input type="text" name="streetAddress2" id="streetAddress2" />
                 </div>
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" />
+                  </div>
+                  <div class="input-group">
+                    <label for="state">State</label>
+                    <input type="text" name="state" id="state" />
+                  </div>
+                  <div class="input-group">
+                    <label for="postalOrZipCode">Postal/ZipCode</label>
+                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" />
+                  </div>
+                  <div class="input-group">
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country" />
+                </div>
+                <div class="input-group">
+                    <label for="typesOfAddress">Types Of Address</label>
+                    <input type="text" name="typesOfAddress" id="typesOfAddress" />
+                  </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
+                  <a href="#" class="btn btn-next" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
                 </div>
               </div>
               <div class="form-step">
                 <div class="input-group">
-                  <label for="dob">Date of Birth</label>
-                  <input type="date" name="dob" id="dob" />
+                  <label for="accountHolderName">Account Holder Name</label>
+                  <input type="date" name="accountHolderName" id="accountHolderName" />
                 </div>
                 <div class="input-group">
-                  <label for="ID">National ID</label>
-                  <input type="number" name="ID" id="ID" />
+                    <label for="bankName">Bank Name</label>
+                    <input type="number" name="bankName" id="bankName" />
+                  </div>
+                  <div class="input-group">
+                    <label for="bankBranch">Bank Branch</label>
+                    <input type="number" name="bankBranch" id="bankBranch" />
+                  </div>
+                  <div class="input-group">
+                    <label for="bankAccountNumber">Bank Account Number</label>
+                    <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
+                  </div>
+                  <div class="input-group">
+                    <label for="bankAccountType">Bank Account Type</label>
+                    <input type="number" name="bankAccountType" id="bankAccountType" />
+                  </div>
+                  <div class="input-group">
+                    <label for="swiftPerBicCode">SWIFT/BIC COde</label>
+                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" />
+                  </div>
+                  <div class="input-group">
+                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code</label>
+                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
+                  </div>
+                <div class="input-group">
+                  <label for="ifscCode">IFSC Code</label>
+                  <input type="number" name="ifscCode" id="ifscCode" />
                 </div>
+                <div class="input-group">
+                    <label for="micrNumber">MICR No</label>
+                    <input type="number" name="micrNumber" id="micrNumber" />
+                  </div>
+                  <div class="input-group">
+                    <label for="currency">Currency</label>
+                    <input type="number" name="currency" id="currency" />
+                  </div>
+                  <div class="input-group">
+                    <label for="creditLimit">Credit Limit</label>
+                    <input type="number" name="creditLimit" id="creditLimit" />
+                  </div>
+                  <div class="input-group">
+                    <label for="taxId">Tax Id</label>
+                    <input type="number" name="taxId" id="taxId" />
+                  </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
+                  <a href="#" class="btn btn-next" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
                 </div>
               </div>
-              <div class="form-step">
-                <div class="input-group">
+
+               <div class="form-step">
+                <!-- <div class="input-group"> -->
+                <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions
+                 <!--<div class="input-group">
                   <label for="password">Password</label>
                   <input type="password" name="password" id="password" />
                 </div>
@@ -915,10 +1006,10 @@
                     name="confirmPassword"
                     id="confirmPassword"
                   />
-                </div>
+                </div> -->
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                  <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
+                  <input type="submit" value="Submit" class="btn" style="background-color: rgb(11, 78, 179); color: white;"/>
                 </div>
               </div>
             </form>
