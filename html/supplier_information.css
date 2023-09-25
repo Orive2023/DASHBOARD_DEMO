@@ -1,5 +1,5 @@
 .row{
-    padding: 40px 0;
+    /* padding: 40px 0; */
     margin: 20px;
 }
 .center{
@@ -14,4 +14,8 @@
     margin-right: auto;
     width: 80%;
     height: 50%;
+}
+
+footer{
+    margin: 240px 0 0 0;
 }
