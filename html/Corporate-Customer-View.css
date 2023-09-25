@@ -17,15 +17,15 @@
          
         /* pagination hover effect on non-active */
         .pagination_section a:hover:not(.active) {
-            background-color: #031F3B;
-            color: white;
+            background-color: #0d7ff1;
+            color: black;
         }
          
         /* pagination hover effect on active*/
          
-        a:nth-child(5) {
+        a:nth-child(2) {
             background-color: green;
-            color: white;
+            color: rgb(0, 0, 0);
         }
          
         a:nth-child(1) {
