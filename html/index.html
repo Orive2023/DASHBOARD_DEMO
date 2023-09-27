@@ -63,6 +63,89 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <!-----columnbar charts-->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+
+    <style>
+      
+        #chart {
+      max-width: 650px;
+      margin: 35px auto;
+    }
+      
+    </style>
+
+    <script>
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+        )
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+        )
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+        )
+    </script>
+
+    
+    <script src="/assets/js/columnbar.js"></script>
+    
+
+    <script>
+      // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+      // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+      var _seed = 42;
+      Math.random = function() {
+        _seed = _seed * 16807 % 2147483647;
+        return (_seed - 1) / 2147483646;
+      };
+    </script>
+
+    <!-------pie chart-------->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <style>
+      
+      #chart {
+    padding: 0;
+    max-width: 380px;
+    margin: 35px auto;
+  }
+    
+  </style>
+
+  <script>
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+      )
+  </script>
+
+  
+  <script src="/assets/js/piecharts.js"></script>
+  
+
+  <script>
+    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+    // var _seed = 42;
+    var _seed = 42;
+    Math.random = function() {
+      _seed = _seed * 16807 % 2147483647;
+      return (_seed - 1) / 2147483646;
+    };
+  </script>
   </head>
 
   <body>
@@ -1480,7 +1563,7 @@
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between pb-0">
                       <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Order Statistics</h5>
+                        <h5 class="m-0 me-2">Purchase Statistics</h5>
                         <small class="text-muted">42.82k Total Sales</small>
                       </div>
                       <div class="dropdown">
@@ -1504,13 +1587,17 @@
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center mb-3">
                         <div class="d-flex flex-column align-items-center gap-1">
-                          <h2 class="mb-2">8,258</h2>
-                          <span>Total Orders</span>
+                          <h2 class="mb-2">1,265</h2>
+                          <span>Purchase</span>
                         </div>
                         <div id=""></div>
                       </div>
                       <ul class="p-0 m-0">
-                        <li class="d-flex mb-4 pb-1">
+                        <!-- <div id="chart"></div> -->
+                        <div id="columnBar"> 
+
+                        </div>
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <span class="avatar-initial rounded bg-label-primary"
                               ><i class='bx bx-bowl-rice'></i></span>
@@ -1524,8 +1611,8 @@
                               <small class="fw-semibold">82.5k</small>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <span class="avatar-initial rounded bg-label-success"><i class='bx bx-bowl-rice'></i></span>
                           </div>
@@ -1538,8 +1625,8 @@
                               <small class="fw-semibold">23.8k</small>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <span class="avatar-initial rounded bg-label-info"></span>
                           </div>
@@ -1552,7 +1639,7 @@
                               <small class="fw-semibold">849k</small>
                             </div>
                           </div>
-                        </li>
+                        </li> -->
                         <!-- <li class="d-flex">
                           <div class="avatar flex-shrink-0 me-3">
                             <span class="avatar-initial rounded bg-label-secondary"
@@ -1644,7 +1731,7 @@
                 <div class="col-md-6 col-lg-4 order-2 mb-4">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-2">Transactions</h5>
+                      <h5 class="card-title m-0 me-2">Stocks</h5>
                       <div class="dropdown">
                         <button
                           class="btn p-0"
@@ -1665,7 +1752,9 @@
                     </div>
                     <div class="card-body">
                       <ul class="p-0 m-0">
-                        <li class="d-flex mb-4 pb-1">
+                        <div id="piecharts"></div>
+
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/paypal.png" alt="User" class="rounded" />
                           </div>
@@ -1679,8 +1768,8 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
                           </div>
@@ -1694,8 +1783,8 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/chart.png" alt="User" class="rounded" />
                           </div>
@@ -1709,8 +1798,8 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/cc-success.png" alt="User" class="rounded" />
                           </div>
@@ -1724,8 +1813,8 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
+                        </li> -->
+                        <!-- <li class="d-flex mb-4 pb-1">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
                           </div>
@@ -1739,8 +1828,8 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
-                        <li class="d-flex">
+                        </li> -->
+                        <!-- <li class="d-flex">
                           <div class="avatar flex-shrink-0 me-3">
                             <img src="../assets/img/icons/unicons/cc-warning.png" alt="User" class="rounded" />
                           </div>
@@ -1754,7 +1843,7 @@
                               <span class="text-muted">INR</span>
                             </div>
                           </div>
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -1842,5 +1931,100 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script src="index.js"></script>
+
+    <!-- Chart For Stock -->
+    <script>
+      var options = {
+          // series: [44, 55, 13, 43],
+          series: [60, 30, 40, 10],
+          chart: {
+          width: 350,
+          type: 'pie',
+        },
+        labels: ['Rice(A4)', 'Rice(A1)', 'Rice(A2)', 'Rice(A3)'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              // position: 'bottom'
+              position: 'center'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#piecharts"), options);
+        chart.render();
+    </script>
+
+
+     <!-- Chart For purchase -->
+     <div id="columnBar"></div>
+
+    <script>
+      
+        var options = {
+          series: [{
+          name: 'Rice',
+          data: [44, 55, 57, 56, 61, 58, 63]
+          // data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+        }, {
+          name: 'Wheat',
+          data: [76, 85, 101, 98, 87, 105, 91]
+          // data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+        }, {
+          // name: 'Free Cash Flow',
+          // data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+          title:{
+            text:'month sale ---->'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Quantity ----->'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "₹ " + val + " thousands"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#columnBar"), options);
+        chart.render();
+      
+      
+    </script>
   </body>
 </html>
