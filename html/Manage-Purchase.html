@@ -20,6 +20,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
 
+
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -800,6 +802,134 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Purchase Management /</span>B</p>
           
+              <!--Layout of table-->
+              <br><div style="margin: 10px; display: inline;">
+                <span style="border: 2px solid rgba(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"> <img src="/visible.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;">Column</a> <select for="dropdown" style="border: none; color: #696CFF;"></select></span>
+                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/PRINT.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;"><a href="">Print</a></span>
+                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/export.png" alt="" height="12px" style="margin: 10px; transform: rotate(-90deg);"><a href="" style="text-align: center;"></a><a href="">Export</a><select for="dropdown" style="border: none; color: #696CFF;"></select></span>
+              </div>
+              <div><span><input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid;"></span>
+              </div>
+              <br>
+                <!-- Striped Rows -->
+                <div class="card">
+                  <h5 class="card-header">Purchase Report:</h5>
+                  <div class="table-responsive text-nowrap">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>SL.</th>
+                          <th>Chalan No</th>
+                          <th>Invoice No</th>
+                          <th>Supplier Name</th>
+                          <th>Purchase Date</th>
+                          <th>Total Amount</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td><strong>1.</strong></td>
+                          <td>001</td>
+                          <td>001</td>
+                          <td>Jhon Doe</td>
+                          <td>2022-03-21</td>
+                          <td>25000</td>
+                          <td><span class="badge bg-label-success me-1">Completed</span></td>
+                          <td>
+                            <div class="dropdown">
+                              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="E-way-Bills-Invoice.html"
+                                  ><i class="bx bx-edit-alt me-1"></i> Print</a
+                                >
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>2.</strong></td>
+                          <td>002</td>
+                          <td>002</td>
+                          <td>Alex Carry</td>
+                          <td>2022-05-21</td>
+                          <td>26000</td>
+                          <td><span class="badge bg-label-success me-1">Completed</span></td>
+                          <td>
+                            <div class="dropdown">
+                              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="E-way-Bills-Invoice.html"
+                                  ><i class="bx bx-edit-alt me-1"></i> Print</a
+                                >
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <tr>
+                            <td><strong>3.</strong></td>
+                            <td>003</td>
+                            <td>003</td>
+                            <td>Prince Rathod</td>
+                            <td>2022-08-21</td>
+                            <td>31000</td>
+                            <td><span class="badge bg-label-success me-1">Completed</span></td>
+                            <td>
+                              <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                  <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="E-way-Bills-Invoice.html"
+                                    ><i class="bx bx-edit-alt me-1"></i> Print</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="pagination_section" style="text-align: right;">
+                    <a href="#">
+                        << Previous
+                    </a>
+                    <a href="#"
+                       title="Algorithm">
+                        1
+                    </a>
+                    <a href="#"
+                       title="DataStructure">
+                        2
+                    </a>
+                    <a href="#"
+                       title="Languages">
+                        3
+                    </a>
+                    <a href="#"
+                       title="Interview"
+                       class="active">
+                        4
+                    </a>
+                    <a href="#"
+                       title="practice">
+                        5
+                    </a>
+                    <a href="#">
+                    Next >>
+                    </a>
+                </div>
+                </div>
+                 <!--/ Striped Rows -->
+              
+            
            <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
