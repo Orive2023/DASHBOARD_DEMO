@@ -841,7 +841,7 @@
                         <a href="javascript:void(0);" class="card-link">Another link</a>
                       </div> -->
                       <div class="panel-body">
-                        <form action="https://saleserpdemo.bdtask-demo.com/v10_demo/purchase/purchase/bdtask_save_purchase" class="form-vertical" id="insert_purchase" name="insert_purchase" enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate">
+                        <form  class="form-vertical" id="insert_purchase" name="insert_purchase" enctype="multipart/form-data" method="post" accept-charset="utf-8" novalidate="novalidate">
                         <div class="row">
                         <div class="col-sm-6">
                         <div class="form-group row">
@@ -853,7 +853,7 @@
                         </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 235.25px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="1" aria-labelledby="select2-supplier_id-container"><span class="select2-selection__rendered" id="select2-supplier_id-container" title="Select One"><span class="select2-selection__clear">×</span>Select One</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                         </div>
                         <div class="col-sm-2">
-                        <a class="btn btn-success" title="Add New Supplier" href="https://saleserpdemo.bdtask-demo.com/v10_demo/add_supplier"><i class="fa fa-user"></i></a>
+                        <a class="btn btn-success" title="Add New Supplier" ><i class="fa fa-user"></i></a>
                         </div>
                         </div>
                         </div>
@@ -963,7 +963,7 @@
                         <input type="text" id="Total" class="text-right form-control" name="total" value="0.00" readonly="readonly">
                         </td>
                         <td> <button type="button" id="add_invoice_item" class="btn btn-info" name="add-invoice-item" onclick="addPurchaseOrderField1('addPurchaseItem')" tabindex="9"><i class="fa fa-plus"></i></button>
-                        <input type="hidden" name="baseUrl" class="baseUrl" value="https://saleserpdemo.bdtask-demo.com/v10_demo/">
+                        <input type="hidden" name="baseUrl" class="baseUrl" >
                         </td>
                         </tr>
                         <tr>
@@ -1462,5 +1462,6 @@
       </div>
     </footer>
     <!-- / Footer -->
+    <script src="Add-Purchase.js"></script>
   </body>
 </html>
