@@ -58,7 +58,7 @@
 .login-box span{
     display: flex;
     width: 40px ;
-    margin: auto ;
+    margin:  auto ;
     background: #fff;
     font-size: 14px ;
     margin-top: -18px;
@@ -78,7 +78,7 @@
    
 }
 .input-box label{
-    margin-top: 30px;
+    margin-top: -30px;
 }
 
 .input-box input::placeholder{
@@ -99,6 +99,7 @@
 .remember-forgot a{
      color: red;
      text-decoration: none;
+     /* font-weight: bold; */
 }
 .remember-forgot a:hover{
     text-decoration: underline;
@@ -128,6 +129,7 @@
 .register-link  a{
     color: red;
     text-decoration: none;
+    font-weight: bold;
 }
 .register-link a:hover{
     text-decoration: underline;
@@ -138,7 +140,7 @@
     width: 720px;
     height: 720px;
     /* margin: 20px 0 20px 0; */
-    background-color:rgb(249, 247, 252);
+    background-color:rgb(54, 54, 55);
     margin-left: 50px;
     border-radius: 0px 0px  0px 230px ;
     margin-top: 10px;
