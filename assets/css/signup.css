@@ -20,11 +20,9 @@
     align-items: left;
     margin:150px;
     background-color:white;
-    margin-top: 20px;
+    margin-top: -10px;
     padding: 90px 0 20px 10px; 
-    /* margin-left: 180px;
-    margin-top: 90px; */
-    /* margin: 120px; */  
+    
 }
 
 #sign{
@@ -68,7 +66,7 @@
 }
 .input-box input{
     width:100% ;
-    padding: 3px;
+    padding: 10px;
     display:flex ;
     align-items: center;
     justify-content: center;
@@ -99,7 +97,6 @@
 }
 
 .input-box input::placeholder{
-    /* padding: 20px 45px 20px 20px; */
     padding: 20px;
 }
 
@@ -107,7 +104,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 13.5px;
-    margin: 15px 0 15px;
+    margin: 15px ;
     font-weight: bold;
     color: black;
     margin-right: 3px;
@@ -159,9 +156,9 @@
  /*---css for toggle password -----*/
  body .input-box #togglePassword {
     position: absolute;
-    margin-left: 390px;
+    margin-left: 400px;
     margin-top: -40px;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
     cursor: pointer;
     }
 
