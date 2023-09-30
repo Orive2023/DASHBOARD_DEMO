@@ -13,7 +13,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard Annam</title>
+    <title>Custom-Supplier-Add</title>
 
     <meta name="description" content="" />
 
@@ -55,6 +55,12 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <style>
+      span{
+        color: red;
+      }
+    </style>
 
    
   </head>
@@ -843,8 +849,8 @@
             </div>
             </div>
              <!--Lay Out of Form Design-->
-             <form action="#" class="form">
-                <h1 class="text-center" style="color: rgb(255, 0, 0);">Supplier Registartion Form</h1>
+              <form action="#" name="myForm" class="form" onsubmit="return validateForm()" method="post">
+                <h1 class="text-center" style="color: rgb(255, 0, 0);"> Custom Supplier Registartion Form</h1>
                 <!-- Progress bar -->
                 <div class="progressbar">
                   <div class="progress" id="progress"></div>
@@ -856,90 +862,125 @@
                 </div>
           
                 <!-- Steps -->
-              <div class="form-step form-step-active">
-                  <div class="row">
-                      <div class="col w-50">
-                          <div class="input-group">
-                              <label for="businessName">Business Name</label>
-                               <input type="text" name="businessName" id="businessName" />
-                          </div>
-                      </div>
-                      <div class="col">
-                          <div class="input-group">
-                              <label for="supplierName">Supplier Name</label>
-                              <input type="text" name="supplierName" id="supplierName" />
-                          </div>
-                      </div>
-                  </div>
+              
+                <div class="form-step form-step-active">   
                   <div class="input-group">
-                      <label for="emailAddress">Email Address</label>
-                      <input type="text" name="emailAddress" id="emailAddress" />
+                      <label for="supplierName">Supplier Name <span>*</span></label>
+                      <input type="text" name="suppliername" id="supplierName" required/>
                   </div>
-                  <div class="input-group">
+                  
+                  <!-- <div class="input-group">
                       <label for="gender">Gender</label>
                       <input type="text" name="gender" id="gender" />
-                  </div>
-                  <div class="input-group">
+                  </div> -->
+                  <!-- <div class="input-group">
                       <label for="webUrl">Web Url</label>
                       <input type="text" name="webUrl" id="webUrl" />
+                  </div> -->
+                  <div class="input-group">
+                      <label for="fax">Person of Contact <span>*</span></label>
+                      <input type="text" name="poc" id="poc" required />
                   </div>
                   <div class="input-group">
-                      <label for="fax">Fax</label>
-                      <input type="text" name="fax" id="fax" />
+                      <label for="gstIn">GSTIN</label>
+                      <input type="alphanumeric" name="gstIn" id="gstIn" />
                   </div>
                   <div class="input-group">
-                      <label for="gstIn">GST In</label>
-                      <input type="text" name="gstIn" id="gstIn" />
+                    <label for="emailAddress">Email Address</label>
+                    <input type="text" name="emailAddress" id="emailAddress" />
                   </div>
                   <div class="input-group">
-                      <label for="mobileNumber">Mobile No</label>
-                      <input type="text" name="mobileNumber" id="mobileNumber" />
+                      <label for="mobileNumber">Mobile No <span>*</span></label>
+                      <input type="number" name="mobileNumber" id="mobileNumber" required />
+                  </div>
+                  <div class="input-group">
+                    <label for="mobileNumber">Landline No <span>(optional)</span></label>
+                    <input type="number" name="mobileNumber" id="mobileNumber" />
                   </div>
                   <div class="input-group">
                       <label for="panNumber">Pan No</label>
                       <input type="text" name="panNumber" id="panNumber" />
                   </div>
                   <div class="input-group">
-                      <label for="adharNumber">Adhar No</label>
-                      <input type="text" name="adharNumber" id="adharNumber" />
+                    <label for="panNumber" style="margin-right: 20px;">Date of Registration: </label>
+                    <!-- <input type="currentdate" name="" id="currentdate" /> -->
+                    <p id="currentdate"></p>
                   </div>
-                  <!-- <div class="input-group">
-                    <label for="position">Position</label>
-                    <input type="text" name="position" id="position" />
-                  </div> -->
+                  <div class="input-group">
+                      <label for="adharNumber">Aadhar No <span>(optional)</span></label>
+                      <input type="number" name="aadharNumber" id="aadharNumber" />
+                  </div>
                   <div class="">
                       <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
                   </div>
-              </div>
-              <div class="form-step">
+                </div>
+                <div class="form-step">
                   <div class="input-group">
-                    <label for="streetAddress1">Street Address 1</label>
-                    <input type="text" name="streetAddress1" id="streetAddress1" />
+                    <label for="streetAddress1">Street Address 1 <span>*</span></label>
+                    <input type="text" name="streetAddress1" id="streetAddress1" required/>
                   </div>
                   <div class="input-group">
                     <label for="streetAddress2">Street Address 2</label>
                     <input type="text" name="streetAddress2" id="streetAddress2" />
                   </div>
-                  <div class="input-group">
-                      <label for="city">City</label>
-                      <input type="text" name="city" id="city" />
-                    </div>
-                    <div class="input-group">
-                      <label for="state">State</label>
-                      <input type="text" name="state" id="state" />
-                    </div>
-                    <div class="input-group">
-                      <label for="postalOrZipCode">Postal/ZipCode</label>
-                      <input type="text" name="postalOrZipCode" id="postalOrZipCode" />
-                    </div>
-                    <div class="input-group">
-                    <label for="country">Country</label>
-                    <input type="text" name="country" id="country" />
+                  
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Select Country <span>*</span></label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>India</option>
+                      <option value="1">United State of America</option>
+                      <option value="2">Afghanistan</option>
+                      <option value="3">Bangladesh</option>
+                      <option value="4">Bhutan</option>
+                      <option value="5">Canada</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
                   </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Select State <span>*</span></label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>Odisha</option>
+                      <option value="1">Tamil Nadu</option>
+                      <option value="2">Uttar Pradesh</option>
+                      <option value="3">Gujarat</option>
+                      <option value="4">Punjab</option>
+                      <option value="5">Andhra Pradesh</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
+                  </div>
+
+                  <!-- <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" />
+                  </div> -->
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label" style="font-family: 'Poppins', sans-serif;">Select City <span>*</span></label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>Bhubaneswar</option>
+                      <option value="1">Cuttack</option>
+                      <option value="2">Berhampur</option>
+                      <option value="3">Keonjhar</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
+                  </div>
+
                   <div class="input-group">
-                      <label for="typesOfAddress">Types Of Address</label>
-                      <input type="text" name="typesOfAddress" id="typesOfAddress" />
-                    </div>
+                      <label for="postalOrZipCode">Postal/ZipCode</label>
+                      <input type="number" name="postalOrZipCode" id="postalOrZipCode" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Type of Address <span>*</span></label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>Home</option>
+                      <option value="1">Work</option>
+                      <option value="2">Others</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
+                  </div>
+
                   <div class="btns-group">
                     <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
                     <a href="#" class="btn btn-next" style="background-color:rgb(255, 0, 0); color: white;">Next</a>
@@ -947,53 +988,58 @@
                 </div>
                 <div class="form-step">
                   <div class="input-group">
-                    <label for="accountHolderName">Account Holder Name</label>
-                    <input type="date" name="accountHolderName" id="accountHolderName" />
+                    <label for="accountHolderName">Account Holder Name <span>*</span></label>
+                    <input type="text" name="accountHolderName" id="accountHolderName" />
                   </div>
                   <div class="input-group">
-                      <label for="bankName">Bank Name</label>
+                      <label for="bankName">Bank Name <span>*</span></label>
                       <input type="number" name="bankName" id="bankName" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="bankBranch">Bank Branch</label>
                       <input type="number" name="bankBranch" id="bankBranch" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="bankAccountNumber">Bank Account Number</label>
                       <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
-                    </div>
-                    <div class="input-group">
-                      <label for="bankAccountType">Bank Account Type</label>
-                      <input type="number" name="bankAccountType" id="bankAccountType" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Bank Account Type </label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>Saving</option>
+                      <option value="1">Current</option>
+                      <option value="2">Others</option>
+                      <!-- <option value="3">Three</option> -->
+                    </select>
+                  </div>
+                  <!-- <div class="input-group">
                       <label for="swiftPerBicCode">SWIFT/BIC COde</label>
                       <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="bankRoutingPerSortCode">Bank Routing/Sort Code</label>
                       <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
-                    </div>
+                  </div> -->
                   <div class="input-group">
                     <label for="ifscCode">IFSC Code</label>
                     <input type="number" name="ifscCode" id="ifscCode" />
                   </div>
-                  <div class="input-group">
+                  <!-- <div class="input-group">
                       <label for="micrNumber">MICR No</label>
                       <input type="number" name="micrNumber" id="micrNumber" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="currency">Currency</label>
                       <input type="number" name="currency" id="currency" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="creditLimit">Credit Limit</label>
                       <input type="number" name="creditLimit" id="creditLimit" />
-                    </div>
-                    <div class="input-group">
+                  </div>
+                  <div class="input-group">
                       <label for="taxId">Tax Id</label>
                       <input type="number" name="taxId" id="taxId" />
-                    </div>
+                  </div> -->
                   <div class="btns-group">
                     <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
                     <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
@@ -1009,8 +1055,9 @@
                     <input type="text" name="clearedBy" id="clearedBy" />
                   </div>
                   <div class="input-group">
-                    <label for="date">Date</label>
-                    <input type="date" name="date" id="date" />
+                    <label for="panNumber" style="margin-right: 20px;">Date of Approval: </label>
+                    <!-- <input type="currentdate" name="" id="currentdate" /> -->
+                    <input type="date" />
                   </div>
                   <div class="btns-group">
                     <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
@@ -1018,24 +1065,13 @@
                   </div>
                 </div>
                 
-                 <div class="form-step">
+                <div class="form-step">
                   <!-- <div class="input-group"> -->
                   <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions
-                   <!--<div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" />
-                  </div>
-                  <div class="input-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input
-                      type="password"
-                      name="confirmPassword"
-                      id="confirmPassword"
-                    />
-                  </div> -->
                   <div class="btns-group">
                     <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
                     <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
+                   
                   </div>
                 </div>
               </form>
@@ -1060,6 +1096,11 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+      const d = new Date();
+      document.getElementById("currentdate").innerHTML = d;
+    </script>
     <!-- Footer -->
     <footer class="content-footer footer bg-footer-theme">
       <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
