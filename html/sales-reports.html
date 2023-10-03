@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -16,11 +30,6 @@
     <title>Dashboard - Annam</title>
 
     <meta name="description" content="" />
-
-    <!--Form-->
-    <link rel="stylesheet" href="Corporate-Customer-Add.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="Corporate-Customer-Add.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
@@ -55,10 +64,93 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
 
+    <!-----columnbar charts-->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/css/sales_reports.css">
+
+    <style>
+      
+        #chart {
+      max-width: 650px;
+      margin: 35px auto;
+    }
+      
+    </style>
+
+    <script>
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+                '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+            )
+    </script>
+
     
+    <script src="/assets/js/columnbar.js"></script>
+    
+
+    <script>
+        // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+        // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+        var _seed = 42;
+        Math.random = function () {
+            _seed = _seed * 16807 % 2147483647;
+            return (_seed - 1) / 2147483646;
+        };
+    </script>
+
+    <!-------pie chart-------->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <style>
+      
+      #chart {
+    padding: 0;
+    max-width: 380px;
+    margin: 35px auto;
+  }
+    
+  </style>
+
+  <script>
+    window.Promise ||
+        document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+        )
+    window.Promise ||
+        document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+        )
+    window.Promise ||
+        document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+        )
+</script>
+
+  
+  <script src="/assets/js/piecharts.js"></script>
+  
+
+  <script>
+    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+    // var _seed = 42;
+    var _seed = 42;
+    Math.random = function () {
+        _seed = _seed * 16807 % 2147483647;
+        return (_seed - 1) / 2147483646;
+    };
+</script>
   </head>
 
-  <body>
+  <html>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -67,61 +159,6 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
-              <!-- <span class="app-brand-logo demo">
-                <svg
-                  width="25"
-                  viewBox="0 0 25 42"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <path
-                      d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                      id="path-1"
-                    ></path>
-                    <path
-                      d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                      id="path-3"
-                    ></path>
-                    <path
-                      d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                      id="path-4"
-                    ></path>
-                    <path
-                      d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                      id="path-5"
-                    ></path>
-                  </defs>
-                  <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
-                      <g id="Icon" transform="translate(27.000000, 15.000000)">
-                        <g id="Mask" transform="translate(0.000000, 8.000000)">
-                          <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                          </mask>
-                          <use fill="#696cff" xlink:href="#path-1"></use>
-                          <g id="Path-3" mask="url(#mask-2)">
-                            <use fill="#696cff" xlink:href="#path-3"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
-                          </g>
-                          <g id="Path-4" mask="url(#mask-2)">
-                            <use fill="#696cff" xlink:href="#path-4"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
-                          </g>
-                        </g>
-                        <g
-                          id="Triangle"
-                          transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
-                        >
-                          <use fill="#696cff" xlink:href="#path-5"></use>
-                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </span> -->
               <img src="../assets/img/favicon/annam.png" alt="" class="center">
               <!-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Annam</span> -->
             </a>
@@ -136,7 +173,7 @@
             <!-- Dashboard -->
             <li class="menu-item active">
               <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <i class="menu-icon tf-icons bx bx-home-circle bx-burst"></i>
                 
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -148,7 +185,7 @@
                 <img src="/control (1).png" alt="" height="22px">
                 <i class="menu-icon"></i>
                 
-                <div data-i18n="Layouts">Supplier-Vender</div>
+                <div data-i18n="Layouts">Supplier-Vendor</div>
               </a>
 
               <ul class="menu-sub">
@@ -159,8 +196,12 @@
                 </li>
                 <li class="menu-item">
                   <a href="transaction-history.html" class="menu-link">
-                    <div data-i18n="Without navbar">Transaction History
-                    </div>
+                    <div data-i18n="Without navbar">Transaction History </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="credit and debit-management.html" class="menu-link">
+                    <div data-i18n="Without menu">Credit and Debit Management</div>
                   </a>
                 </li>
               </ul>
@@ -173,19 +214,7 @@
                 
                 <div data-i18n="Layouts">Customer-Vendor</div>
               </a>
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="Customer-Information.html" class="menu-link">
-                  <div data-i18n="Without menu">Customer Information</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="Customer-Transaction-History.html" class="menu-link">
-                  <div data-i18n="Without navbar">Transaction History</div>
-                </a>
-              </li>
-            </ul>
-          </li>
+
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="Customer-Information.html" class="menu-link">
@@ -198,13 +227,8 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="Customer-E-way-Bills-Invoice.html" class="menu-link">
-                    <div data-i18n="Container">E-way Bills/Invoice</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="Customer-Banking.html" class="menu-link">
-                    <div data-i18n="Fluid">Banking</div>
+                  <a href="Customer-Credit-and-Debit-Management.html" class="menu-link">
+                    <div data-i18n="Without navbar">Credit and Debit Management</div>
                   </a>
                 </li>
               </ul>
@@ -249,28 +273,33 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="1.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
+                  <a href="Transportation-Gate-Pass.html" class="menu-link">
+                    <div data-i18n="Without menu">Vechicle Entry Pass</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="2.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
+                  <a href="Material-Entry-Pass.html" class="menu-link">
+                    <div data-i18n="Without navbar">Material Entry Pass</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="3.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
+                  <a href="Material-Out-Pass.html" class="menu-link">
+                    <div data-i18n="Container">Material Out Pass</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="4.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
+                  <a href="Visitor-Entry-Pass.html" class="menu-link">
+                    <div data-i18n="Without menu">Visitor Entry Pass</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Gate-Pass-History.html" class="menu-link">
+                    <div data-i18n="Fluid">Gate Pass History</div>
                   </a>
                 </li>
               </ul>
             </li>
-            <!--Layout of Stock Management-->
+            <!--Layout of Purchase Management-->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <img src="/order.png" alt="" height="22px">
@@ -279,28 +308,19 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="A.html" class="menu-link">
-                    <div data-i18n="Without menu">A</div>
+                  <a href="Add-Purchase.html" class="menu-link">
+                    <div data-i18n="Without menu">Add Purchase</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="B.html" class="menu-link">
-                    <div data-i18n="Without navbar">B</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="C.html" class="menu-link">
-                    <div data-i18n="Container">C</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="D.html" class="menu-link">
-                    <div data-i18n="Fluid">D</div>
+                  <a href="Manage-Purchase.html" class="menu-link">
+                    <div data-i18n="Without navbar">Manage Purchase</div>
                   </a>
                 </li>
               </ul>
             </li>
-            <!--Layout of Stock Management-->
+
+            <!--Layout of Product Management-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <img src="/inventory (1).png" alt="" height="22px">
@@ -310,26 +330,53 @@
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="a.html" class="menu-link">
-                    <div data-i18n="Without menu">a</div>
+                    <div data-i18n="Without menu">Add Category</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="b.html" class="menu-link">
-                    <div data-i18n="Without navbar">b</div>
+                  <a href="Category-List.html" class="menu-link">
+                    <div data-i18n="Without navbar">Category List</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="c.html" class="menu-link">
-                    <div data-i18n="Container">c</div>
+                  <a href="Add-Unit.html" class="menu-link">
+                    <div data-i18n="Container">Add Unit</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="d.html" class="menu-link">
-                    <div data-i18n="Fluid">d</div>
+                  <a href="Unit-List.html" class="menu-link">
+                    <div data-i18n="Fluid">Unit List</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Add-Product.html" class="menu-link">
+                    <div data-i18n="Fluid">Add Product</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Manage-Product.html" class="menu-link">
+                    <div data-i18n="Fluid">Manage Product</div>
                   </a>
                 </li>
               </ul>
             </li>
+
+            <!--Layout Of Stock -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/bill (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Stock Management</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="Stock-Report.html" class="menu-link">
+                    <div data-i18n="Without menu">Stock Report</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
             <!--Layout of E-Invoice/E-Way bill-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -339,8 +386,8 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
+                  <a href="E-way-Bills-Invoice.html" class="menu-link">
+                    <div data-i18n="Without menu">Invoice for Purchase</div>
                   </a>
                 </li>
                 <li class="menu-item">
@@ -360,36 +407,33 @@
                 </li>
               </ul>
             </li>
-            <!--Layout Of Return-->
+
+            <!--Layout Of Sale-->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/return bill.png" alt="" height="22px">
+                <img src="/cooperation.png" alt="" height="22px">
                 <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Return</div>
+                <div data-i18n="Layouts">Sale Management</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="return.html" class="menu-link">
-                    <div data-i18n="Without menu">Return</div>
+                  <a href="New-Sale.html" class="menu-link">
+                    <div data-i18n="Without menu">New Sale</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="stock-return.html" class="menu-link">
-                    <div data-i18n="Without navbar">Stock</div>
+                  <a href="Manage-Sale.html" class="menu-link">
+                    <div data-i18n="Without navbar">Manage Sale</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="supplier-return-list.html" class="menu-link">
-                    <div data-i18n="Container">Supplier Return List</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="wastage-return-list.html" class="menu-link">
-                    <div data-i18n="Fluid">Wastage Return List</div>
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">POS Sale</div>
                   </a>
                 </li>
               </ul>
-            </li>  
+            </li>
+
             <!--Layout of Business Compliance-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -420,39 +464,34 @@
                 </li>
               </ul>
             </li>
+
             <!--HRM-->
-             <!--Layout of GatePass-Security Pass-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <img src="/hrm (1) (1).png" alt="" height="22px">
                 <i class="menu-icon"></i>
-                <div data-i18n="Layouts">HRM</div>
+                <div data-i18n="Layouts">Human Resource</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
+                  <a href="Hrm.html" class="menu-link">
+                    <div data-i18n="Without menu">HRM</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
+                  <a href="Attendance.html" class="menu-link">
+                    <div data-i18n="Without navbar">Attendance</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
+                  <a href="Payroll.html" class="menu-link">
+                    <div data-i18n="Container">Payroll</div>
                   </a>
                 </li>
               </ul>
             </li>
+
             <!--Layout of CRM-->
-             <!--Layout of GatePass-Security Pass-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <img src="/crm (1).png" alt="" height="22px">
@@ -482,6 +521,40 @@
                 </li>
               </ul>
             </li>
+
+            <!-- Layout of Reports -->
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/crm (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Reports</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="sales-reports.html" class="menu-link">
+                    <div data-i18n="Without menu">Sales Report</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="due-reports.html" class="menu-link">
+                    <div data-i18n="Without navbar">Due Reports</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="purchase-reports.html" class="menu-link">
+                    <div data-i18n="Container">Purchase Reports</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="profit-reports.html" class="menu-link">
+                    <div data-i18n="Fluid">Profit Reports (Sales Wise)</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layouts of Account -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <img src="/settings (1).png" alt="" height="22px">
@@ -506,6 +579,28 @@
                 </li>
               </ul>
             </li>
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/market-analysis.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Account Settings">Finance</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="finance-banking.html" class="menu-link">
+                    <div data-i18n="Account">Banking</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="finance-accounts.html" class="menu-link">
+                    <div data-i18n="Notifications">Accounts</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Authentication -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
@@ -764,7 +859,7 @@
         <div class="layout-page">
           <!-- Navbar -->
 
-          <nav
+        <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
           >
@@ -864,274 +959,214 @@
                 <!--/ User -->
               </ul>
             </div>
-          </nav>
-          <div class="content-wrapper">
-            <!-- Content -->
+        </nav>
 
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Customer-Vendor /Customer-Information /</span> Add Corporate-Customer</p>
-            </div>
-            </div>
-            <!--Layout of Button-->
-            <div class="upload-print-button">
-              <div class="upload">
-                <a href="Add-Corporate-Customer-upload.html"><button >+ UPLOAD DOCUMENT</button></a>
-                <a href="Add-Corporate-Customer-print.html"><button>PRINT FORMS</button></a>
-              </div>
-            </div>
-            <!--Lay Out Of Forms-->
-            <form action="#" class="form">
-              <h1 class="text-center">Customer Registration Form</h1>
-              <!-- Progress bar -->
-              <div class="progressbar">
-                <div class="progress" id="progress"></div>
-                <div class="progress-step progress-step-active" data-title="General Information"></div>
-                <div class="progress-step" data-title="Address Details"></div>
-                <div class="progress-step" data-title="Bank Details"></div>
-                <div class="progress-step" data-title="Approval & Clearance Deatils"></div>
-                <div class="progress-step" data-title="Terms & Conditions"></div>
-              </div>
-        
-              <!-- Steps -->
-            <div class="form-step form-step-active">
+          <!-- / Navbar -->
+
+
+        <!-- Sales Report Section -->
+        <div class="content-wrapper1">
+
+
+            <div class="content  ">
+                <!-- <ol class="breadcrumb">
+                    <li><a href="#"><i class="pe-7s-home"></i> Home</a></li>
+                    <li><a href="#">report</a></li>
+                    <li class="active">Sales Report</li>
+                </ol> -->
+
+                <div class="se-pre-con"></div>
+
+
                 <div class="row">
-                    <div class="col w-50">
-                        <div class="input-group">
-                            <label for="businessName">Business Name</label>
-                             <input type="text" name="businessName" id="businessName" />
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form action="https://saleserpdemo.bdtask-demo.com/v10_demo/datewise_sales_report"
+                                    class="form-inline" method="get" accept-charset="utf-8">
+                                    <div class="form-group">
+                                        <label class for="from_date">Start Date</label>
+                                        <input type="text" name="from_date" class="form-control datepicker"
+                                            id="from_date" placeholder="Start Date" value="2023-10-02">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class for="to_date">End Date</label>
+                                        <input type="text" name="to_date" class="form-control datepicker" id="to_date"
+                                            placeholder="End Date" value="2023-10-02">
+                                    </div>
+                                    <button type="button" id="btn-filter" class="btn btn-success">Find</button>
+                                    <a class="btn btn-warning" href="#" onclick="printDiv('purchase_div')">Print</a>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="input-group">
-                            <label for="customerName">Customer Name</label>
-                            <input type="text" name="customerName" id="customerName" />
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-bd lobidrag">
+                            <!-- <div class="panel-heading">
+                                <div class="panel-title">
+                                    <span>Sales Report </span>
+                                    <span class="padding-lefttitle">
+                                        <a class="btn btn-primary m-b-5 m-r-2"
+                                            href="#">Todays
+                                            Report</a>
+                                        <a href="#"
+                                            class="btn btn-success m-b-5 m-r-2"><i class="ti-align-justify"> </i>
+                                            Purchase Report </a>
+                                        <a href="#"
+                                            class="btn btn-primary m-b-5 m-r-2"><i class="ti-align-justify"> </i>
+                                            Sales Report (Product Wise) </a>
+                                        <a href="#"
+                                            class="btn btn-warning m-b-5 m-r-2"><i class="ti-align-justify"> </i> Profit
+                                            Report (Sale Wise) </a>
+                                    </span>
+                                </div>
+                            </div> -->
+                            <div class="panel-body">
+                                <div id="purchase_div">
+                                    <div class="paddin5ps">
+                                        <table class="print-table" width="100%">
+                                            <tr>
+                                                <td align="left" class="print-table-tr">
+                                                    <img style="height: 30px;" src="../assets/img/favicon/annam.png"
+                                                        alt="logo">
+                                                </td>
+                                                <td align="center" class="print-cominfo">
+                                                    <span class="company-txt">
+                                                        Demo Company
+                                                    </span><br>
+                                                    Company Demo Address <br>
+                                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                        data-cfemail="3a5e5f57557a575b535614595557">[email&#160;protected]</a>
+                                                    <br>
+                                                    123456 <br>
+                                                    <strong>Sales Report</strong>
+                                                </td>
+                                                <td align="right" class="print-table-tr">
+                                                    <date>
+                                                        Date: 03-Oct-2023 </date>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive paddin5ps">
+                                        <table class="table table-striped table-bordered" cellspacing="0" width="100%"
+                                            id="reportlist">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sales Date</th>
+                                                    <th>Invoice No</th>
+                                                    <th>Customer Name</th>
+                                                    <th>Total Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                            <tfoot>
+                                                <th colspan="3" class="text-right" style="text-align: right;">Total Purchase:</th>
+                                                <th></th>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="input-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="text" name="emailAddress" id="emailAddress" />
-                </div>
-                <div class="input-group">
-                    <label for="gender">Gender</label>
-                    <input type="text" name="gender" id="gender" />
-                </div>
-                <div class="input-group">
-                    <label for="webUrl">Web Url</label>
-                    <input type="text" name="webUrl" id="webUrl" />
-                </div>
-                <div class="input-group">
-                    <label for="fax">Fax</label>
-                    <input type="text" name="fax" id="fax" />
-                </div>
-                <div class="input-group">
-                    <label for="gstIn">GST In</label>
-                    <input type="text" name="gstIn" id="gstIn" />
-                </div>
-                <div class="input-group">
-                    <label for="mobileNumber">Mobile No</label>
-                    <input type="text" name="mobileNumber" id="mobileNumber" />
-                </div>
-                <div class="input-group">
-                    <label for="panNumber">Pan No</label>
-                    <input type="text" name="panNumber" id="panNumber" />
-                </div>
-                <div class="input-group">
-                    <label for="adharNumber">Aadhar No</label>
-                    <input type="text" name="adharNumber" id="adharNumber" />
-                </div>
-                <!-- <div class="input-group">
-                  <label for="position">Position</label>
-                  <input type="text" name="position" id="position" />
-                </div> -->
-                <div class="">
-                    <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
-                </div>
+                <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+                <!-- <script src="https://saleserpdemo.bdtask-demo.com/v10_demo/my-assets/js/admin_js/sales_report.js"
+                    type="text/javascript"></script> -->
             </div>
-            <div class="form-step">
-                <div class="input-group">
-                  <label for="streetAddress1">Street Address 1</label>
-                  <input type="text" name="streetAddress1" id="streetAddress1" />
-                </div>
-                <div class="input-group">
-                  <label for="streetAddress2">Street Address 2</label>
-                  <input type="text" name="streetAddress2" id="streetAddress2" />
-                </div>
-                <div class="input-group">
-                    <label for="city">City</label>
-                    <input type="text" name="city" id="city" />
-                  </div>
-                  <div class="input-group">
-                    <label for="state">State</label>
-                    <input type="text" name="state" id="state" />
-                  </div>
-                  <div class="input-group">
-                    <label for="postalOrZipCode">Postal/ZipCode</label>
-                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" />
-                  </div>
-                  <div class="input-group">
-                  <label for="country">Country</label>
-                  <input type="text" name="country" id="country" />
-                </div>
-                <div class="input-group">
-                    <label for="typesOfAddress">Types Of Address</label>
-                    <input type="text" name="typesOfAddress" id="typesOfAddress" />
-                  </div>
-                <div class="btns-group">
-                  <a href="#" class="btn btn-prev" style="background-color: rgb(255,0,0); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255,0,0); color: white;">Next</a>
-                </div>
-              </div>
-              <div class="form-step">
-                <div class="input-group">
-                  <label for="accountHolderName">Account Holder Name</label>
-                  <input type="date" name="accountHolderName" id="accountHolderName" />
-                </div>
-                <div class="input-group">
-                    <label for="bankName">Bank Name</label>
-                    <input type="number" name="bankName" id="bankName" />
-                  </div>
-                  <div class="input-group">
-                    <label for="bankBranch">Bank Branch</label>
-                    <input type="number" name="bankBranch" id="bankBranch" />
-                  </div>
-                  <div class="input-group">
-                    <label for="bankAccountNumber">Bank Account Number</label>
-                    <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
-                  </div>
-                  <div class="input-group">
-                    <label for="bankAccountType">Bank Account Type</label>
-                    <input type="number" name="bankAccountType" id="bankAccountType" />
-                  </div>
-                  <div class="input-group">
-                    <label for="swiftPerBicCode">SWIFT/BIC COde</label>
-                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" />
-                  </div>
-                  <div class="input-group">
-                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code</label>
-                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
-                  </div>
-                <div class="input-group">
-                  <label for="ifscCode">IFSC Code</label>
-                  <input type="number" name="ifscCode" id="ifscCode" />
-                </div>
-                <div class="input-group">
-                    <label for="micrNumber">MICR No</label>
-                    <input type="number" name="micrNumber" id="micrNumber" />
-                  </div>
-                  <div class="input-group">
-                    <label for="currency">Currency</label>
-                    <input type="number" name="currency" id="currency" />
-                  </div>
-                  <div class="input-group">
-                    <label for="creditLimit">Credit Limit</label>
-                    <input type="number" name="creditLimit" id="creditLimit" />
-                  </div>
-                  <div class="input-group">
-                    <label for="taxId">Tax Id</label>
-                    <input type="number" name="taxId" id="taxId" />
-                  </div>
-                <div class="btns-group">
-                  <a href="#" class="btn btn-prev" style="background-color: rgb(255,0,0); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255,0,0); color: white;">Next</a>
-                </div>
-              </div>
-              <div class="form-step">
-                <div class="input-group">
-                  <label for="approvedBy">Approved By</label>
-                  <input type="text" name="approvedBy" id="approvedBy" />
-                </div>
-                <div class="input-group">
-                  <label for="clearedBy">Cleared By</label>
-                  <input type="text" name="clearedBy" id="clearedBy" />
-                </div>
-                <div class="input-group">
-                  <label for="date">Date</label>
-                  <input type="date" name="date" id="date" />
-                </div>
-                <div class="btns-group">
-                  <a href="#" class="btn btn-prev" style="background-color: rgb(255,0,0); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255,0,0); color: white;">Next</a>
-                </div>
-              </div>
-
-               <div class="form-step">
-                <!-- <div class="input-group"> -->
-                  <div class="form-check mt-3">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1"> Terms & Condtions </label>
-                  </div>
-                 <!--<div class="input-group">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" id="password" />
-                </div>
-                <div class="input-group">
-                  <label for="confirmPassword">Confirm Password</label>
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                  />
-                </div> -->
-                <div class="btns-group">
-                  <a href="#" class="btn btn-prev" style="background-color: rgb(255,0,0); color: white;">Previous</a>
-                  <input type="submit" value="Submit" class="btn" style="background-color: rgb(255,0,0); color: white;"/>
-                </div>
-              </div>
-            </form>
-           <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
-
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Footer -->
-    <footer class="content-footer footer bg-footer-theme">
-      <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-        <div class="mb-2 mb-md-0">
-          ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          , made with ❤️ by
-          <img src="/orive_logo.png" alt="" height="20px" width="20px">
-          <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
         </div>
-        <div>
-          <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-          <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+        <!-- Sales Report Section Ends -->
 
-          <a
-            href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-            target="_blank"
-            class="footer-link me-4"
-            >Documentation</a
-          >
+           <!-- Footer -->
+           <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+              <div class="mb-2 mb-md-0">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                , made with ❤️ by
+                <img src="/orive_logo.png" alt="" height="20px" width="20px">
+                <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
+              </div>
+              <div>
+                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
-          <a
-            href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-            target="_blank"
-            class="footer-link me-4"
-            >Support</a
-          >
+                <a
+                  href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                  target="_blank"
+                  class="footer-link me-4"
+                  >Documentation</a
+                >
+
+                <a
+                  href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                  target="_blank"
+                  class="footer-link me-4"
+                  >Support</a
+                >
+              </div>
+            </div>
+          </footer>
+          <!-- / Footer -->
+
+          <div class="content-backdrop fade"></div>
         </div>
+        <!-- Content wrapper -->
       </div>
-    </footer>
-    <!-- / Footer -->
-  </body>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <div class="buy-now">
+    <a
+      href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
+      target="_blank"
+      class="btn btn-danger btn-buy-now"
+      >Upgrade to Pro</a
+    >
+  </div>
+
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="../assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="../assets/js/dashboards-analytics.js"></script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script src="index.js"></script>
+
+  <script src="piechart.js"></script>
+
+  <script src="columnbar.js"></script>
+
+  <!-- Script section starts -->
+
+  <!-- Script section ends -->
+</body>
 </html>
