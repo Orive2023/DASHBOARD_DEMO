@@ -1,0 +1,50 @@
+
+   /*  print*/
+
+   .breadcrumb{
+    text-align: right;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+/* .row{
+    margin-right: -15px;
+    margin-left: -15px;
+} */
+
+
+.panel-title{
+    margin: 0 0 10px 240px;
+}
+
+.content-wrapper1{
+    margin: 20px;
+}
+
+.row{
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 2px rgb(230, 219, 219);
+}
+
+form{
+    display: flex;
+}
+.form-inline .form-group{
+    margin: 5px;
+}
+
+button{
+    height: 40px;
+    margin: 26px 20px 0 0;
+
+}
+
+.form-inline a{
+    height: 40px;
+    margin: 26px 20px 0 0;
+}
