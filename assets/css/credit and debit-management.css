@@ -1,0 +1,10 @@
+table{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.dropdown-menu{
+    align-items: center;
+    justify-items: auto;
+}
