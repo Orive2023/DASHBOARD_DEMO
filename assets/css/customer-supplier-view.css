@@ -1,0 +1,44 @@
+.filter-container{
+    width: 40%;
+    height: 10vh;
+    margin-left: 10px;
+    /* background-color: blue; */
+    /* padding: 20px; */
+}
+
+.dt-button{
+    /* display: flex; */
+    align-items: center;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.07);
+    border: solid 1px #ebedf2;
+    background-color: #ffffff;
+    /* padding: 8px; */
+    margin-right: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal !important;
+    letter-spacing: normal;
+    color: #606266;
+    text-decoration: none;
+}
+
+.dt-button img{
+    margin: 10px;
+    image-rendering: auto;
+}
+
+#myInput {
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 61%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
