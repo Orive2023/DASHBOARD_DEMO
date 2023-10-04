@@ -583,7 +583,7 @@
                 <div class="col-md-12">
                   <ul class="nav nav-pills flex-column flex-md-row mb-3">
                     <li class="nav-item">
-                      <a class="nav-link active" href="pages-account-settings-account.html"><i class="bx bx-user me-1"></i>Add User</a>
+                      <a class="nav-link" href="pages-account-settings-account.html"><i class="bx bx-user me-1"></i>Add User</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Manage-Company.html"
@@ -606,17 +606,17 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Settings.html"
+                      <a class="nav-link active" href="Settings.html"
                         ><i class="bx bx-bell me-1"></i>Settings</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Print-Settings.html"
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
                         ><i class="bx bx-bell me-1"></i>Print Settings</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Mail-Settings.html"
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
                         ><i class="bx bx-bell me-1"></i>Mail Settings</a
                       >
                     </li>
@@ -641,240 +641,277 @@
                       >
                     </li> -->
                   </ul>
-                  <div class="card mb-4">
-                    <h5 class="card-header">Profile Details</h5>
-                    <!-- Account -->
-                    <div class="card-body">
-                      <div class="d-flex align-items-start align-items-sm-center gap-4">
-                        <img
-                          src="../assets/img/avatars/1.png"
-                          alt="user-avatar"
-                          class="d-block rounded"
-                          height="100"
-                          width="100"
-                          id="uploadedAvatar"
-                        />
-                        <div class="button-wrapper">
-                          <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                            <span class="d-none d-sm-block">Upload new photo</span>
-                            <i class="bx bx-upload d-block d-sm-none"></i>
-                            <input
-                              type="file"
-                              id="upload"
-                              class="account-file-input"
-                              hidden
-                              accept="image/png, image/jpeg"
-                            />
-                          </label>
-                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
-                            <i class="bx bx-reset d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Reset</span>
-                          </button>
-
-                          <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                        </div>
+                  
+                  <div class="col-xxl">
+                    <div class="card mb-4">
+                      <div class="card-header d-flex align-items-center justify-content-between">
+                        <h5 class="mb-0">Update Settings</h5>
+                        <small class="text-muted float-end">Merged input group</small>
                       </div>
-                    </div>
-                    <hr class="my-0" />
-                    <div class="card-body">
-                      <form id="formAccountSettings" method="POST" onsubmit="return false">
-                        <div class="row">
-                          <div class="mb-3 col-md-6">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input
-                              class="form-control"
-                              type="text"
-                              id="firstName"
-                              name="firstName"
-                              value="John"
-                              autofocus
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input
-                              class="form-control"
-                              type="text"
-                              id="email"
-                              name="email"
-                              value="john.doe@example.com"
-                              placeholder="john.doe@example.com"
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="organization" class="form-label">Organization</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="organization"
-                              name="organization"
-                              value="ThemeSelection"
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="phoneNumber">Phone Number</label>
-                            <div class="input-group input-group-merge">
-                              <span class="input-group-text">US (+1)</span>
-                              <input
-                                type="text"
-                                id="phoneNumber"
-                                name="phoneNumber"
-                                class="form-control"
-                                placeholder="202 555 0111"
-                              />
+                      <div class="card-body">
+                        <form>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Logo</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"
+                                  ><i class="bx bx-user"></i
+                                ></span>
+                                <input class="form-control" name="logo" id="logo" type="file" tabindex="1">
+                              </div>
                             </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Sale Logo</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"
+                                  ><i class="bx bx-user"></i
+                                ></span>
+                                <input class="form-control" name="logo" id="logo" type="file" tabindex="1">
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="state" class="form-label">State</label>
-                            <input class="form-control" type="text" id="state" name="state" placeholder="California" />
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Favicon</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"
+                                  ><i class="bx bx-user"></i
+                                ></span>
+                                <input class="form-control" name="logo" id="logo" type="file" tabindex="1">
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="zipCode" class="form-label">Zip Code</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="zipCode"
-                              name="zipCode"
-                              placeholder="231465"
-                              maxlength="6"
-                            />
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Currency</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                  <option value="active">USD $</option>
+                                  <option value="inactive">RUPEES</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="country">Country</label>
-                            <select id="country" class="select2 form-select">
-                              <option value="">Select</option>
-                              <option value="Australia">Australia</option>
-                              <option value="Bangladesh">Bangladesh</option>
-                              <option value="Belarus">Belarus</option>
-                              <option value="Brazil">Brazil</option>
-                              <option value="Canada">Canada</option>
-                              <option value="China">China</option>
-                              <option value="France">France</option>
-                              <option value="Germany">Germany</option>
-                              <option value="India">India</option>
-                              <option value="Indonesia">Indonesia</option>
-                              <option value="Israel">Israel</option>
-                              <option value="Italy">Italy</option>
-                              <option value="Japan">Japan</option>
-                              <option value="Korea">Korea, Republic of</option>
-                              <option value="Mexico">Mexico</option>
-                              <option value="Philippines">Philippines</option>
-                              <option value="Russia">Russian Federation</option>
-                              <option value="South Africa">South Africa</option>
-                              <option value="Thailand">Thailand</option>
-                              <option value="Turkey">Turkey</option>
-                              <option value="Ukraine">Ukraine</option>
-                              <option value="United Arab Emirates">United Arab Emirates</option>
-                              <option value="United Kingdom">United Kingdom</option>
-                              <option value="United States">United States</option>
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Time Zone</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                    <option value="Africa/Casablanca">Africa/Casablanca</option>
+                                    <option value="Africa/Lagos">Africa/Lagos</option>
+                                    <option value="Africa/Cairo">Africa/Cairo</option>
+                                    <option value="Africa/Harare">Africa/Harare</option>
+                                    <option value="Africa/Johannesburg">Africa/Johannesburg</option>
+                                    <option value="Africa/Monrovia">Africa/Monrovia</option>
+                                    <option value="America/Anchorage">America/Anchorage</option>
+                                    <option value="America/Los_Angeles">America/Los_Angeles</option>
+                                    <option value="America/Tijuana">America/Tijuana</option>
+                                    <option value="America/Chihuahua">America/Chihuahua</option>
+                                    <option value="America/Mazatlan">America/Mazatlan</option>
+                                    <option value="America/Denver">America/Denver</option>
+                                    <option value="America/Managua">America/Managua</option>
+                                    <option value="America/Chicago">America/Chicago</option>
+                                    <option value="America/Mexico_City">America/Mexico_City</option>
+                                    <option value="America/Monterrey">America/Monterrey</option>
+                                    <option value="America/New_York">America/New_York</option>
+                                    <option value="America/Lima">America/Lima</option>
+                                    <option value="America/Bogota">America/Bogota</option>
+                                    <option value="America/Caracas">America/Caracas</option>
+                                    <option value="America/La_Paz">America/La_Paz</option>
+                                    <option value="America/Santiago">America/Santiago</option>
+                                    <option value="America/St_Johns">America/St_Johns</option>
+                                    <option value="America/Sao_Paulo">America/Sao_Paulo</option>
+                                    <option value="America/Argentina">America/Argentina</option>
+                                    <option value="America/Godthab">America/Godthab</option>
+                                    <option value="America/Noronha">America/Noronha</option>
+                                    <option value="Asia/Jerusalem">Asia/Jerusalem</option>
+                                    <option value="Asia/Baghdad">Asia/Baghdad</option>
+                                    <option value="Asia/Kuwait">Asia/Kuwait</option>
+                                    <option value="Africa/Nairobi">Africa/Nairobi</option>
+                                    <option value="Asia/Riyadh">Asia/Riyadh</option>
+                                    <option value="Asia/Tehran">Asia/Tehran</option>
+                                    <option value="Asia/Baku">Asia/Baku</option>
+                                    <option value="Asia/Muscat">Asia/Muscat</option>
+                                    <option value="Asia/Tbilisi">Asia/Tbilisi</option>
+                                    <option value="Asia/Yerevan">Asia/Yerevan</option>
+                                    <option value="Asia/Kabul">Asia/Kabul</option>
+                                    <option value="Asia/Karachi">Asia/Karachi</option>
+                                    <option value="Asia/Tashkent">Asia/Tashkent</option>
+                                    <option value="Asia/Kolkata">Asia/Kolkata</option>
+                                    <option value="Asia/Katmandu">Asia/Katmandu</option>
+                                    <option value="Asia/Almaty">Asia/Almaty</option>
+                                    <option value="Asia/Dhaka" selected="selected">Asia/Dhaka</option>
+                                    <option value="Asia/Yekaterinburg">Asia/Yekaterinburg</option>
+                                    <option value="Asia/Rangoon">Asia/Rangoon</option>
+                                    <option value="Asia/Bangkok">Asia/Bangkok</option>
+                                    <option value="Asia/Jakarta">Asia/Jakarta</option>
+                                    <option value="Asia/Hong_Kong">Asia/Hong_Kong</option>
+                                    <option value="Asia/Chongqing">Asia/Chongqing</option>
+                                    <option value="Asia/Krasnoyarsk">Asia/Krasnoyarsk</option>
+                                    <option value="Asia/Kuala_Lumpur">Asia/Kuala_Lumpur</option>
+                                    <option value="Australia/Perth">Australia/Perth</option>
+                                    <option value="Asia/Singapore">Asia/Singapore</option>
+                                    <option value="Asia/Taipei">Asia/Taipei</option>
+                                    <option value="Asia/Ulan_Bator">Asia/Ulan_Bator</option>
+                                    <option value="Asia/Urumqi">Asia/Urumqi</option>
+                                    <option value="Asia/Irkutsk">Asia/Irkutsk</option>
+                                    <option value="Asia/Tokyo">Asia/Tokyo</option>
+                                    <option value="Asia/Seoul">Asia/Seoul</option>
+                                    <option value="Asia/Yakutsk">Asia/Yakutsk</option>
+                                    <option value="Asia/Vladivostok">Asia/Vladivostok</option>
+                                    <option value="Asia/Kamchatka">Asia/Kamchatka</option>
+                                    <option value="Asia/Magadan">Asia/Magadan</option>
+                                    <option value="Atlantic/Azores">Atlantic/Azores</option>
+                                    <option value="Atlantic/Cape_Verde">Atlantic/Cape_Verde</option>
+                                    <option value="Australia/Adelaide">Australia/Adelaide</option>
+                                    <option value="Australia/Darwin">Australia/Darwin</option>
+                                    <option value="Australia/Brisbane">Australia/Brisbane</option>
+                                    <option value="Australia/Canberra">Australia/Canberra</option>
+                                    <option value="Australia/Sydney">Australia/Sydney</option>
+                                    <option value="Australia/Hobart">Australia/Hobart</option>
+                                    <option value="Australia/Melbourne">Australia/Melbourne</option>
+                                    <option value="Canada/Atlantic">Canada/Atlantic</option>
+                                    <option value="Europe/Helsinki">Europe/Helsinki</option>
+                                    <option value="Europe/London">Europe/London</option>
+                                    <option value="Europe/Dublin">Europe/Dublin</option>
+                                    <option value="Europe/Lisbon">Europe/Lisbon</option>
+                                    <option value="Europe/Belgrade">Europe/Belgrade</option>
+                                    <option value="Europe/Berlin">Europe/Berlin</option>
+                                    <option value="Europe/Bratislava">Europe/Bratislava</option>
+                                    <option value="Europe/Brussels">Europe/Brussels</option>
+                                    <option value="Europe/Budapest">Europe/Budapest</option>
+                                    <option value="Europe/Copenhagen">Europe/Copenhagen</option>
+                                    <option value="Europe/Ljubljana">Europe/Ljubljana</option>
+                                    <option value="Europe/Madrid">Europe/Madrid</option>
+                                    <option value="Europe/Paris">Europe/Paris</option>
+                                    <option value="Europe/Prague">Europe/Prague</option>
+                                    <option value="Europe/Sarajevo">Europe/Sarajevo</option>
+                                    <option value="Europe/Skopje">Europe/Skopje</option>
+                                    <option value="Europe/Stockholm">Europe/Stockholm</option>
+                                    <option value="Europe/Vienna">Europe/Vienna</option>
+                                    <option value="Europe/Warsaw">Europe/Warsaw</option>
+                                    <option value="Europe/Zagreb">Europe/Zagreb</option>
+                                    <option value="Europe/Athens">Europe/Athens</option>
+                                    <option value="Europe/Bucharest">Europe/Bucharest</option>
+                                    <option value="Europe/Riga">Europe/Riga</option>
+                                    <option value="Europe/Sofia">Europe/Sofia</option>
+                                    <option value="Europe/Tallinn">Europe/Tallinn</option>
+                                    <option value="Europe/Vilnius">Europe/Vilnius</option>
+                                    <option value="Europe/Minsk">Europe/Minsk</option>
+                                    <option value="Europe/Istanbul">Europe/Istanbul</option>
+                                    <option value="Europe/Moscow">Europe/Moscow</option>
+                                    <option value="Pacific/Port_Moresby">Pacific/Port_Moresby</option>
+                                    <option value="Pacific/Fiji">Pacific/Fiji</option>
+                                    <option value="Pacific/Kwajalein">Pacific/Kwajalein</option>
+                                    <option value="Pacific/Midway">Pacific/Midway</option>
+                                    <option value="Pacific/Samoa">Pacific/Samoa</option>
+                                    <option value="Pacific/Honolulu">Pacific/Honolulu</option>
+                                    <option value="Pacific/Auckland">Pacific/Auckland</option>
+                                    <option value="Pacific/Tongatapu">Pacific/Tongatapu</option>
+                                    <option value="Pacific/Guam">Pacific/Guam</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="language" class="form-label">Language</label>
-                            <select id="language" class="select2 form-select">
-                              <option value="">Select Language</option>
-                              <option value="en">English</option>
-                              <option value="fr">French</option>
-                              <option value="de">German</option>
-                              <option value="pt">Portuguese</option>
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Current Position</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                  <option value="Left">Left</option>
+                                  <option value="Right">Right</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="timeZones" class="form-label">Timezone</label>
-                            <select id="timeZones" class="select2 form-select">
-                              <option value="">Select Timezone</option>
-                              <option value="-12">(GMT-12:00) International Date Line West</option>
-                              <option value="-11">(GMT-11:00) Midway Island, Samoa</option>
-                              <option value="-10">(GMT-10:00) Hawaii</option>
-                              <option value="-9">(GMT-09:00) Alaska</option>
-                              <option value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
-                              <option value="-8">(GMT-08:00) Tijuana, Baja California</option>
-                              <option value="-7">(GMT-07:00) Arizona</option>
-                              <option value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                              <option value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
-                              <option value="-6">(GMT-06:00) Central America</option>
-                              <option value="-6">(GMT-06:00) Central Time (US & Canada)</option>
-                              <option value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-                              <option value="-6">(GMT-06:00) Saskatchewan</option>
-                              <option value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-                              <option value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
-                              <option value="-5">(GMT-05:00) Indiana (East)</option>
-                              <option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
-                              <option value="-4">(GMT-04:00) Caracas, La Paz</option>
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Footer Text</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"
+                                  ><i class="bx bx-user"></i
+                                ></span>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="basic-icon-default-fullname"
+                                  placeholder="Developed by Annam"
+                                  aria-label="John Doe"
+                                  aria-describedby="basic-icon-default-fullname2"
+                                />
+                              </div>
+                            </div>
+                          </div> 
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Language</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                  <option value="English">English</option>
+                                  <option value="Hindi">Hindi</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="currency" class="form-label">Currency</label>
-                            <select id="currency" class="select2 form-select">
-                              <option value="">Select Currency</option>
-                              <option value="usd">USD</option>
-                              <option value="euro">Euro</option>
-                              <option value="pound">Pound</option>
-                              <option value="bitcoin">Bitcoin</option>
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">LTR/RTR</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                  <option value="LTR">LTR</option>
+                                  <option value="RTR">RTR</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="timeZones" class="form-label">User Type</label>
-                            <select id="timeZones" class="select2 form-select">
-                              <option value="">Select Type</option>
-                              <option value="-12">User</option>
-                              <option value="-12">Admin</option>
-                              
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Discount Type</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <span id="status-icon" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <select class="form-select" id="status" aria-describedby="status-icon">
+                                  <option value="Discount %">Discount %</option>
+                                  <option value="Dis./Pcs">Dis./Pcs</option>
+                                  <option value="Fixed Dis.">Fixed Dis.</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="currency" class="form-label">Status</label>
-                            <select id="currency" class="select2 form-select">
-                              <option value="">Select Status</option>
-                              <option value="active">Active</option>
-                              <option value="inactive">Inactive</option>
-                            </select>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Invoice Qr-Code</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <input type="checkbox" name="is_qr" class="is-qr-pos" value="1" style="margin-bottom: -35px;">
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div class="mt-2">
-                          <button type="submit" class="btn btn-danger me-2">Save changes</button>
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- /Account -->
-                  </div>
-                  <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
-                    <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
-                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
-                        </div>
+                          <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="status">Auto Approve Invoice Voucher</label>
+                            <div class="col-sm-10">
+                              <div class="input-group input-group-merge">
+                                <input type="checkbox" name="is_qr" class="is-qr-pos" value="1" style="margin-bottom: -35px;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row justify-content-end">
+                            <div class="col-sm-10">
+                              <button type="submit" class="btn btn-danger">Save Changes</button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          />
-                          <label class="form-check-label" for="accountActivation"
-                            >I confirm my account deactivation</label
-                          >
-                        </div>
-                        <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
-                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+                    
             <!-- / Content -->
 <!-- Footer -->
 <footer class="content-footer footer bg-footer-theme">

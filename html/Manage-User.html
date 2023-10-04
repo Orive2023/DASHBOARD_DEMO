@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -13,12 +27,14 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Annam</title>
+    <title>Account settings - Annam</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
+
+    <link rel="stylesheet" href="index.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +46,6 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -40,11 +55,8 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
-    <link rel="stylesheet" href="credit and debit-management.css">
+    <!-- Page CSS -->
 
-    <link rel="stylesheet" href="index.css">
-    
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
@@ -125,353 +137,68 @@
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
-
           <div class="menu-inner-shadow"></div>
+
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
-            <!-- Layouts of supplier-vendor -->
+            <!-- Layouts -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/control (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                
-                <div data-i18n="Layouts">Supplier-Vendor</div>
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Layouts">Layouts</div>
               </a>
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="supplier-information.html" class="menu-link">
-                    <div data-i18n="Without menu">Supplier Information</div>
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">Without menu</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="transaction-history.html" class="menu-link">
-                    <div data-i18n="Without navbar">Transaction History
-                    </div>
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Without navbar</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                    <a href="credit and debit-management.html" class="menu-link">
-                      <div data-i18n="Without menu">Credit and Debit Management</div>
-                    </a>
-                  </li>
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">Container</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">Fluid</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-blank.html" class="menu-link">
+                    <div data-i18n="Blank">Blank</div>
+                  </a>
+                </li>
               </ul>
             </li>
-           <!-- Layouts of Supplier-vendor-->
-           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <img src="/value.png" alt="" height="22px">
-              <i class="menu-icon"></i>
-              <div data-i18n="Layouts">Customer-Vendor</div>
-            </a>
 
-            <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="Customer-Information.html" class="menu-link">
-                  <div data-i18n="Without menu">Customer Information</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="Customer-Transaction-History.html" class="menu-link">
-                  <div data-i18n="Without navbar">Transaction History</div>
-                </a>
-              </li>
-            </ul>
-          </li>
-            <!-- Lay Out of Transportation-Vendor-->
-              <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/truck (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Transportation-Vendor</div>
-              </a>
-
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="Transportation-Information.html" class="menu-link">
-                    <div data-i18n="Without menu">Transportation Information</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="Transportation-History.html" class="menu-link">
-                    <div data-i18n="Without navbar">Transportation History</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="Transportation-Documentation.html" class="menu-link">
-                    <div data-i18n="Container">Transportation Documentation</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="Payment.html" class="menu-link">
-                    <div data-i18n="Fluid">Payment</div>
-                  </a>
-                </li>
-              </ul>
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Pages</span>
             </li>
-             <!--Layout of GatePass-Security Pass-->
-             <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/transport.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Gate Pass-Security Pass</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="1.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="2.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="3.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="4.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--Layout of Stock Management-->
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/order.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Purchase Management</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="A.html" class="menu-link">
-                    <div data-i18n="Without menu">A</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="B.html" class="menu-link">
-                    <div data-i18n="Without navbar">B</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="C.html" class="menu-link">
-                    <div data-i18n="Container">C</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="D.html" class="menu-link">
-                    <div data-i18n="Fluid">D</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--Layout of Stock Management-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/inventory (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Product Management</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="a.html" class="menu-link">
-                    <div data-i18n="Without menu">a</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="b.html" class="menu-link">
-                    <div data-i18n="Without navbar">b</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="c.html" class="menu-link">
-                    <div data-i18n="Container">c</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="d.html" class="menu-link">
-                    <div data-i18n="Fluid">d</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--Layout of E-Invoice/E-Way bill-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/bill (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Invoice/EWay-bill</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--Layout Of Return-->
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/return bill.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Return</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="return.html" class="menu-link">
-                    <div data-i18n="Without menu">Return</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="stock-return.html" class="menu-link">
-                    <div data-i18n="Without navbar">Stock</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="supplier-return-list.html" class="menu-link">
-                    <div data-i18n="Container">Supplier Return List</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="wastage-return-list.html" class="menu-link">
-                    <div data-i18n="Fluid">Wastage Return List</div>
-                  </a>
-                </li>
-              </ul>
-            </li>  
-            <!--Layout of Business Compliance-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/cooperation.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Bussiness Compliance</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">GST Software</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">TDS</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Income Tax</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Banking</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--HRM-->
-             <!--Layout of GatePass-Security Pass-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/hrm (1) (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">HRM</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!--Layout of CRM-->
-             <!--Layout of GatePass-Security Pass-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/crm (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">CRM</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">1</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">2</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">3</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">4</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/settings (1).png" alt="" height="22px">
-                <i class="menu-icon"></i>
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Account Settings">Account Settings</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="pages-account-settings-account.html" class="menu-link">
                     <div data-i18n="Account">Account</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                   <a href="pages-account-settings-notifications.html" class="menu-link">
                     <div data-i18n="Notifications">Notifications</div>
                   </a>
@@ -480,30 +207,9 @@
                   <a href="pages-account-settings-connections.html" class="menu-link">
                     <div data-i18n="Connections">Connections</div>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </li>
-
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/market-analysis.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Account Settings">Finance</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="finance-banking.html" class="menu-link">
-                    <div data-i18n="Account">Banking</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="finance-accounts.html" class="menu-link">
-                    <div data-i18n="Notifications">Accounts</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
@@ -863,224 +569,259 @@
               </ul>
             </div>
           </nav>
-           <!-- Content wrapper -->
-           <div class="content-wrapper">
-            <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Supplier-Vendor /</span> Credit and Debit Management</p>
-              <!-- Content wrapper -->
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
-            <!-- <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Transaction</h4> -->
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4>
 
-              <!-- Basic Bootstrap Table -->
-
-              
-              <br><div style="margin: 10px; display: inline;">
-                <span style="border: 2px solid rgba(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"> <img src="/visible.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;">Column</a> <select for="dropdown" style="border: none; color:black;"></select></span>
-                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/PRINT.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;"><a href="">Print</a></span>
-                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/export.png" alt="" height="12px" style="margin: 10px; transform: rotate(-90deg);"><a href="" style="text-align: center;"></a><a href="">Export</a><select for="dropdown" style="border: none; color: black;"></select></span>
-              </div>
-              <div><span><input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid;"></span>
-              </div>
-              <br>
-              <div class="card">
-
-            
-               
-                <!-- <h5 class="card-header" style="color: blue;">Transaction Of Supplier-Vendor:</h5> -->
-                <div class="table-responsive text-nowrap">
-                    <table class="table">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-account.html"><i class="bx bx-user me-1"></i>Add User</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Manage-Company.html"
+                        ><i class="bx bx-bell me-1"></i>Manage Company</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="Manage-User.html"
+                        ><i class="bx bx-bell me-1"></i>Manage User</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>Language</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>Currency</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>Print Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>Mail Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>App Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i> Notifications</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i> Connections</a
+                      >
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i></a
+                      >
+                    </li> -->
+                  </ul>
+                  
+                    <!-- /Account -->
+                  
+                    <div class="card">
+                        <h5 class="card-header">User List</h5>
+                        <div class="table-responsive text-nowrap">
+                          <table class="table">
                             <thead style="background-color: red;">
                               <tr>
-                                <th rowspan="2" style="color: white;">sl no.</th>
-                                <th rowspan="2" style="color: white;">Supplier Name</th>
-                                <th rowspan="2" style="color: white;">Supplier ID</th>
-                                <th rowspan="2" style="color: white;">Transaction ID</th>
-                                <th rowspan="2" style="color: white;">Transaction Date</th>
-                                <th colspan="3" style="color: white;">Cash Flow</th>
-                                <th rowspan="2" style="color: white;">Discount Receviable</th>
-                                <th rowspan="2" style="color: white;">Balance</th>
-                                <th rowspan="2" style="color: white;">Prediction Analysis</th>
-                                <th rowspan="2" style="color: white;">Status</th>
-                                <tr>
-                                  <th style="color: white;">Total Dedit</th>
-                                  <th style="color: white;">Total Credit</th>
-                                  <th style="color: white;">Payment Type</th>
-                                </tr>
+                                <th style="color: white;">SL.</th>
+                                <th style="color: white;">Image</th>
+                                <th style="color: white;">User Name</th>
+                                <th style="color: white;">Email</th>
+                                <th style="color: white;">Status</th>
+                                <th style="color: white;">Actions</th>
                               </tr>
                             </thead>
-                       
                             <tbody class="table-border-bottom-0">
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Mary Bridget</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i>001</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> FF090352-C98A-83AB-84F5-CD775C34B98F</td>
-                                <td>26/09/2016</td>
-                                <td>1200.0</td>
-                                <td>0.00</td>
-                                <td>check</td>
-                                <td>5%</td>
-                                <td>₹1400.00</td>
+                                <td>1.</td>
                                 <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="credit & debit-graph.html"
-                                          ><i class="bx bx-edit-alt me-1"></i>Credit & Debit graph</a>
-                                      </div>
-                                    </div>
+                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                      <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller"
+                                      >
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                      </li>
+                                    </ul>
                                   </td>
-                                  <td><span class="badge bg-label-primary me-1">Payment</span></td>
-                              </tr>
-                              <tr class="darker">
-                                <th scope="row">2</th>
-                                <td>Mary Bridget</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i>002</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> FF090352-C98A-83AB-84F5-CD775C34B98F</td>
-                                <td>26/09/2016</td>
-                                <td>780</td>
-                                <td>0.00</td>
-                                <td>Cash</td>
-                                <td>10%</td>
-                                <td>₹1800.00</td>
+                                <td>Albert Cook</td>
+                                <td>Sourav@gmail.com</td>
+                                <td><span class="badge bg-label-primary me-1">Active</span></td>
                                 <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="credit & debit-graph.html"
-                                          ><i class="bx bx-edit-alt me-1"></i>Credit & Debit graph</a>
-                                      </div>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                                      >
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-1"></i> Delete</a
+                                      >
                                     </div>
-                                  </td>
-                                  <td><span class="badge bg-label-info me-1">Transfer</span></td>
-                              </tr>
+                                  </div>
+                                </td>
                               </tr>
                               <tr>
-                                <th scope="row">3</th>
-                                <td>Mary Bridget</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i>003</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> FF090352-C98A-83AB-84F5-CD775C34B98F</td>
-                                <td>26/09/2016</td>
-                                <td>1000.00</td>
-                                <td>0.00</td>
-                                <td>UPI</td>
-                                <td>8%</td>
-                                <td>₹20000</td>
+                                <td>1.</td>
                                 <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="credit & debit-graph.html"
-                                          ><i class="bx bx-edit-alt me-1"></i>Credit & Debit graph</a>
-                                      </div>
-                                    </div>
+                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                      <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller"
+                                      >
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                      </li>
+                                    </ul>
                                   </td>
-                                  <td><span class="badge bg-label-warning me-1">Purchase</span></td>
-                              </tr>
-                              </tr>
-                              <tr class="darker">
-                                <th scope="row">4</th>
-                                <td>Mary Bridget</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i>004</td>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> FF090352-C98A-83AB-84F5-CD775C34B98F</td>
-                                <td>26/09/2016</td>
-                                <td>1900.00</td>
-                                <td>0.00</td>
-                                <td>Net Banking</td>
-                                <td>13%</td>
-                                <td>₹21000</td>
+                                <td>Albert Cook</td>
+                                <td>Sourav@gmail.com</td>
+                                <td><span class="badge bg-label-primary me-1">Active</span></td>
                                 <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="credit & debit-graph.html"
-                                          ><i class="bx bx-edit-alt me-1"></i>Credit & Debit graph</a>
-                                      </div>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                                      >
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-1"></i> Delete</a
+                                      >
                                     </div>
-                                  </td>
-                                  <td><span class="badge bg-label-warning me-1">Purchase</span></td>
+                                  </div>
+                                </td>
                               </tr>
-                              </tr> 
+                              <tr>
+                                <td>1.</td>
+                                <td>
+                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                      <li
+                                        data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller"
+                                      >
+                                        <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                      </li>
+                                    </ul>
+                                  </td>
+                                <td>Albert Cook</td>
+                                <td>Sourav@gmail.com</td>
+                                <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                <td>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                                      >
+                                      <a class="dropdown-item" href="javascript:void(0);"
+                                        ><i class="bx bx-trash me-1"></i> Delete</a
+                                      >
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
                             </tbody>
-                    </table>
-                </div>
-            <br>
-            <div class="pagination_section" style="text-align: right;">
-              <a href="#">
-                  << Previous
-              </a>
-              <a href="#"
-                 title="Algorithm">
-                  1
-              </a>
-              <a href="#"
-                 title="DataStructure">
-                  2
-              </a>
-              <a href="#"
-                 title="Languages">
-                  3
-              </a>
-              <a href="#"
-                 title="Interview"
-                 class="active">
-                  4
-              </a>
-              <a href="#"
-                 title="practice">
-                  5
-              </a>
-              <a href="#">
-              Next >>
-              </a>
+                          </table>
+                        </div>
+                      </div>
+            <!-- / Content -->
+<!-- Footer -->
+<footer class="content-footer footer bg-footer-theme">
+  <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+    <div class="mb-2 mb-md-0">
+      ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      , made with ❤️ by
+      <img src="/orive_logo.png" alt="" height="20px" width="20px">
+      <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
+    </div>
+    <div>
+      <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+      <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+
+      <a
+        href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+        target="_blank"
+        class="footer-link me-4"
+        >Documentation</a
+      >
+
+      <a
+        href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+        target="_blank"
+        class="footer-link me-4"
+        >Support</a
+      >
+    </div>
+  </div>
+</footer>
+<!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
           </div>
-              <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <img src="/orive_logo.png" alt="" height="20px" width="20px">
-                  <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
-                </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
 
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
 
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
-           <!-- Core JS -->
+    <div class="buy-now">
+      <a
+        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
+        target="_blank"
+        class="btn btn-danger btn-buy-now"
+        >Upgrade to Pro</a
+      >
+    </div>
+
+    <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
@@ -1091,13 +832,12 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
+    <script src="../assets/js/pages-account-settings-account.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
