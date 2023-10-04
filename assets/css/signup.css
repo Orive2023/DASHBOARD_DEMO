@@ -155,9 +155,9 @@
  /*---css for toggle password -----*/
  body .input-box #togglePassword {
     position: absolute;
-    margin-left: 400px;
+    margin-left: 460px;
     margin-top: -40px;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
     cursor: pointer;
     }
 
