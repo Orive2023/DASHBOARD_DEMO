@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -27,7 +13,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Container - Annam</title>
+    <title>Dashboard - Annam</title>
 
     <meta name="description" content="" />
 
@@ -53,8 +39,10 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
+    <link rel="stylesheet" href="index.css">
+    
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
@@ -72,13 +60,14 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
+              <!-- <span class="app-brand-logo demo">
                 <svg
                   width="25"
                   viewBox="0 0 25 42"
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
                   <defs>
                     <path
                       d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
@@ -125,8 +114,9 @@
                     </g>
                   </g>
                 </svg>
-              </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+              </span> -->
+              <img src="../assets/img/favicon/annam.png" alt="" class="center">
+              <!-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Annam</span> -->
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -135,58 +125,342 @@
           </div>
 
           <div class="menu-inner-shadow"></div>
-
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
-            <!-- Layouts -->
-            <li class="menu-item active open">
+            <!-- Layouts of supplier-vendor -->
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <img src="/control (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                
+                <div data-i18n="Layouts">Supplier-Vender</div>
               </a>
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Without menu</div>
+                  <a href="supplier-information.html" class="menu-link">
+                    <div data-i18n="Without menu">Supplier Information</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Without navbar</div>
+                  <a href="transaction-history.html" class="menu-link">
+                    <div data-i18n="Without navbar">Transaction History
+                    </div>
                   </a>
                 </li>
-                <li class="menu-item active">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                   <a href="layouts-blank.html" class="menu-link">
                     <div data-i18n="Blank">Blank</div>
+                  </a>
+                </li> -->
+              </ul>
+            </li>
+            <!-- Layouts of customer-vendor-->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/value.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                
+                <div data-i18n="Layouts">Customer-Vendor</div>
+              </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="Customer-Information.html" class="menu-link">
+                  <div data-i18n="Without menu">Customer Information</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="Customer-Transaction-History.html" class="menu-link">
+                  <div data-i18n="Without navbar">Transaction History</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+            <!-- Lay Out of Transportation-Vendor-->
+              <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/truck (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Transportation-Vendor</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="Transportation-Information.html" class="menu-link">
+                    <div data-i18n="Without menu">Transportation Information</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Transportation-History.html" class="menu-link">
+                    <div data-i18n="Without navbar">Transportation History</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Transportation-Documentation.html" class="menu-link">
+                    <div data-i18n="Container">Transportation Documentation</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="Payment.html" class="menu-link">
+                    <div data-i18n="Fluid">Payment</div>
                   </a>
                 </li>
               </ul>
             </li>
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Pages</span>
+             <!--Layout of GatePass-Security Pass-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/transport.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Gate Pass-Security Pass</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="1.html" class="menu-link">
+                    <div data-i18n="Without menu">1</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="2.html" class="menu-link">
+                    <div data-i18n="Without navbar">2</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="3.html" class="menu-link">
+                    <div data-i18n="Container">3</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="4.html" class="menu-link">
+                    <div data-i18n="Fluid">4</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--Layout of Stock Management-->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/order.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Purchase Management</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="A.html" class="menu-link">
+                    <div data-i18n="Without menu">A</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="B.html" class="menu-link">
+                    <div data-i18n="Without navbar">B</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="C.html" class="menu-link">
+                    <div data-i18n="Container">C</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="D.html" class="menu-link">
+                    <div data-i18n="Fluid">D</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--Layout of Stock Management-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/inventory (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Product Management</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="a.html" class="menu-link">
+                    <div data-i18n="Without menu">a</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="b.html" class="menu-link">
+                    <div data-i18n="Without navbar">b</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="c.html" class="menu-link">
+                    <div data-i18n="Container">c</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="d.html" class="menu-link">
+                    <div data-i18n="Fluid">d</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--Layout of E-Invoice/E-Way bill-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/bill (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Invoice/EWay-bill</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">1</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">2</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">3</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">4</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--Layout Of Return-->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/return bill.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Return</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="return.html" class="menu-link">
+                    <div data-i18n="Without menu">Return</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="stock-return.html" class="menu-link">
+                    <div data-i18n="Without navbar">Stock</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="supplier-return-list.html" class="menu-link">
+                    <div data-i18n="Container">Supplier Return List</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="wastage-return-list.html" class="menu-link">
+                    <div data-i18n="Fluid">Wastage Return List</div>
+                  </a>
+                </li>
+              </ul>
+            </li>  
+            <!--Layout of Business Compliance-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/cooperation.png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">Bussiness Compliance</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">GST Software</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">TDS</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">Income Tax</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">Banking</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--HRM-->
+             <!--Layout of GatePass-Security Pass-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/hrm (1) (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">HRM</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">1</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">2</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">3</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">4</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--Layout of CRM-->
+             <!--Layout of GatePass-Security Pass-->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <img src="/crm (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
+                <div data-i18n="Layouts">CRM</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">1</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">2</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">3</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">4</div>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <img src="/settings (1).png" alt="" height="22px">
+                <i class="menu-icon"></i>
                 <div data-i18n="Account Settings">Account Settings</div>
               </a>
               <ul class="menu-sub">
@@ -566,90 +840,83 @@
               </ul>
             </div>
           </nav>
-
-          <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- Layout Demo -->
-              <div class="layout-demo-wrapper">
-                <div class="layout-demo-placeholder">
-                  <img
-                    src="../assets/img/layouts/layout-container-light.png"
-                    class="img-fluid"
-                    alt="Layout container"
-                    data-app-light-img="layouts/layout-container-light.png"
-                    data-app-dark-img="layouts/layout-container-dark.png"
-                  />
-                </div>
-                <div class="layout-demo-info">
-                  <h4>Layout container</h4>
-                  <p>Container layout sets a <code>max-width</code> at each responsive breakpoint.</p>
-                </div>
-              </div>
-              <!--/ Layout Demo -->
-            </div>
-            <!-- / Content -->
+             <div class="container-xxl flex-grow-1 container-p-y">
+              <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Sale Management / </span>POS Sale</p>
 
-           <!-- Footer -->
-           <footer class="content-footer footer bg-footer-theme">
-            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-              <div class="mb-2 mb-md-0">
-                ©
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                , made with ❤️ by
-                <img src="/orive_logo.png" alt="" height="20px" width="20px">
-                <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
-              </div>
-              <div>
-                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+              <!--Lay out Of Table-->
+               
 
-                <a
-                  href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                  target="_blank"
-                  class="footer-link me-4"
-                  >Documentation</a
-                >
-
-                <a
-                  href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                  target="_blank"
-                  class="footer-link me-4"
-                  >Support</a
-                >
-              </div>
-            </div>
-          </footer>
-          <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
-        </div>
-        <!-- / Layout page -->
+                
+            <!------- Lay out of pagination_section----------->
+        <div class="pagination_section" style="text-align: right;">
+          <a href="#">
+              << Previous
+          </a>
+          <a href="#"
+             title="Algorithm">
+              1
+          </a>
+          <a href="#"
+             title="DataStructure">
+              2
+          </a>
+          <a href="#"
+             title="Languages">
+              3
+          </a>
+          <a href="#"
+             title="Interview"
+             class="active">
+              4
+          </a>
+          <a href="#"
+             title="practice">
+              5
+          </a>
+          <a href="#">
+          Next >>
+          </a>
       </div>
+       
+      <br>
+              <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with ❤️ by
+                  <img src="/orive_logo.png" alt="" height="20px" width="20px">
+                  <a href="https://www.orivesolutions.com" target="_blank" class="footer-link fw-bolder">Orive Solutions</a>
+                </div>
+                <div>
+                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
+                  <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
-
-    <!-- Core JS -->
+                  <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+              <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
@@ -660,13 +927,16 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
     <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
+
