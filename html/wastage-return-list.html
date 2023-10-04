@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
-    <link rel="stylesheet" href="wastage-return-list.css">
+    <link rel="stylesheet" href="../assets/css/wastage-return-list.css">
 
     <link rel="stylesheet" href="index.css">
     
@@ -337,36 +337,36 @@
                 </li>
               </ul>
             </li>
-             <!--Layout Of Return-->
-             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <img src="/return bill.png" alt="" height="22px">
-                <i class="menu-icon"></i>
-                <div data-i18n="Layouts">Return</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="E-way-Bills-Invoice.html" class="menu-link">
-                    <div data-i18n="Without menu">Return</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Stock</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Supplier Return List</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Wastage Return List</div>
-                  </a>
-                </li>
-              </ul>
-            </li>  
+              <!--Layout Of Return-->
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <img src="/return bill.png" alt="" height="22px">
+                  <i class="menu-icon"></i>
+                  <div data-i18n="Layouts">Return</div>
+                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="return.html" class="menu-link">
+                      <div data-i18n="Without menu">Return</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="stock-return.html" class="menu-link">
+                      <div data-i18n="Without navbar">Stock Return</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="supplier-return-list.html" class="menu-link">
+                      <div data-i18n="Container">Supplier Return List</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="wastage-return-list.html" class="menu-link">
+                      <div data-i18n="Fluid">Wastage Return List</div>
+                    </a>
+                  </li>
+                </ul>
+              </li> 
             <!--Layout of Business Compliance-->
              <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -878,68 +878,62 @@
 
               <!-- Basic Bootstrap Table -->
 
-              
+<!--               
               <br><div style="margin: 10px; display: inline;">
                 <span style="border: 2px solid rgba(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"> <img src="/visible.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;">Column</a> <select for="dropdown" style="border: none; color:black;"></select></span>
                 <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/PRINT.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;"><a href="">Print</a></span>
                 <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/export.png" alt="" height="12px" style="margin: 10px; transform: rotate(-90deg);"><a href="" style="text-align: center;"></a><a href="">Export</a><select for="dropdown" style="border: none; color: black;"></select></span>
-              </div>
-              <div><span><input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid;"></span>
-              </div>
-              <br>
-              <div class="card">
-
-            
-               
-                <!-- <h5 class="card-header" style="color: blue;">Transaction Of Supplier-Vendor:</h5> -->
-                <div class="table-responsive text-nowrap">
+              </div> -->
+              <!-- <div><span><input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid;"></span>
+              </div> -->
+                <div class="card">
                     <table class="table">
-                            <thead>
-                              <tr>
-                                <th rowspan="2">sl no.</th>
-                                <th rowspan="2">Invoice No.</th>
-                                <th rowspan="2">Customer Name</th>
-                                <th rowspan="2">Date</th>
-                                <th rowspan="2">Total Amount</th>
-                                <th rowspan="2">Action</th>
-                              </tr>
-                            </thead>
-                       
-                            <tbody class="table-border-bottom-0">
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>0010</td>
-                                <td>Mohan Das</td>
-                                <td>26/09/2016</td>
-                                <td>1200.0</td>
-                                <td>Return</td>
-                              </tr>
-                              <tr class="darker">
-                                <th scope="row">2</th>
-                                <td>0011</td>
-                                <td>oasaka burmham</td>
-                                <td>27/09/2016</td>
-                                <td>1100.0</td>
-                                <td>Return</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>0012</td>
-                                <td>Nomad subham</td>
-                                <td>28/09/2016</td>
-                                <td>1500.0</td>
-                                <td>Return</td>
-                              </tr>
-                              <tr class="darker">
-                                <th scope="row">4</th>
-                                <td>0013</td>
-                                <td>swagat Barik</td>
-                                <td>29/09/2016</td>
-                                <td>2000.0</td>
-                                <td>Return</td>
-                              </tr>
-                            </tbody>
+                      <thead>
+                        <tr style="background-color:red;">
+                          <th style="color:white;">Sl NO.</th>
+                          <th style="color:white;">Invoice No.</th>
+                          <th style="color:white;">Customer Name</th>
+                          <th style="color:white;">Date</th>
+                          <th style="color:white;">Total Amount</th>
+                          <th style="color:white;">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td>1</td>
+                          <td>0010</td>
+                          <td>Mohan Das</td>
+                          <td>26/09/2016</td>
+                          <td>1200.0</td>
+                          <td>Return</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>0011</td>
+                          <td>oasaka burmham</td>
+                          <td>27/09/2016</td>
+                          <td>1100.0</td>
+                          <td>Return</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>0012</td>
+                          <td>Nomad subham</td>
+                          <td>28/09/2016</td>
+                          <td>1500.0</td>
+                          <td>Return</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>0013</td>
+                          <td>swagat Barik</td>
+                          <td>29/09/2016</td>
+                          <td>2000.0</td>
+                          <td>Return</td>
+                        </tr>
+                      </tbody>
                     </table>
+                  </div>
                 </div>
             <br>
             <div class="pagination_section" style="text-align: right;">

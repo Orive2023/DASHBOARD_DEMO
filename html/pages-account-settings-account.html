@@ -34,6 +34,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
 
+    <link rel="stylesheet" href="index.css">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,7 +74,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
+              <!-- <span class="app-brand-logo demo">
                 <svg
                   width="25"
                   viewBox="0 0 25 42"
@@ -126,15 +128,15 @@
                     </g>
                   </g>
                 </svg>
-              </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+              </span> -->
+              <img src="../assets/img/favicon/annam.png" alt="" class="center">
+              <!-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Annam</span> -->
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
-
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
@@ -196,7 +198,7 @@
                     <div data-i18n="Account">Account</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                   <a href="pages-account-settings-notifications.html" class="menu-link">
                     <div data-i18n="Notifications">Notifications</div>
                   </a>
@@ -205,7 +207,7 @@
                   <a href="pages-account-settings-connections.html" class="menu-link">
                     <div data-i18n="Connections">Connections</div>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="menu-item">
@@ -581,7 +583,47 @@
                 <div class="col-md-12">
                   <ul class="nav nav-pills flex-column flex-md-row mb-3">
                     <li class="nav-item">
-                      <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i> Account</a>
+                      <a class="nav-link active" href="pages-account-settings-account.html"><i class="bx bx-user me-1"></i>Add User</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Manage-Company.html"
+                        ><i class="bx bx-bell me-1"></i>Manage Company</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Manage-User.html"
+                        ><i class="bx bx-bell me-1"></i>Manage User</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Language.html"
+                        ><i class="bx bx-bell me-1"></i>Language</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Currency.html"
+                        ><i class="bx bx-bell me-1"></i>Currency</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Settings.html"
+                        ><i class="bx bx-bell me-1"></i>Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Print-Settings.html"
+                        ><i class="bx bx-bell me-1"></i>Print Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Mail-Settings.html"
+                        ><i class="bx bx-bell me-1"></i>Mail Settings</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-notifications.html"
+                        ><i class="bx bx-bell me-1"></i>App Settings</a
+                      >
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages-account-settings-notifications.html"
@@ -593,6 +635,11 @@
                         ><i class="bx bx-link-alt me-1"></i> Connections</a
                       >
                     </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i></a
+                      >
+                    </li> -->
                   </ul>
                   <div class="card mb-4">
                     <h5 class="card-header">Profile Details</h5>
@@ -774,10 +821,27 @@
                               <option value="bitcoin">Bitcoin</option>
                             </select>
                           </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="timeZones" class="form-label">User Type</label>
+                            <select id="timeZones" class="select2 form-select">
+                              <option value="">Select Type</option>
+                              <option value="-12">User</option>
+                              <option value="-12">Admin</option>
+                              
+                            </select>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="currency" class="form-label">Status</label>
+                            <select id="currency" class="select2 form-select">
+                              <option value="">Select Status</option>
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn btn-primary me-2">Save changes</button>
-                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                          <button type="submit" class="btn btn-danger me-2">Save changes</button>
+                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
                         </div>
                       </form>
                     </div>

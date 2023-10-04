@@ -1,0 +1,128 @@
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #374767;
+    background-color: #f1f3f6;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+}
+
+.panel-default {
+    border-color: #ddd;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-title {
+    padding-bottom: 10px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.panel .panel-heading h4 {
+    margin: 0;
+    line-height: 26px;
+    letter-spacing: .5px;
+}
+h4{
+    font-family: 'Alegreya Sans',sans-serif;
+    font-size: 18px;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #e4e5e7;
+}
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+.btn-success {
+    background-color: #37a000;
+    border-color: #318d01;
+}
+.btn{
+    border-radius: 2px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+  
+.col-sm-6{
+    border: solid 1px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+
+
+
+
+
+
