@@ -21,3 +21,10 @@
   opacity: 1;
   border: 0;
 }
+.table-header{
+  background-color: red;
+}
+thead{
+  color: white;
+}
+ 
