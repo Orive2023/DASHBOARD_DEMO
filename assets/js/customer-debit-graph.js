@@ -1,7 +1,5 @@
 
-
-
-//graph for debit//
+//graph for customer debit//
 
 var options = {
     series: [{
