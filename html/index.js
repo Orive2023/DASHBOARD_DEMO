@@ -181,7 +181,7 @@ var options = {
     //     return "I don't understand your choice. Please select one of the available options.";
     // }
     switch (userInput) {
-      case "hii":
+      case "hi": 
           return "Here are the menu options:\n1. Option 1\n2. Option 2\n3. Option 3";
       case "option 1":
           return "You selected Option 1. What would you like to do next?";

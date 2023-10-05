@@ -71,10 +71,13 @@ body.show-chatbot .chatbot-toggler span:last-child {
 }
 .chatbot {
   position: fixed;
-  right: 35px;
+  right: 10px;
   bottom: 90px;
-  width: 420px;
-  background: #fff;
+  width: 320px;
+  background: transparent;
+  background-image: url("../assets/img/rice.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 15px;
   overflow: hidden;
   opacity: 0;
