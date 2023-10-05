@@ -1,5 +1,5 @@
 
-// graph for credit//
+// graph for supplier credit//
 
 var options = {
     series: [{
