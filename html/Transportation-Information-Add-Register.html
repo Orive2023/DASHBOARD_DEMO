@@ -13,7 +13,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Annam</title>
+    <title>Transportation-Information-Add-Register</title>
 
     <meta name="description" content="" />
 
@@ -47,13 +47,22 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <link rel="stylesheet" href="index.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <style>
+      span{
+        color: red;
+      }
+    </style>
+
+
   </head>
 
   <body>
@@ -107,7 +116,7 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="credit and debit-management.html" class="menu-link">
+                  <a href="supplier-credit and debit-management.html" class="menu-link">
                     <div data-i18n="Without menu">Credit and Debit Management</div>
                   </a>
                 </li>
@@ -993,18 +1002,18 @@
               <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Transportation-Vendor/Transport Information </span>/ Add Registartion Form</p>
               <!--Layout of Forms-->
               <!--Lay Out Of Forms-->
-            <form action="#" class="form">
-                <h1 class="text-center">Transportation Registartion Form</h1>
+            <form action="#" name="myForm" class="form"  onsubmit="return validateForm()" method="post">
+                <h1 class="text-center" style="color: rgb(255, 0, 0);">Transportation Registartion Form</h1>
                 <!-- Progress bar -->
                 <div class="progressbar">
                   <div class="progress" id="progress"></div>
                   <div class="progress-step progress-step-active" data-title="Transporter Details"></div>
-                  <div class="progress-step" data-title="Approval & Clearance Deatils"></div>
                   <div class="progress-step" data-title="Driver & Vechicle Details"></div>
+                  <div class="progress-step" data-title="Approval & Clearance Deatils"></div>
                   <div class="progress-step" data-title="Terms & Conditions"></div>
                 </div>
           
-                <!-- Steps -->
+                <!-- Transporter Details -->
               <div class="form-step form-step-active">
                   <div class="row">
                       <div class="col w-50">
@@ -1024,7 +1033,7 @@
                     <div class="col w-20">
                         <div class="input-group">
                             <label for="nameOfTransporterOffice">Name Of Transporter Office:</label>
-                             <input type="text" name="nameOfTransporterOffice" id=nameOfTransporterOffice" />
+                             <input type="text" name="nameOfTransporterOffice" id="nameOfTransporterOffice" />
                         </div>
                     </div>
                     <div class="col">
@@ -1102,60 +1111,12 @@
                   <label for="officeAddress">Office Address:</label>
                   <textarea rows="5" cols="60"></textarea>
               </div>
-                  <!-- <div class="input-group">
-                    <label for="position">Position</label>
-                    <input type="text" name="position" id="position" />
-                  </div> -->
                   <div class="">
-                      <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
+                      <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
                   </div>
               </div>
-              <div class="form-step">
-                <div class="input-group">
-                  <label for="approvedBy">Approved By</label>
-                  <input type="text" name="approvedBy" id="approvedBy" />
-                </div>
-                <div class="input-group">
-                  <label for="clearedBy">Cleared By</label>
-                  <input type="text" name="clearedBy" id="clearedBy" />
-                </div>
-                <div class="input-group">
-                  <label for="date">Date</label>
-                  <input type="date" name="date" id="date" />
-                </div>
-                  <!-- <div class="input-group">
-                    <label for="streetAddress1">Street Address 1</label>
-                    <input type="text" name="streetAddress1" id="streetAddress1" />
-                  </div> -->
-                  <!-- <div class="input-group">
-                    <label for="streetAddress2">Street Address 2</label>
-                    <input type="text" name="streetAddress2" id="streetAddress2" />
-                  </div> -->
-                  <!-- <div class="input-group">
-                      <label for="city">City</label>
-                      <input type="text" name="city" id="city" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="state">State</label>
-                      <input type="text" name="state" id="state" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="postalOrZipCode">Postal/ZipCode</label>
-                      <input type="text" name="postalOrZipCode" id="postalOrZipCode" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                    <label for="country">Country</label>
-                    <input type="text" name="country" id="country" />
-                  </div> -->
-                  <!-- <div class="input-group">
-                      <label for="typesOfAddress">Types Of Address</label>
-                      <input type="text" name="typesOfAddress" id="typesOfAddress" />
-                    </div> -->
-                  <div class="btns-group">
-                    <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                    <a href="#" class="btn btn-next" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
-                  </div>
-                </div>
+
+<!-- ----------Driver & vehivle Details---------------- -->
                 <div class="form-step">
                   <div class="input-group">
                     <label for="driverName">Driver Name</label>
@@ -1207,81 +1168,44 @@
                     <label for="address">Address:</label>
                     <textarea rows="5" cols="50"></textarea>
                 </div>
-                  <!-- <div class="input-group">
-                    <label for="accountHolderName">Account Holder Name</label>
-                    <input type="date" name="accountHolderName" id="accountHolderName" />
-                  </div> -->
-                  <!-- <div class="input-group">
-                      <label for="bankName">Bank Name</label>
-                      <input type="number" name="bankName" id="bankName" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="bankBranch">Bank Branch</label>
-                      <input type="number" name="bankBranch" id="bankBranch" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="bankAccountNumber">Bank Account Number</label>
-                      <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="bankAccountType">Bank Account Type</label>
-                      <input type="number" name="bankAccountType" id="bankAccountType" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="swiftPerBicCode">SWIFT/BIC COde</label>
-                      <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" />
-                    </div>
-                    <div class="input-group">
-                      <label for="bankRoutingPerSortCode">Bank Routing/Sort Code</label>
-                      <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
-                    </div>
-                  <div class="input-group">
-                    <label for="ifscCode">IFSC Code</label>
-                    <input type="number" name="ifscCode" id="ifscCode" />
-                  </div>
-                  <div class="input-group">
-                      <label for="micrNumber">MICR No</label>
-                      <input type="number" name="micrNumber" id="micrNumber" />
-                    </div> -->
-                    <!-- <div class="input-group">
-                      <label for="currency">Currency</label>
-                      <input type="number" name="currency" id="currency" />
-                    </div>
-                    <div class="input-group">
-                      <label for="creditLimit">Credit Limit</label>
-                      <input type="number" name="creditLimit" id="creditLimit" />
-                    </div>
-                    <div class="input-group">
-                      <label for="taxId">Tax Id</label>
-                      <input type="number" name="taxId" id="taxId" />
-                    </div> -->
                   <div class="btns-group">
-                    <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                    <a href="#" class="btn btn-next" style="background-color: rgb(11, 78, 179); color: white;">Next</a>
+                    <a href="#" class="btn btn-prev" style="background-color:rgb(255, 0, 0); color: white;">Previous</a>
+                    <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
                   </div>
                 </div>
+
+                <!-- --------Approval and clearance------- -->
+
+                <div class="form-step">
+                  <div class="input-group">
+                    <label for="approvedBy">Approved By</label>
+                    <input type="text" name="approvedBy" id="approvedBy" />
+                  </div>
+                  <div class="input-group">
+                    <label for="clearedBy">Cleared By</label>
+                    <input type="text" name="clearedBy" id="clearedBy" />
+                  </div>
+                  <div class="input-group">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" />
+                  </div>
+                    <div class="btns-group">
+                      <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
+                      <a href="#" class="btn btn-next" style="background-color:rgb(255, 0, 0); color: white;">Next</a>
+                    </div>
+                  </div>
+
+
+                  <!-- -----Terms and conditions----- -->
   
                  <div class="form-step">
-                  <!-- <div class="input-group"> -->
                     <div class="form-check mt-3">
                       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
                       <label class="form-check-label" for="defaultCheck1"> Terms & Condtions </label>
                     </div>
-                   <!--<div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" />
-                  </div>
-                  <div class="input-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input
-                      type="password"
-                      name="confirmPassword"
-                      id="confirmPassword"
-                    />
-                  </div> -->
                   <div class="btns-group">
-                    <a href="#" class="btn btn-prev" style="background-color: rgb(11, 78, 179); color: white;">Previous</a>
-                    <input type="submit" value="Submit" class="btn" style="background-color: rgb(11, 78, 179); color: white;"/>
+                    <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
+                    <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
                   </div>
                 </div>
               </form>
