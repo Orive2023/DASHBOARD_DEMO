@@ -33,13 +33,25 @@
 }
 
 #myInput {
-    background-image: url('');
+    background-image: url('../img/favicon/search.png');
     background-repeat: no-repeat;
-    background-position-x: left;
+    background-size: 14px 14px;
+    background-origin: padding-box;
+    background-position-y: center;
+    background-position-x: 10px;
+    /* background-position-x: left; */
     width: 88%;
     font-size: 12px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
     margin-bottom: 12px;  
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.07);
+  }
+
+  .fa-solid{
+    align-self: center;
+    /* padding: 10px 20px; */
+    margin: 0px 0px 0px 12px;
+    color: #777;
   }
 
