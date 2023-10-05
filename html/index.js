@@ -141,8 +141,8 @@ var options = {
 
   var chart1 = new ApexCharts(document.querySelector("#chart"), options);
   chart1.render();
-
-
+  
+// Layout of chatbot
   const chatbotToggler = document.querySelector(".chatbot-toggler");
   const closeBtn = document.querySelector(".close-btn");
   const chatbox = document.querySelector(".chatbox");
@@ -161,10 +161,39 @@ var options = {
       return chatLi; // return chat <li> element
   }
 
+  
+
+  
+
   const generateResponse = () => {
-      const responseText = userMessage.toLowerCase() === "hi" ? "Hello" : "I don't understand.";
-      return responseText;
+    const userInput = userMessage.toLowerCase();
+
+    // Check user's input for specific keywords or options
+    // if (userInput.includes("hi")) {
+    //     return "Hello! How can I assist you today?";
+    // } else if (userInput.includes("option 1")) {
+    //     return "You chose Option 1. Great choice!";
+    // } else if (userInput.includes("option 2")) {
+    //     return "You chose Option 2. Excellent!";
+    // } else if (userInput.includes("option 3")) {
+    //     return "You chose Option 3. Wonderful!";
+    // } else {
+    //     return "I don't understand your choice. Please select one of the available options.";
+    // }
+    switch (userInput) {
+      case "hii":
+          return "Here are the menu options:\n1. Option 1\n2. Option 2\n3. Option 3";
+      case "option 1":
+          return "You selected Option 1. What would you like to do next?";
+      case "option 2":
+          return "You selected Option 2. How can I assist you?";
+      case "option 3":
+          return "You selected Option 3. Please provide more details about your request.";
+      default:
+          return "I don't understand. Please enter 'menu' to see the options.";
   }
+}
+
 
   const handleChat = () => {
       userMessage = chatInput.value.trim(); // Get user-entered message and remove extra whitespace
