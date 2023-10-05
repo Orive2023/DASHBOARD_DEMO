@@ -1018,7 +1018,7 @@
                   <div class="row">
                       <div class="col w-50">
                           <div class="input-group">
-                              <label for="serialNo">Serial No:</label>
+                              <label for="serialNo">Serial No</label>
                                <input type="text" name="serialNo" id="serialNo" />
                           </div>
                       </div>
@@ -1032,85 +1032,108 @@
                   <div class="row">
                     <div class="col w-20">
                         <div class="input-group">
-                            <label for="nameOfTransporterOffice">Name Of Transporter Office:</label>
-                             <input type="text" name="nameOfTransporterOffice" id="nameOfTransporterOffice" />
+                            <label for="nameOfTransporterOffice">Name Of Transporter Office<span>*</span></label>
+                             <input type="text" name="nameOfTransporterOffice" id="nameOfTransporterOffice"/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="gstNo">GST No:</label>
-                            <input type="text" name="gstNo" id="gstNo"  />
+                            <label for="gstNo">GSTIN</label>
+                            <input type="text" name="gstNo" id="gstNo" placeholder="Enter GSTIN no" />
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
-                    <label for="ownerName">Owner Name:</label>
-                    <input type="text" name="ownerName" id="ownerName" />
+                    <label for="ownerName">Owner Name<span>*</span></label>
+                    <input type="text" name="ownerName" id="ownerName" placeholder="Enter owner name" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="panNo">PAN No:</label>
-                             <input type="text" name="panNo" id="panNo" />
+                            <label for="panNo">PAN No<span>*</span></label>
+                             <input type="text" name="panNo" id="panNo" placeholder="Enter PAN no" required />
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="adharNumber">Adhar No:</label>
-                            <input type="text" name="adharNumber" id="adharNumber" />
+                            <label for="adharNumber">Aadhaar No<span>(optional)</span></label>
+                            <input type="text" name="adharNumber" id="adharNumber" placeholder="Enter Aadhaar no" />
                         </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="phone">Phone:</label>
-                             <input type="text" name="phone" id="phone"/>
+                            <label for="phone">Phone No<span>(optional)</span></label>
+                             <input type="text" name="phone" id="phone" placeholder="Enter phone no"/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="mobileNumber">Mobile No:</label>
-                            <input type="text" name="mobileNumber" id="mobileNumber" />
+                            <label for="mobileNumber">Mobile No<span>*</span></label>
+                            <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter mobile no" required/>
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" />
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email address" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
-                      <div class="input-group">
-                        <label for="country">Country:</label>
-                        <input type="text" name="country" id="country" />
-                    </div>
+                      <div class="input-box">
+                        <label for="selectcountry" class="selectcountry">Select Country<span>*</span></label>
+                        <select class="select_Country" id="select_Country" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">India</option>
+                          <option value="2">America</option>
+                          <option value="3">canada</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="col">
-                        <div class="input-group">
-                            <label for="state">State:</label>
-                            <input type="text" name="state" id="state" />
+                      <div class="input-box">
+                        <label for="selectstate" class="selectstate">Select Statae<span>*</span></label>
+                        <select class="select_State" id="select_State" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                            <option value="0">Odisha</option>
+                            <option value="1">Tamil Nadu</option>
+                            <option value="2">Uttar Pradesh</option>
+                            <option value="3">Gujarat</option>
+                            <option value="4">Punjab</option>
+                            <option value="5">Andhra Pradesh</option>
+                            <!-- <option value="3">Three</option> -->
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-box">
+                        <label for="selectCity" class="selectCity">Select City<span>*</span></label>
+                        <select class="select_City" id="select_City" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                            <option value="0">Bhubaneswar</option>
+                            <option value="1">Cuttack</option>
+                            <option value="2">Berhampur</option>
+                            <option value="3">Keonjhar</option>
+                            <!-- <option value="3">Three</option> -->
+                          </select>
                         </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="city">City:</label>
-                            <input type="text" name="city" id="city" />
+                          <label for="zipCode">Zip Code<span>*</span></label>
+                          <input type="text" name="zipCode" id="zipCode" />
                         </div>
                     </div>
                     <div class="col">
-                      <div class="input-group">
-                        <label for="zipCode">Zip Code:</label>
-                        <input type="text" name="zipCode" id="zipCode" />
+                        <div class="input-group">
+                          <label for="officeAddress">Office Address<span>*</span></label>
+                          <textarea rows="5" cols="60"></textarea>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="input-group">
-                  <label for="officeAddress">Office Address:</label>
-                  <textarea rows="5" cols="60"></textarea>
-              </div>
                   <div class="">
                       <a href="#" class="btn btn-next width-50 ml-auto" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
                   </div>
@@ -1119,53 +1142,53 @@
 <!-- ----------Driver & vehivle Details---------------- -->
                 <div class="form-step">
                   <div class="input-group">
-                    <label for="driverName">Driver Name</label>
-                    <input type="text" name="driverName" id="driverName" />
+                    <label for="driverName">Driver Name<span>*</span></label>
+                    <input type="text" name="driverName" id="driverName" placeholder="Enter driver name" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="panNo">PAN No:</label>
-                             <input type="text" name="panNo" id="panNo"/>
+                            <label for="panNo">PAN No<span>*</span></label>
+                             <input type="text" name="panNo" id="panNo" placeholder="Enter PAN no" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="mobileNumber">Mobile No:</label>
-                            <input type="text" name="mobileNumber" id="mobileNumber" />
+                            <label for="mobileNumber">Mobile No<span>*</span></label>
+                            <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter mobile no" required/>
                         </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="licenceNo">Licence No:</label>
-                             <input type="text" name="licenceNo" id="licenceNo"/>
+                            <label for="licenceNo">Licence No<span>*</span></label>
+                             <input type="text" name="licenceNo" id="licenceNo" placeholder="Enter licence no" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="rcNo">RC No:</label>
-                            <input type="text" name="rcNo" id="rcNo" />
+                            <label for="rcNo">RC No<span>*</span></label>
+                            <input type="text" name="rcNo" id="rcNo" placeholder="Enter RC no" required />
                         </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="vehicleType">Vehicle Type:</label>
+                            <label for="vehicleType">Vehicle Type<span>*</span></label>
                              <input type="text" name="vehicleType" id="vehicleType"/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="weightmentDetails">Weightment Details:</label>
+                            <label for="weightmentDetails">Weightment Details<span>*</span></label>
                             <input type="text" name="weightmentDetails" id="weightmentDetails" />
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
-                    <label for="address">Address:</label>
+                    <label for="address">Address<span>*</span></label>
                     <textarea rows="5" cols="50"></textarea>
                 </div>
                   <div class="btns-group">
