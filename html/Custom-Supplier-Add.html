@@ -1018,8 +1018,8 @@
               
                 <div class="form-step form-step-active">   
                   <div class="input-group">
-                      <label for="supplierName">Supplier Name <span>*</span></label>
-                      <input type="text" name="suppliername" id="supplierName" required/>
+                      <label for="supplierName">Supplier Name <span> * </span></label>
+                      <input type="text" name="suppliername" id="supplierName" placeholder="Enter Supplier name" required/>
                   </div>
                   
                   <!-- <div class="input-group">
@@ -1031,7 +1031,7 @@
                       <input type="text" name="webUrl" id="webUrl" />
                   </div> -->
                   <div class="input-group">
-                      <label for="fax">Person of Contact <span>*</span></label>
+                      <label for="fax">Person of Contact <span> * </span></label>
                       <input type="text" name="poc" id="poc" required />
                   </div>
                   <div class="input-group">
@@ -1043,24 +1043,24 @@
                     <input type="text" name="emailAddress" id="emailAddress" />
                   </div>
                   <div class="input-group">
-                      <label for="mobileNumber">Mobile No <span>*</span></label>
-                      <input type="number" name="mobileNumber" id="mobileNumber" required />
+                      <label for="mobileNumber">Mobile No <span> * </span></label>
+                      <input type="number" name="mobileNumber" id="mobileNumber" placeholder="Enter mobile no" required />
                   </div>
                   <div class="input-group">
                     <label for="mobileNumber">Landline No <span>(optional)</span></label>
                     <input type="number" name="mobileNumber" id="mobileNumber" />
                   </div>
                   <div class="input-group">
-                      <label for="panNumber">Pan No</label>
-                      <input type="text" name="panNumber" id="panNumber" />
+                      <label for="panNumber">Pan No<span> * </span></label>
+                      <input type="text" name="panNumber" id="panNumber" placeholder="Enter PAN no" required/>
                   </div>
                   <div class="input-group">
-                    <label for="panNumber" style="margin-right: 20px;">Date of Registration: </label>
+                    <label for="panNumber" style="margin-right: 20px;">Date of Registration<span>*</span></label>
                     <!-- <input type="currentdate" name="" id="currentdate" /> -->
                     <p id="currentdate"></p>
                   </div>
                   <div class="input-group">
-                      <label for="adharNumber">Aadhar No <span>(optional)</span></label>
+                      <label for="adharNumber">Aadhaar No <span>(optional)</span></label>
                       <input type="number" name="aadharNumber" id="aadharNumber" />
                   </div>
                   <div class="">
@@ -1069,7 +1069,7 @@
                 </div>
                 <div class="form-step">
                   <div class="input-group">
-                    <label for="streetAddress1">Street Address 1 <span>*</span></label>
+                    <label for="streetAddress1">Street Address 1 <span> * </span></label>
                     <input type="text" name="streetAddress1" id="streetAddress1" required/>
                   </div>
                   <div class="input-group">
@@ -1078,9 +1078,10 @@
                   </div>
                   
                   <div class="mb-3">
-                    <label for="exampleFormControlSelect1" class="form-label">Select Country <span>*</span></label>
+                    <label for="exampleFormControlSelect1" class="form-label">Select Country <span> * </span></label>
                     <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected>India</option>
+                      <option selected>Select option menu</option>
+                      <option value="0">India</option>
                       <option value="1">United State of America</option>
                       <option value="2">Afghanistan</option>
                       <option value="3">Bangladesh</option>
@@ -1093,7 +1094,8 @@
                   <div class="mb-3">
                     <label for="exampleFormControlSelect1" class="form-label">Select State <span>*</span></label>
                     <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected>Odisha</option>
+                      <option selected>Select option menu</option>
+                      <option value="0">Odisha</option>
                       <option value="1">Tamil Nadu</option>
                       <option value="2">Uttar Pradesh</option>
                       <option value="3">Gujarat</option>
@@ -1111,7 +1113,8 @@
                   <div class="mb-3">
                     <label for="exampleFormControlSelect1" class="form-label" style="font-family: 'Poppins', sans-serif;">Select City <span>*</span></label>
                     <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected>Bhubaneswar</option>
+                      <option selected>Select option menu</option>
+                      <option value="0">Bhubaneswar</option>
                       <option value="1">Cuttack</option>
                       <option value="2">Berhampur</option>
                       <option value="3">Keonjhar</option>
@@ -1127,7 +1130,8 @@
                   <div class="mb-3">
                     <label for="exampleFormControlSelect1" class="form-label">Type of Address <span>*</span></label>
                     <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected>Home</option>
+                      <option selected>select option menu</option>
+                      <option value="0">Home</option>
                       <option value="1">Work</option>
                       <option value="2">Others</option>
                       <!-- <option value="3">Three</option> -->
@@ -1141,25 +1145,26 @@
                 </div>
                 <div class="form-step">
                   <div class="input-group">
-                    <label for="accountHolderName">Account Holder Name <span>*</span></label>
-                    <input type="text" name="accountHolderName" id="accountHolderName" />
+                    <label for="accountHolderName">Account Holder Name <span> * </span></label>
+                    <input type="text" name="accountHolderName" id="accountHolderName" placeholder="Enter account holder name" required/>
                   </div>
                   <div class="input-group">
-                      <label for="bankName">Bank Name <span>*</span></label>
-                      <input type="number" name="bankName" id="bankName" />
+                      <label for="bankName">Bank Name <span> * </span></label>
+                      <input type="number" name="bankName" id="bankName" placeholder="Enter Bank name" required/>
                   </div>
                   <div class="input-group">
-                      <label for="bankBranch">Bank Branch</label>
-                      <input type="number" name="bankBranch" id="bankBranch" />
+                      <label for="bankBranch">Bank Branch<span>*</span></label>
+                      <input type="number" name="bankBranch" id="bankBranch" placeholder="Enter Bank branch" required/>
                   </div>
                   <div class="input-group">
-                      <label for="bankAccountNumber">Bank Account Number</label>
-                      <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
+                      <label for="bankAccountNumber">Bank Account Number <span>*</span></label>
+                      <input type="number" name="bankAccountNumber" id="bankAccountNumber" placeholder="Enter Bank Account no" required/>
                   </div>
                   <div class="mb-3">
-                    <label for="exampleFormControlSelect1" class="form-label">Bank Account Type </label>
-                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected>Saving</option>
+                    <label for="exampleFormControlSelect1" class="form-label">Bank Account Type <span>*</span> </label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example" >
+                      <option selected>select option menu</option>
+                      <option value="0">Saving</option>
                       <option value="1">Current</option>
                       <option value="2">Others</option>
                       <!-- <option value="3">Three</option> -->
@@ -1174,8 +1179,8 @@
                       <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
                   </div> -->
                   <div class="input-group">
-                    <label for="ifscCode">IFSC Code</label>
-                    <input type="number" name="ifscCode" id="ifscCode" />
+                    <label for="ifscCode">IFSC Code <span> * </span></label>
+                    <input type="number" name="ifscCode" id="ifscCode" required/>
                   </div>
                   <!-- <div class="input-group">
                       <label for="micrNumber">MICR No</label>
