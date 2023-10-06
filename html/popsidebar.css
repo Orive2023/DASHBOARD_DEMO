@@ -1,0 +1,64 @@
+.sidenav {
+    margin-top: 50px;
+    height: 60%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: pink;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    right: 0; /* Change this to open from the right */
+  }
+  
+  .bba {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px; /* Adjust this to your preference */
+    font-size: 36px;
+    margin-right: 50px;
+    right: initial; /* Add this line to reset the right property */
+  }
+  
+  .nav-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Center vertically within the sidebar */
+    right: 20px;
+    transform: translateY(-50%); /* Center vertically */
+    transition: right 0.5s; /* Add this line for icon animation */
+  }
+  
+  .nav-icon.open {
+    right: calc(250px - 30px); /* Adjust this value to match the sidebar width and half of the icon size */
+    transition: right 0.5s; /* Add this line for icon animation */
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
