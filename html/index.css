@@ -75,7 +75,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   bottom: 90px;
   width: 320px;
   background: transparent;
-  background-image: url("../assets/img/rice.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("../assets/img/rice.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 15px;
@@ -94,7 +94,7 @@ body.show-chatbot .chatbot {
   transform: scale(1);
 }
 .chatbot header {
-  padding: 10px 0;
+  padding: 5px 0;
   position: relative;
   text-align: center;
   color: #fff;
