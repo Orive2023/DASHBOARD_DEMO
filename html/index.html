@@ -152,98 +152,25 @@
       return (_seed - 1) / 2147483646;
     };
   </script>
-
-  <!--layout of map-->
-  <style>
-    #viewDiv {
-      padding: 0;
-      margin: 0;
-      height:60vh;
-      width: 95%;
-      margin-left: 28px;
-     
+   <style>
+    .map-container{
+      height: 50vh;
+      width: 169vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: black;
+      margin-left: 30px;
+      margin-bottom: 100px;
     }
-
-    #instruction {
-      z-index: 99;
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      padding: 5px;
-      margin-left: -175px;
-      height: 30px;
-      width: 355px;
-      background: rgba(25, 25, 25, 0.8);
-      color: white;
+    h1{
+      color: #333;
+      margin-bottom: 60px;      
     }
-  </style>
-
-  <link
-    rel="stylesheet"
-    href="https://js.arcgis.com/4.27/esri/themes/light/main.css"
-  />
-  <script src="https://js.arcgis.com/4.27/"></script>
-
-  <script>
-    require(["esri/rest/locator", "esri/Map", "esri/views/MapView"], (
-      locator,
-      Map,
-      MapView
-    ) => {
-      // Set up a locator url using the world geocoding service
-      const locatorUrl =
-        "https://maps.app.goo.gl/iPdkZE6sy5geSocB9";
-
-      // Create the Map
-      const map = new Map({
-        basemap: "streets-navigation-vector"
-      });
-
-      // Create the MapView
-      const view = new MapView({
-        container: "viewDiv",
-        map: map,
-        center: [-71.6899, 43.7598],
-        zoom: 12
-      });
-
-      /*******************************************************************
-       * This click event sets generic content on the popup not tied to
-       * a layer, graphic, or popupTemplate. The location of the point is
-       * used as input to a reverse geocode method and the resulting
-       * address is printed to the popup content.
-       *******************************************************************/
-      view.popupEnabled = false;
-      view.on("click", (event) => {
-        // Get the coordinates of the click on the view
-        const lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
-        const lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
-
-        view.openPopup({
-          // Set the popup's title to the coordinates of the location
-          title: "Reverse geocode: [" + lon + ", " + lat + "]",
-          location: event.mapPoint // Set the location of the popup to the clicked location
-        });
-
-        const params = {
-          location: event.mapPoint
-        };
-
-        // Display the popup
-        // Execute a reverse geocode using the clicked location
-        locator
-          .locationToAddress(locatorUrl, params)
-          .then((response) => {
-            // If an address is successfully found, show it in the popup's content
-            view.popup.content = response.address;
-          })
-          .catch(() => {
-            // If the promise fails and no result is found, show a generic message
-            view.popup.content = "No address was found for this location";
-          });
-      });
-    });
-  </script>
+    
+   </style>
+  
   </head>
 
   <body>
@@ -2125,10 +2052,15 @@
             <!-- / Content -->
 
             <!--map-->
-            <div id="viewDiv">
-              <div id="instruction" class="esri-widget">
-                Click any location on the map to see its street address
-              </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.806858265076!2d85.80528587402515!3d20.34959611076095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d501f96465%3A0xb57ff80bdaa3d1c5!2sOrive%20Solutions!5e0!3m2!1sen!2sin!4v1696577836000!5m2!1sen!2sin" 
+                width="100%" 
+                height="580" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
               
             
