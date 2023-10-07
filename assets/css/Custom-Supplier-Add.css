@@ -156,6 +156,30 @@
   .btn:hover {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
   }
+
+
+  /* --------------css for icons------------- */
+
+  .input-group i {
+    position: absolute;
+}
+ 
+.input-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+ 
+.icon {
+    padding: 50px;
+    min-width: 40px;
+    margin-left:-50px;
+}
+ 
+#input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
   
   /* --------css for popup window-------- */
   /* *{
