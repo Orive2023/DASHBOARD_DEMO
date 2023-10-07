@@ -1228,7 +1228,16 @@
                   <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions
                   <div class="btns-group">
                     <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
-                    <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
+                    <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"  onclick="openPopup()"/>
+                    <div class="container">
+                      <!-- <button type="submit" class="btn" onclick="openPopup()">Click me</button> -->
+                      <div class="popup" id="popup">
+                          <img src="/assets/img/layouts/tick.png">
+                          <h2>Thank you!</h2>
+                          <p>You are in Demo mode. Thanks!</p>
+                          <button type="button" onclick="closePopup()">ok</button>
+                      </div>
+                  </div>
                    
                   </div>
                 </div>
