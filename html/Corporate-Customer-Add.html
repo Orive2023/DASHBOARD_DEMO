@@ -1014,7 +1014,7 @@
                 <div class="progress-step" data-title="Address Details"></div>
                 <div class="progress-step" data-title="Bank Details"></div>
                 <div class="progress-step" data-title="Approval & Clearance Deatils"></div>
-                <div class="progress-step" data-title="Terms & Conditions"></div>
+                <!-- <div class="progress-step" data-title="Terms & Conditions"></div> -->
               </div>
         
               <!-- Steps -->
@@ -1022,48 +1022,48 @@
                 <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="businessName">Business Name<span>*</span></label>
-                             <input type="text" name="businessName" id="businessName" placeholder="Enter business name" required/>
+                            <label for="businessName">Business Name<span> * </span></label>
+                             <input type="text" name="businessName" id="businessName" placeholder="Enter Business Name" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="customerName">Customer Name<span>*</span></label>
-                            <input type="text" name="customerName" id="customerName" placeholder="Enter customer name" required/>
+                            <label for="customerName">Customer Name<span> * </span></label>
+                            <input type="text" name="customerName" id="customerName" placeholder="Enter Customer Name" required/>
                         </div>
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="text" name="emailAddress" id="emailAddress" placeholder="Enter email address" />
+                    <label for="emailAddress">Email Address<span> * </span></label>
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="Enter Email Address" required />
                 </div>
                 <div class="input-group">
-                    <label for="gender">Gender<span>*</span></label>
-                    <input type="text" name="gender" id="gender" placeholder="Enter your gender" required/>
+                    <label for="gender">Gender<span> * </span></label>
+                    <input type="text" name="gender" id="gender" placeholder="Enter Your Gender" required/>
                 </div>
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <label for="webUrl">Web Url</label>
                     <input type="text" name="webUrl" id="webUrl" />
+                </div> -->
+                <div class="input-group">
+                    <label for="fax">Fax <span> * </span></label>
+                    <input type="text" name="fax" id="fax" placeholder="Enter Fax" required/>
                 </div>
                 <div class="input-group">
-                    <label for="fax">Fax</label>
-                    <input type="text" name="fax" id="fax" />
+                    <label for="gstIn">GSTIN<span> * </span></label>
+                    <input type="text" name="gstIn" id="gstIn" placeholder="Enter GSTIN" required/>
                 </div>
                 <div class="input-group">
-                    <label for="gstIn">GST In<span>*</span></label>
-                    <input type="text" name="gstIn" id="gstIn" />
+                    <label for="mobileNumber">Mobile No<span> * </span></label>
+                    <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile No" required/>
                 </div>
                 <div class="input-group">
-                    <label for="mobileNumber">Mobile No<span>*</span></label>
-                    <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter mobile no" required/>
-                </div>
-                <div class="input-group">
-                    <label for="panNumber">Pan No<span>*</span></label>
-                    <input type="text" name="panNumber" id="panNumber" placeholder="Enter PAN no" required/>
+                    <label for="panNumber">PAN No<span> * </span></label>
+                    <input type="text" name="panNumber" id="panNumber" placeholder="Enter PAN No" required/>
                 </div>
                 <div class="input-group">
                     <label for="adharNumber">Aadhaar No<span>(optional)</span></label>
-                    <input type="text" name="adharNumber" id="adharNumber" placeholder="Enter Aadhaar no"/>
+                    <input type="text" name="adharNumber" id="adharNumber" placeholder="Enter Aadhaar No"/>
                 </div>
                 <!-- <div class="input-group">
                   <label for="position">Position</label>
@@ -1075,32 +1075,32 @@
             </div>
             <div class="form-step">
                 <div class="input-group">
-                  <label for="streetAddress1">Street Address 1<span>*</span></label>
-                  <input type="text" name="streetAddress1" id="streetAddress1" />
+                  <label for="streetAddress1">Street Address 1<span> * </span></label>
+                  <input type="text" name="streetAddress1" id="streetAddress1" placeholder="Enter Street Address1" required/>
                 </div>
                 <div class="input-group">
-                  <label for="streetAddress2">Street Address 2<span>*</span></label>
-                  <input type="text" name="streetAddress2" id="streetAddress2" />
+                  <label for="streetAddress2">Street Address 2</label>
+                  <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Enter Street Address2"/>
                 </div>
                 <div class="input-group">
-                    <label for="city">City<span>*</span></label>
-                    <input type="text" name="city" id="city" placeholder="Enter city" required />
+                    <label for="city">City<span> * </span></label>
+                    <input type="text" name="city" id="city" placeholder="Enter City" required />
                   </div>
                   <div class="input-group">
-                    <label for="state">State<span>*</span></label>
+                    <label for="state">State<span> * </span></label>
                     <input type="text" name="state" id="state" placeholder="Enter State" required />
                   </div>
                   <div class="input-group">
-                    <label for="postalOrZipCode">ZipCode<span>*</span></label>
-                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" placeholder="Enter zip code" required />
+                    <label for="postalOrZipCode">Postal/ZipCode<span> * </span></label>
+                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" placeholder="Enter Postal Code" required />
                   </div>
                   <div class="input-group">
-                  <label for="country">Country<span>*</span></label>
-                  <input type="text" name="country" id="country" placeholder="Enter country" required />
+                  <label for="country">Country<span> * </span></label>
+                  <input type="text" name="country" id="country" placeholder="Enter Country" required />
                 </div>
                 <div class="input-group">
-                    <label for="typesOfAddress">Types Of Address<span>*</span></label>
-                    <input type="text" name="typesOfAddress" id="typesOfAddress" />
+                    <label for="typesOfAddress">Types Of Address<span> * </span></label>
+                    <input type="text" name="typesOfAddress" id="typesOfAddress" placeholder="Enter Types Of address" required />
                   </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
@@ -1109,52 +1109,52 @@
               </div>
               <div class="form-step">
                 <div class="input-group">
-                  <label for="accountHolderName">Account Holder Name<span>*</span></label>
-                  <input type="date" name="accountHolderName" id="accountHolderName" placeholder="Enter Account holder name" required/>
+                  <label for="accountHolderName">Account Holder Name<span> * </span></label>
+                  <input type="date" name="accountHolderName" id="accountHolderName" placeholder="Enter Account Holder Name" required/>
                 </div>
                 <div class="input-group">
-                    <label for="bankName">Bank Name<span>*</span></label>
-                    <input type="number" name="bankName" id="bankName" placeholder="Enter bank name" required/>
+                    <label for="bankName">Bank Name<span> * </span></label>
+                    <input type="number" name="bankName" id="bankName" placeholder="Enter Bank Name" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankBranch">Bank Branch<span>*</span></label>
-                    <input type="number" name="bankBranch" id="bankBranch" placeholder="Enter bank branch" required/>
+                    <label for="bankBranch">Bank Branch<span> * </span></label>
+                    <input type="number" name="bankBranch" id="bankBranch" placeholder="Enter Bank Branch" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankAccountNumber">Bank Account Number<span>*</span></label>
-                    <input type="number" name="bankAccountNumber" id="bankAccountNumber" placeholder="Enter bank account no" required/>
+                    <label for="bankAccountNumber">Bank Account Number<span> * </span></label>
+                    <input type="number" name="bankAccountNumber" id="bankAccountNumber" placeholder="Enter Bank Account No" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankAccountType">Bank Account Type<span>*</span></label>
-                    <input type="number" name="bankAccountType" id="bankAccountType" placeholder="Enter bank account type" required />
+                    <label for="bankAccountType">Bank Account Type<span> * </span></label>
+                    <input type="number" name="bankAccountType" id="bankAccountType" placeholder="Enter Bank Account Type" required />
                   </div>
                   <div class="input-group">
-                    <label for="swiftPerBicCode">SWIFT/BIC COde<span>*</span></label>
-                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" placeholder="Enter BIC code" required />
+                    <label for="swiftPerBicCode">SWIFT/BIC COde<span> * </span></label>
+                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" placeholder="Enter BIC Code" required />
                   </div>
                   <div class="input-group">
-                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code<span>*</span></label>
-                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" placeholder="Enter sort code" required />
+                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code<span> * </span></label>
+                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" placeholder="Enter Sort Code" required />
                   </div>
                 <div class="input-group">
-                  <label for="ifscCode">IFSC Code<span>*</span></label>
-                  <input type="number" name="ifscCode" id="ifscCode" placeholder="Enter IFSC code"  required/>
+                  <label for="ifscCode">IFSC Code<span> * </span></label>
+                  <input type="number" name="ifscCode" id="ifscCode" placeholder="Enter IFSC Code"  required/>
                 </div>
                 <div class="input-group">
-                    <label for="micrNumber">MICR No<span>*</span></label>
-                    <input type="number" name="micrNumber" id="micrNumber" placeholder="Enter MICR no" required/>
+                    <label for="micrNumber">MICR No<span> * </span></label>
+                    <input type="number" name="micrNumber" id="micrNumber" placeholder="Enter MICR No" required/>
                   </div>
                   <div class="input-group">
-                    <label for="currency">Currency<span>*</span></label>
-                    <input type="number" name="currency" id="currency" />
+                    <label for="currency">Currency<span> * </span></label>
+                    <input type="number" name="currency" id="currency" placeholder="Enter Currency" required />
                   </div>
                   <div class="input-group">
-                    <label for="creditLimit">Credit Limit<span>*</span></label>
-                    <input type="number" name="creditLimit" id="creditLimit" />
+                    <label for="creditLimit">Credit Limit<span> * </span></label>
+                    <input type="number" name="creditLimit" id="creditLimit" placeholder="Enter Credit Limit" required/>
                   </div>
                   <div class="input-group">
-                    <label for="taxId">Tax Id<span>*</span></label>
-                    <input type="number" name="taxId" id="taxId" required />
+                    <label for="taxId">Tax Id<span> * </span></label>
+                    <input type="number" name="taxId" id="taxId" placeholder="Enter Tax Id" required />
                   </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
@@ -1163,26 +1163,29 @@
               </div>
               <div class="form-step">
                 <div class="input-group">
-                  <label for="approvedBy">Approved By</label>
-                  <input type="text" name="approvedBy" id="approvedBy" />
+                  <label for="approvedBy">Approved By<span> * </span></label>
+                  <input type="text" name="approvedBy" id="approvedBy" placeholder="Enter Approved By" required />
                 </div>
                 <div class="input-group">
-                  <label for="clearedBy">Cleared By</label>
-                  <input type="text" name="clearedBy" id="clearedBy" />
+                  <label for="clearedBy">Cleared By <span> * </span></label>
+                  <input type="text" name="clearedBy" id="clearedBy" placeholder="Enter Cleared By" required />
                 </div>
                 <div class="input-group">
                   <label for="date">Date</label>
                   <input type="date" name="date" id="date" />
                 </div>
+                <div class="input-group">
+                  <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions
+                </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
-                  <a href="#" class="btn btn-next" style="background-color: rgb(255, 0, 0); color: white;">Next</a>
+                  <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
                 </div>
               </div>
 
                <div class="form-step">
                 <!-- <div class="input-group"> -->
-                <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions
+                <!-- <input type="checkbox" id="myCheckbox" name="myCheckbox" value="option1">Terms & Conditions -->
                  <!--<div class="input-group">
                   <label for="password">Password</label>
                   <input type="password" name="password" id="password" />
@@ -1195,10 +1198,10 @@
                     id="confirmPassword"
                   />
                 </div> -->
-                <div class="btns-group">
+                <!-- <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
                   <input type="submit" value="Submit" class="btn" style="background-color: rgb(255, 0, 0); color: white;"/>
-                </div>
+                </div> -->
               </div>
             </form>
            <!-- Core JS -->

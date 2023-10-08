@@ -170,10 +170,23 @@
     }
     
    </style>
-  
-  </head>
+   
+   <link href="popsidebar.css" rel="stylesheet" />
 
-  <body>
+   </head>
+   <body>
+   <!--  Pop up side nav -->
+   <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <div class="bba">
+    <span class="nav-icon" onclick="toggleNav()" style="position: fixed;">&#9776;</span>
+  </div>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -2075,6 +2088,7 @@
             </div> -->
               
             
+            
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -2151,9 +2165,15 @@
         <span id="send-btn" class="material-symbols-rounded">send</span>
       </div>
     </div>
+   
+       
+
+
 
 
     <!-- Core JS -->
+
+    <script src="popsidebar.js"></script>
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
