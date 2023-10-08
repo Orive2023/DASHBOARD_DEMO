@@ -14,6 +14,15 @@
     />
 
     <title>Dashboard - Annam</title>
+
+    <!-- for table -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- For Font Awesome -->
     <script src="https://kit.fontawesome.com/db63c68c61.js" crossorigin="anonymous"></script>
 
@@ -988,183 +997,141 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Supplier-Vendor /Supplier-Information /</span> View Custom-Supplier</p>
-           
-              
-              <!-- <br>
-              <div style="margin: 10px; display: inline;">
-                <span style="border: 2px solid rgba(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"> 
-                  <img src="/visible.png" alt="" height="12px" style="margin: 10px;">
-                  <a href="" style="text-align: center;">Column</a> 
-                  <select for="dropdown" style="border: none; color: #696CFF;">
-                  </select>
-                </span>
-                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);">
-                  <img src="/PRINT.png" alt="" height="12px" style="margin: 10px;">
-                  <a href="" style="text-align: center;">Print</a>
-                </span>
-                <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);">
-                  <img src="/export.png" alt="" height="12px" style="margin: 10px; transform: rotate(-90deg);">
-                  <a href="" style="text-align: center;">Export</a>
-                  <select for="dropdown" style="border: none; color: #696CFF;">
-                  </select>
-                </span>
-              </div>
-              <div>
-                <span>
-                  <input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid; margin: 10px; padding: 3px;">
-                </span>
-              </div>
-              <br> -->
-              
-              <!-- Striped Rows -->
-        <div class="card">
-                <h5 class="card-header">Custom-Supplier List:</h5>
-                <div class="filter-container">
-                  <div class="dropdown">
-                    <button class="dt-button">
-                      <img src="/visible.png" alt="" height="20px">
-                      <span>Columns</span>
-                      <span>▼</span>
-                    </button>
-                    <button class="dt-button">
-                      <img src="/PRINT.png" alt="" height="20px">
-                      <span>Print</span>
-                      <span></span>
-                    </button>
-                    <button class="dt-button">
-                      <img src="/export.png" alt="" height="20px">
-                      <span>Export</span>
-                      <span>▼</span>
-                    </button>
-                  </div>
-                  <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-                  <div>
-                    <input type="text" placeholder="Show">
-                  </div>
-                </div>
-                <div class="table-responsive text-nowrap" style="padding: 10px; margin-top: 30px;">
-                  <table class="table table-striped" style="padding: 20px;">
-                    <thead style="background-color:red; color:white;">
-                      <tr>
-                        <th style="color:white;">SL.No</th>
-                        <th style="color:white;">Supplier ID</th>
-                        <th style="color:white;">Supplier Name</th>
-                        <th colspan="3" style="color:white;text-align: center;">Address</th>
-                        <th style="color:white;">Contact Information</th>
-                        <th style="color:white;">Email</th>
-                        <th style="color:white;">Status</th>
-                        <th style="color:white;">Action</th>
-                      </tr>
-                      <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th style="color:white;">City</th>
-                        <th style="color:white;">Dist</th>
-                        <th style="color:white;">State</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1.</strong></td>
-                        <td>00125648</td>
-                        <td>Albert Cook</td>
-                        <td>Berhampur</td>
-                        <td>Ganjam</td>
-                        <td>Odisha</td>
-                        <td>9337980017</td>
-                        <td>sourav@gmail.com</td>
-                        <td><span class="badge bg-label-primary me-1">InActive</span></td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="bx bx-trash me-1"></i> Delete</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class='bx bx-low-vision'></i>View</a
-                              >
+              <div class="container">
+                <div class="table-responsive">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-8"><h2>Individual-Supplier <b>Details</b></h2></div>
+                                <div class="col-sm-4">
+                                    <div class="search-box">
+                                        <i class="material-icons">&#xE8B6;</i>
+                                        <input type="text" class="form-control" placeholder="Search&hellip;">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>2.</strong></td>
-                        <td>00122563</td>
-                        <td>Albert Rethu</td>
-                        <td>Talcher</td>
-                        <td>Ganjam</td>
-                        <td>Odisha</td>
-                        <td>9337980017</td>
-                        <td>sourav@gmail.com</td>
-                        <td><span class="badge bg-label-success me-1">Active</span></td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="bx bx-trash me-1"></i> Delete</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class='bx bx-low-vision'></i>View</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              <br>
-                <div class="pagination_section" style="text-align: right; margin: 10px;">
-                  <a href="#">
-                      << Previous
-                  </a>
-                  <a href="#"
-                    title="Algorithm">
-                      1
-                  </a>
-                  <a href="#"
-                    title="DataStructure">
-                      2
-                  </a>
-                  <a href="#"
-                    title="Languages">
-                      3
-                  </a>
-                  <a href="#"
-                    title="Interview"
-                    class="active">
-                      4
-                  </a>
-                  <a href="#"
-                    title="practice">
-                      5
-                  </a>
-                  <a href="#">
-                  Next >>
-                  </a>
-                </div> 
-              <br>
-        </div>
-        </div>
-        </div>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead style="background-color: red; color: #fff;">
+                                <tr>
+                                    <th>Sl No.</th>
+                                    <th>Supplier Id</th>
+                                    <th>Supplier Name <i class="fa fa-sort"></i></th>
+                                    <th>Address</th>
+                                    <th>City <i class="fa fa-sort"></i></th>
+                                    <th>Pin Code</th>
+                                    <th>Country <i class="fa fa-sort"></i></th>
+                                    <th>Contact Information</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0090991</td>
+                                    <td>Thomas Hardy</td>
+                                    <td>89 Chiaroscuro Rd.</td>
+                                    <td>Portland</td>
+                                    <td>97219</td>
+                                    <td>USA</td>
+                                    <td>9337980017</td>
+                                    <td>thomas123@gmail.com</td>
+                                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>8909981</td>
+                                    <td>Maria Anders</td>
+                                    <td>Obere Str. 57</td>
+                                    <td>Berlin</td>
+                                    <td>12209</td>
+                                    <td>Germany</td>
+                                    <td>1234567891</td>
+                                    <td>maria23@gmail.com</td>
+                                    <td><span class="badge bg-label-primary me-1">InActive</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>0098911</td>
+                                    <td>Fran Wilson</td>
+                                    <td>C/ Araquil, 67</td>
+                                    <td>Madrid</td>
+                                    <td>28023</td>
+                                    <td>Spain</td>
+                                    <td>8905674358</td>
+                                    <td>fran44@gmail.com</td>
+                                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>8901191</td>
+                                    <td>Dominique Perrier</td>
+                                    <td>25, rue Lauriston</td>
+                                    <td>Paris</td>
+                                    <td>75016</td>
+                                    <td>France</td>
+                                    <td>7890765678</td>
+                                    <td>dominique21@gmail.com</td>
+                                    <td><span class="badge bg-label-primary me-1">InActive</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>8911019</td>
+                                    <td>Martin Blank</td>
+                                    <td>Via Monte Bianco 34</td>
+                                    <td>Turin</td>
+                                    <td>10100</td>
+                                    <td>Italy</td>
+                                    <td>7896574532</td>
+                                    <td>martin34@gmail.com</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>        
+                            </tbody>
+                        </table>
+                        <div class="clearfix">
+                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>        
+              </div>
+            </div>
+          </div>
               <!--/ Striped Rows -->
               <!-- <br>
             <div class="pagination_section" style="text-align: right;">
@@ -1207,6 +1174,13 @@
 
     <script src="../assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
+
+    <!-- script for table -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
 
     <!-- Vendors JS -->
     <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
