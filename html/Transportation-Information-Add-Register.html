@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../assets/css/Transportation-Information-Add-Register.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="../assets/js/Transportation-Information-Add-Register.js" defer></script>
+    <script src="https://kit.fontawesome.com/413a78bd3f.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
@@ -28,14 +29,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -1032,30 +1034,35 @@
                   <div class="row">
                     <div class="col w-20">
                         <div class="input-group">
+                          <img src="/assets/img/favicon/company.png" alt="" height="20px" style="margin-left:5px;" >
                             <label for="nameOfTransporterOffice">Name Of Transporter Office<span> * </span></label>
                              <input type="text" name="nameOfTransporterOffice" id="nameOfTransporterOffice" placeholder="Enter Name Of Transporter Office" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <img src="/assets/img/icons/tax.png" alt="" height="20px" style="margin-left:5px;" >
                             <label for="gstNo">GSTIN <span> * </span></label>
                             <input type="text" name="gstNo" id="gstNo" placeholder="Enter GSTIN No" required />
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
+                    <i class="fa-solid fa-user-tie"></i>
                     <label for="ownerName">Owner Name<span> * </span></label>
                     <input type="text" name="ownerName" id="ownerName" placeholder="Enter Owner Name" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
+                          <i class="fa-solid fa-address-card"></i>
                             <label for="panNo">PAN No<span> * </span></label>
                              <input type="text" name="panNo" id="panNo" placeholder="Enter PAN No" required />
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-address-card"></i>
                             <label for="adharNumber">Aadhaar No<span>(optional)</span></label>
                             <input type="text" name="adharNumber" id="adharNumber" placeholder="Enter Aadhaar No" />
                         </div>
@@ -1064,59 +1071,66 @@
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
+                          <i class="fa-solid fa-phone"></i>
                             <label for="phone">Phone No<span>(optional)</span></label>
                              <input type="text" name="phone" id="phone" placeholder="Enter Phone No"/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-mobile"></i>
                             <label for="mobileNumber">Mobile No<span>*</span></label>
                             <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile No" required/>
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" placeholder="Enter Email Address" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                       <div class="input-box">
-                        <label for="selectcountry" class="selectcountry">Select Country<span> * </span></label>
-                        <select class="select_Country" id="select_Country" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                          <option value="1">India</option>
-                          <option value="2">America</option>
-                          <option value="3">canada</option>
-                        </select>
+                        <label for="exampleFormControlSelect1" class="form-label">Select Country <span> * </span></label>
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <select class="form-select1" id="exampleFormControlSelect1" aria-label="Default select example">
+                      <option selected>Select option menu</option>
+                      <option value="0">India</option>
+                      <option value="1">United State of America</option>
+                      <option value="2">Afghanistan</option>
+                      <option value="3">Bangladesh</option>
+                      <option value="4">Bhutan</option>
+                      <option value="5">Canada</option>
+                    </select>
                       </div>
                     </div>
                     <div class="col">
                       <div class="input-box">
-                        <label for="selectstate" class="selectstate">Select Statae<span> * </span></label>
-                        <select class="select_State" id="select_State" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                            <option value="0">Odisha</option>
-                            <option value="1">Tamil Nadu</option>
-                            <option value="2">Uttar Pradesh</option>
-                            <option value="3">Gujarat</option>
-                            <option value="4">Punjab</option>
-                            <option value="5">Andhra Pradesh</option>
-                            <!-- <option value="3">Three</option> -->
-                          </select>
+                        <label for="exampleFormControlSelect1" class="form-label">Select State <span>*</span></label>
+                        <img src="/assets/img/favicon/map-location.png" alt="" height="20px" >
+                        <select class="form-select1" id="exampleFormControlSelect1" aria-label="Default select example">
+                          <option selected>Select option menu</option>
+                          <option value="0">Odisha</option>
+                          <option value="1">Tamil Nadu</option>
+                          <option value="2">Uttar Pradesh</option>
+                          <option value="3">Gujarat</option>
+                          <option value="4">Punjab</option>
+                          <option value="5">Andhra Pradesh</option>
+                        </select>
                         </div>
                     </div>
                     <div class="col">
                       <div class="input-box">
-                        <label for="selectCity" class="selectCity">Select City<span> * </span></label>
-                        <select class="select_City" id="select_City" aria-label="Default select example">
-                          <option selected>Open this select menu</option>
-                            <option value="0">Bhubaneswar</option>
-                            <option value="1">Cuttack</option>
-                            <option value="2">Berhampur</option>
-                            <option value="3">Keonjhar</option>
-                            <!-- <option value="3">Three</option> -->
-                          </select>
+                        <label for="exampleFormControlSelect1" class="form-label" style="font-family: 'Poppins', sans-serif;">Select City <span>*</span></label>
+                        <img src="/assets/img/favicon/location.png" alt="" height="25px" >
+                        <select class="form-select1" id="exampleFormControlSelect1" aria-label="Default select example">
+                          <option selected>Select option menu</option>
+                          <option value="0">Bhubaneswar</option>
+                          <option value="1">Cuttack</option>
+                          <option value="2">Berhampur</option>
+                          <option value="3">Keonjhar</option>
+                        </select>
                         </div>
                     </div>
                   </div>
@@ -1124,11 +1138,13 @@
                     <div class="col w-50">
                         <div class="input-group">
                           <label for="zipCode">Postal/Zip Code<span> * </span></label>
+                          <img src="/assets/img/favicon/mailbox.png" alt="" height="21px" style="margin-left: 5px;">
                           <input type="text" name="zipCode" id="zipCode" placeholder="Enter Postal Code" required />
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-building-circle-check"></i>
                           <label for="officeAddress">Office Address<span> * </span></label>
                           <textarea rows="5" cols="60"></textarea>
                         </div>
@@ -1142,18 +1158,21 @@
 <!-- ----------Driver & vehivle Details---------------- -->
                 <div class="form-step">
                   <div class="input-group">
+                    <img src="/assets/img/favicon/driver.png" alt="" height="21px" style="margin-left: 5px;">
                     <label for="driverName">Driver Name<span> * </span></label>
                     <input type="text" name="driverName" id="driverName" placeholder="Enter Driver Name" required/>
                   </div>
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
+                          <i class="fa-solid fa-address-card"></i>
                             <label for="panNo">PAN No<span> * </span></label>
                              <input type="text" name="panNo" id="panNo" placeholder="Enter PAN No" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-mobile"></i> 
                             <label for="mobileNumber">Mobile No<span> * </span></label>
                             <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile No" required/>
                         </div>
@@ -1162,12 +1181,14 @@
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
+                          <i class="fa-solid fa-id-card"></i>
                             <label for="licenceNo">Licence No<span> * </span></label>
                              <input type="text" name="licenceNo" id="licenceNo" placeholder="Enter Licence No" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-id-card"></i>
                             <label for="rcNo">RC No<span> * </span></label>
                             <input type="text" name="rcNo" id="rcNo" placeholder="Enter RC No" required />
                         </div>
@@ -1176,18 +1197,21 @@
                   <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
+                          <i class="fa-solid fa-truck"></i>
                             <label for="vehicleType">Vehicle Type<span> * </span></label>
                              <input type="text" name="vehicleType" id="vehicleType" placeholder="Enter Vehicle Type" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
+                          <i class="fa-solid fa-weight-scale"></i>
                             <label for="weightmentDetails">Weightment Details<span> * </span></label>
                             <input type="text" name="weightmentDetails" id="weightmentDetails" placeholder="Enter Weightment Details" required />
                         </div>
                     </div>
                   </div>
                   <div class="input-group">
+                    <i class="fa-solid fa-building-circle-check" style="margin-left: 80px; margin-top: 10px;"></i>
                     <label for="address">Address<span> * </span></label>
                     <textarea rows="5" cols="50"></textarea>
                 </div>
@@ -1201,10 +1225,12 @@
 
                 <div class="form-step">
                   <div class="input-group">
+                    <img src="/assets/img/favicon/approved.png" alt="" height="21px" >
                     <label for="approvedBy">Approved By <span> * </span></label>
                     <input type="text" name="approvedBy" id="approvedBy" placeholder="Enter Approved By" required />
                   </div>
                   <div class="input-group">
+                    <img src="/assets/img/favicon/file check.png" alt="" height="21px" >
                     <label for="clearedBy">Cleared By<span> * </span></label>
                     <input type="text" name="clearedBy" id="clearedBy" placeholder="Enter Cleared By" required />
                   </div>
