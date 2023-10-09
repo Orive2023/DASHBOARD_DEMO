@@ -231,7 +231,7 @@ header h2 {
   }
 }
 
-<<<<<<< HEAD
+
 .banner{
   position: absolute;
   bottom: 0;
@@ -242,8 +242,8 @@ header h2 {
   background-color: transparent;
   transition: all 0.6s;
 }
-=======
+
 /* footer{
   position: fixed;
 } */
->>>>>>> 7dc3b5f318b945e09eda4897da16363a2d523ecd
+
