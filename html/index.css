@@ -231,6 +231,7 @@ header h2 {
   }
 }
 
+
 .banner{
   position: absolute;
   bottom: 0;
@@ -243,9 +244,9 @@ header h2 {
 }
 
 .menu-sub{
-  background-color: #696cff;
+  background-color: #ff0000;
 }
 
 .menu-sub a:hover{
-  color: rgb(0, 0, 0);
+  color: white;
 }
