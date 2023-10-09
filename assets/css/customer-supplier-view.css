@@ -113,7 +113,7 @@
 .table-title {
     padding-bottom: 10px;
     margin: 0 0 10px;
-    background-color: #0397d6;
+    /* background-color: #0397d6; */
 }
 .table-title h2 {
     margin: 8px 0 0;
@@ -126,7 +126,7 @@
     width: 40%;
     margin-left: 920px;
     /* margin-bottom: 80px; */
-    background-color: #E34724;
+    /* background-color: #E34724; */
 }
 .search-box input {
     height: 34px;
