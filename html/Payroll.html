@@ -991,10 +991,10 @@
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 mb-3">
                   <div class="card h-100">
-                    <img class="card-img-top" src="../assets/img/elements/sal.jpg" alt="Card image cap" />
+                    <img class="card-img-top skeleton" src="../assets/img/elements/sal.jpg" alt="Card image cap" />
                     <div class="card-body">
-                      <h5 class="card-title">Add Salary Advance</h5>
-                      <p class="card-text">
+                      <h5 class="card-title skeleton">Add Salary Advance</h5>
+                      <p class="card-text skeleton">
                         Adding a salary to an employee's record involves several steps to ensure accuracy and compliance with company policies and legal regulations.                      </p>
                       <a href="Add-Salery-Advance.html" class="btn btn-outline-primary">Add</a>
                     </div>
@@ -1002,10 +1002,10 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-3">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../assets/img/elements/add.jpg" alt="Card image cap" />
+                        <img class="card-img-top skeleton" src="../assets/img/elements/add.jpg" alt="Card image cap" />
                         <div class="card-body">
-                          <h5 class="card-title">Manage Salary Advance</h5>
-                          <p class="card-text">
+                          <h5 class="card-title skeleton">Manage Salary Advance</h5>
+                          <p class="card-text skeleton">
                             Managing salary advances for employees involves a structured process to ensure fairness, transparency, and compliance with company policies.                          </p>
                           <a href="Manage-Salery-Advance.html" class="btn btn-outline-primary">Manage Salary Advance</a>
                         </div>
@@ -1013,10 +1013,10 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-3">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../assets/img/elements/gen.jpg" alt="Card image cap" />
+                        <img class="card-img-top skeleton" src="../assets/img/elements/gen.jpg" alt="Card image cap" />
                         <div class="card-body">
-                          <h5 class="card-title">Salary Generate</h5>
-                          <p class="card-text">
+                          <h5 class="card-title skeleton">Salary Generate</h5>
+                          <p class="card-text skeleton">
                             Generating employee salaries involves a systematic process to ensure accuracy and compliance with company policies and legal regulations.                           </p>
                           <a href="Salery-Generate.html" class="btn btn-outline-primary">Salary Generate</a>
                         </div>
@@ -1026,10 +1026,10 @@
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 mb-3">
                   <div class="card h-100">
-                    <img class="card-img-top" src="../assets/img/elements/ms.jpg" alt="Card image cap" />
+                    <img class="card-img-top skeleton" src="../assets/img/elements/ms.jpg" alt="Card image cap" />
                     <div class="card-body">
-                      <h5 class="card-title">Manage Employee Salary</h5>
-                      <p class="card-text">
+                      <h5 class="card-title skeleton">Manage Employee Salary</h5>
+                      <p class="card-text skeleton">
                         Managing employee salaries involves a series of tasks to ensure accurate and timely payments while complying with legal and company policies.                      </p>
                       <a href="Manage-Employee-Salery.html" class="btn btn-outline-primary">Manage</a>
                     </div>
@@ -1069,6 +1069,15 @@
             </footer>
             <!-- / Footer -->
               <!-- Core JS -->
+               <!-- script for skeleton -->
+    <script>
+      const allskeleton = document.querySelectorAll('.skeleton')
+      window.addEventListener('load',function() {
+        allskeleton.forEach(item =>{
+          item.classList.remove('skeleton')
+        })
+      }) 
+    </script>
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
