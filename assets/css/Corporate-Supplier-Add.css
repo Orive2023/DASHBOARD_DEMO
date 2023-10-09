@@ -119,7 +119,9 @@
   .input-group {
     margin: 2rem 0;
   }
-
+  .input-group input::placeholder{
+    padding: 20px;
+} 
 
     /* --------------css for icons------------- */
 
