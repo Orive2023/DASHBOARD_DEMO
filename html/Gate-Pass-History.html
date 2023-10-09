@@ -995,11 +995,11 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Vechicle Entry pass</h5>
-                      <p class="card-text">
+                      <h5 class="card-title skeleton">Vechicle Entry pass</h5>
+                      <p class="card-text skeleton">
                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.
                       </p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <p class="card-text skeleton"><small class="text-muted">Last updated 3 mins ago</small></p>
                       <a href="Vechicle-Entry-pass-View.html">
                       <button type="button" class="btn btn-danger">View</button>
                     </a>
@@ -1019,11 +1019,11 @@
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-title">Material Entry Pass</h5>
-                        <p class="card-text">
+                        <h5 class="card-title skeleton">Material Entry Pass</h5>
+                        <p class="card-text skeleton">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.
                         </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text skeleton"><small class="text-muted">Last updated 3 mins ago</small></p>
                         <a href="Material-Entry-Pass-View.html">
                         <button type="button" class="btn btn-danger">View</button>
                       </a>
@@ -1043,11 +1043,11 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Material Out Pass</h5>
-                          <p class="card-text">
+                          <h5 class="card-title skeleton">Material Out Pass</h5>
+                          <p class="card-text skeleton">
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.
                           </p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <p class="card-text skeleton"><small class="text-muted">Last updated 3 mins ago</small></p>
                           <a href="Material-Out-Pass-View.html">
                           <button type="button" class="btn btn-danger">View</button>
                         </a>
@@ -1065,11 +1065,11 @@
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Visitor Entry Pass </h5>
-                            <p class="card-text">
+                            <h5 class="card-title skeleton">Visitor Entry Pass </h5>
+                            <p class="card-text skeleton">
                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.
                             </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text skeleton"><small class="text-muted">Last updated 3 mins ago</small></p>
                             <a href="Visitor-Entry-Pass-View.html">
                             <button type="button" class="btn btn-danger">View</button>
                           </a>
@@ -1079,6 +1079,16 @@
                     </div>
                   </div>
            <!-- Core JS -->
+
+            <!-- script for skeleton -->
+    <script>
+      const allskeleton = document.querySelectorAll('.skeleton')
+      window.addEventListener('load',function() {
+        allskeleton.forEach(item =>{
+          item.classList.remove('skeleton')
+        })
+      }) 
+    </script>
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
