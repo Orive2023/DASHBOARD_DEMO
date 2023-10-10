@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -16,6 +17,14 @@
     <title>Dashboard - Annam</title>
 
     <meta name="description" content="" />
+
+    <!-- for table -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
@@ -42,6 +51,7 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="View-MSP.css">
     
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -49,11 +59,12 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+   
   </head>
 
   <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
+     <!-- Layout wrapper -->
+     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
 
@@ -209,6 +220,16 @@
                 <div data-i18n="Layouts">Purchase Management</div>
               </a>
               <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="Add-MSP.html" class="menu-link">
+                      <div data-i18n="Without menu">Add MSP</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="View-MSP.html" class="menu-link">
+                      <div data-i18n="Without menu">View MSP</div>
+                    </a>
+                  </li>
                 <li class="menu-item">
                   <a href="Add-Purchase.html" class="menu-link">
                     <div data-i18n="Without menu">Add Purchase</div>
@@ -979,618 +1000,171 @@
           </nav>
 
           <!-- / Navbar -->
-
            <!-- Content wrapper -->
            <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Gate Pass-Security Pass /</span>Material-Out-Pass</p>
-          <!--Lay out of Form-->
-          <!--Lay out of forms-->
-          <div class="col-xxl">
-            <div class="card mb-4">
-              <div class="card-header d-flex align-items-center justify-content-between">
-                <h5 class="mb-0" style="color: red;">Material Out Pass:</h5>
-                <small class="text-muted float-end">Basic Details:</small>
-              </div>
-              <div class="card-body">
-                <form>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Gate Pass No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="001"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Gate Entry No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder=""
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Gate Entry Date</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="date"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="2022-05-12"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Supplier/Customer Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Address</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div><div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Challan No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="02563"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Challan Date</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="date"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Transporter</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Driver Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Vechicle No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="og-02-45"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Division Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="plant"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Dept Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="Warehouse"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Arrival Time</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="time"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="Warehouse"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Departure Time</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="time"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="Warehouse"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Weigh Bridge name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div><div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Weigh Bridge Slip No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Supplier Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Authorised By</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Name</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-fullname2" class="input-group-text"
-                          ><i class="bx bx-user"></i
-                        ></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-icon-default-fullname"
-                          placeholder="John Doe"
-                          aria-label="John Doe"
-                          aria-describedby="basic-icon-default-fullname2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Company</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-company2" class="input-group-text"
-                          ><i class="bx bx-buildings"></i
-                        ></span>
-                        <input
-                          type="text"
-                          id="basic-icon-default-company"
-                          class="form-control"
-                          placeholder="ACME Inc."
-                          aria-label="ACME Inc."
-                          aria-describedby="basic-icon-default-company2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Email</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-                        <input
-                          type="text"
-                          id="basic-icon-default-email"
-                          class="form-control"
-                          placeholder="john.doe"
-                          aria-label="john.doe"
-                          aria-describedby="basic-icon-default-email2"
-                        />
-                        <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
-                      </div>
-                      <div class="form-text">You can use letters, numbers & periods</div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 form-label" for="basic-icon-default-phone">Phone No</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-phone2" class="input-group-text"
-                          ><i class="bx bx-phone"></i
-                        ></span>
-                        <input
-                          type="text"
-                          id="basic-icon-default-phone"
-                          class="form-control phone-mask"
-                          placeholder="658 799 8941"
-                          aria-label="658 799 8941"
-                          aria-describedby="basic-icon-default-phone2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 form-label" for="basic-icon-default-message">Message</label>
-                    <div class="col-sm-10">
-                      <div class="input-group input-group-merge">
-                        <span id="basic-icon-default-message2" class="input-group-text"
-                          ><i class="bx bx-comment"></i
-                        ></span>
-                        <textarea
-                          id="basic-icon-default-message"
-                          class="form-control"
-                          placeholder="Hi, Do you have a moment to talk Joe?"
-                          aria-label="Hi, Do you have a moment to talk Joe?"
-                          aria-describedby="basic-icon-default-message2"
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div> -->
+              <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Purchase Management /</span> View MSP</p>
 
 
+              <!--Layout Of Table-->
+              <div class="container">
+                <div class="table-responsive">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-8"><h2>View MSP History</h2></div>
+                                <div class="col-sm-6">
+                                    <div class="dropdown">
+                                      <button class="dt-button">
+                                        <img src="/visible.png" alt="" height="20px">
+                                        <span>Columns</span>
+                                        <span>▼</span>
+                                      </button>
+                                      <button class="dt-button">
+                                        <img src="/PRINT.png" alt="" height="20px">
+                                        <span>Print</span>
+                                        <span></span>
+                                      </button>
+                                      <button class="dt-button">
+                                        <img src="/export.png" alt="" height="20px">
+                                        <span>Export</span>
+                                        <span>▼</span>
+                                      </button>
 
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-hover" id="purchaseTable">
-                    <thead class="table-header">
-                    <tr>
-                      <th class="text-center">SL.</th>
-                    <th class="text-center" width="20%">Item Description<i class="text-danger">*</i></th>
-                    <th class="text-center">UON</th>
-                    <th class="text-center">Quantity</th>
-                    <th class="text-center">Rate</th>
-                    <th class="text-center">Amount<i class="text-danger">*</i></th>
-                    <th class="text-center">Ref.Doc.No<i class="text-danger">*</i>
-                    </th>
-                    <th class="text-center">Ref.Doc.Date<i class="text-danger">*</i></th>
-                    <th class="text-center">Action</th>
-                    <!-- <th class="text-center invoice_fields">Discount %
-                    </th>
-                    <th class="text-center invoice_fields">Dis. Value </th>
-                    <th class="text-center invoice_fields">Vat % </th>
-                    <th class="text-center invoice_fields">VAT Value </th>
-                    <th class="text-center">Total</th>
-                    <th class="text-center">Action</th> -->
-                    </tr>
-                    </thead>
-                    <tbody id="addPurchaseItem">
-                    <tr>
-                      <td class="span3 supplier">
-                        <input type="text" name="product_name" required="" class="form-control product_name productSelection" onkeypress="product_pur_or_list(1);" placeholder="" id="product_name_1" tabindex="5" aria-required="true">
-                        <!-- <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId">
-                        <input type="hidden" class="sl" value="1"> -->
-                        </td>
-                    <td class="span3 supplier">
-                      <input type="text" name="product_name" required="" class="form-control product_name productSelection" onkeypress="product_pur_or_list(1);" placeholder="Product Name" id="product_name_1" tabindex="5" aria-required="true">
-                      <!-- <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId">
-                       <input type="hidden" class="sl" value="1"> -->
-                    </td>
-                    <td class="span3 supplier">
-                      <input type="text" name="product_name" required="" class="form-control product_name productSelection" onkeypress="product_pur_or_list(1);" placeholder="" id="product_name_1" tabindex="5" aria-required="true">
-                      <!-- <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId">
-                      <input type="hidden" class="sl" value="1"> -->
-                      </td>
-                    <td class="wt">
-                      <input type="text" id="available_quantity_1" class="form-control text-right stock_ctn_1" placeholder="0.00" >
-                    </td>
-                    <td class="wt">
-                      <input type="text" id="available_quantity_1" class="form-control text-right stock_ctn_1" placeholder="0.00" >
-                      </td>
-                      <td class="wt">
-                        <input type="text" id="available_quantity_1" class="form-control text-right stock_ctn_1" placeholder="0.00" >
-                        </td>
-                        <td class="span3 supplier">
-                          <input type="text" name="product_name" required="" class="form-control product_name productSelection" onkeypress="product_pur_or_list(1);" placeholder="" id="product_name_1" tabindex="5" aria-required="true">
-                          <!-- <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId">
-                          <input type="hidden" class="sl" value="1"> -->
-                          </td>
-                          <td class="span3 supplier">
-                            <input type="date" name="product_name" required="" class="form-control product_name productSelection" onkeypress="product_pur_or_list(1);" placeholder="" id="product_name_1" tabindex="5" aria-required="true">
-                            <!-- <input type="hidden" class="autocomplete_hidden_value product_id_1" name="product_id[]" id="SchoolHiddenId">
-                            <input type="hidden" class="sl" value="1"> -->
-                            </td>
+                                      <div class="search-box">
+                                        <i class="material-icons">&#xE8B6;</i>
+                                        <input type="text" class="form-control"  placeholder="Search&hellip;">
+                                      </div>
 
-
-
-
-
-
-                    
-                    
-                    <!-- <td>
-                    <input type="text" name="vatpercent[]" onkeyup="calculate_store(1);" onchange="calculate_store(1);" id="vat_percent_1" class="form-control text-right" min="0" tabindex="13" placeholder="0.00">
-                    </td>
-                    <td>
-                    <input type="text" name="vatvalue[]" id="vat_value_1" class="form-control text-right total_vatamnt" min="0" tabindex="14" placeholder="0.00" readonly="">
-                    </td>
-                    
-                    <td class="text-right">
-                    <input class="form-control total_price text-right" type="text" name="total_price[]" id="total_price_1" value="0.00" readonly="readonly">
-                    <input type="hidden" id="all_discount_1" class="total_discount dppr" name="discount_amount[]">
-                    <input type="hidden" id="total_discount_1" class="">
-                    </td> -->
-                    <td>
-                    <button class="btn btn-danger text-right red" type="button" value="Delete" onclick="deleteRow(this)" tabindex="8"><i class="fa fa-close"></i>Add</button>
-                    </td>
-                    </tr>
-                    <!-- <tfoot>
-                      <tr>
-                      <td class="text-right" colspan="10"><b>Total:</b></td>
-                       <td class="text-right">
-                      <input type="text" id="Total" class="text-right form-control" name="total" value="0.00" readonly="readonly">
-                      </td> -->
-                      <!-- <td> <button type="button" id="add_invoice_item" class="btn btn-info" name="add-invoice-item" onclick="addPurchaseOrderField1('addPurchaseItem')" tabindex="9"><i class="fa fa-plus"></i></button>
-                      <input type="hidden" name="baseUrl" class="baseUrl" >
-                      </td>
-                      </tr> 
-                      </tfoot> -->
-                    </tbody>
-                    </table>
-                    </div>
-                    <div class="row mb-3">
-                      <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Remark</label>
-                      <div class="col-sm-10">
-                        <div class="input-group input-group-merge">
-                          <span id="basic-icon-default-fullname2" class="input-group-text"
-                            ><i class="bx bx-user"></i
-                          ></span>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="basic-icon-default-fullname"
-                            placeholder="John Doe"
-                            aria-label="John Doe"
-                            aria-describedby="basic-icon-default-fullname2"
-                          />
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                      <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Received By</label>
-                      <div class="col-sm-10">
-                        <div class="input-group input-group-merge">
-                          <span id="basic-icon-default-fullname2" class="input-group-text"
-                            ><i class="bx bx-user"></i
-                          ></span>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="basic-icon-default-fullname"
-                            placeholder="John Doe"
-                            aria-label="John Doe"
-                            aria-describedby="basic-icon-default-fullname2"
-                          />
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead style="background-color: red; color: #fff;">
+                                <tr>
+                                    <th>Sl.</th>
+                                    <th>MSP Year</th>
+                                    <th>Crops<i class="fa fa-sort"></i></th>
+                                    <th>Season<i class="fa fa-sort"></i></th>
+                                    <th>Crops Unit <i class="fa fa-sort"></i></th>
+                                    <th>MSP Price(Rs/Unit)</th>
+                                    <th>Dist<i class="fa fa-sort"></i></th>
+                                    <th>State<i class="fa fa-sort"></i></th>
+                                    <th>Country<i class="fa fa-sort"></i></th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2022-23</td>
+                                    <td>Paddy</td>
+                                    <td>Ravi</td>
+                                    <td>Quintal</td>
+                                    <td>2150.00</td>
+                                    <td>Ganjam</td>
+                                    <td>Odisha</td>
+                                    <td>India</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2022-23</td>
+                                    <td>Paddy</td>
+                                    <td>Ravi</td>
+                                    <td>Quintal</td>
+                                    <td>2150.00</td>
+                                    <td>Ganjam</td>
+                                    <td>Odisha</td>
+                                    <td>India</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2022-23</td>
+                                    <td>Paddy</td>
+                                    <td>Ravi</td>
+                                    <td>Quintal</td>
+                                    <td>2150.00</td>
+                                    <td>Ganjam</td>
+                                    <td>Odisha</td>
+                                    <td>India</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2022-23</td>
+                                    <td>Paddy</td>
+                                    <td>Ravi</td>
+                                    <td>Quintal</td>
+                                    <td>2150.00</td>
+                                    <td>Ganjam</td>
+                                    <td>Odisha</td>
+                                    <td>India</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2022-23</td>
+                                    <td>Paddy</td>
+                                    <td>Ravi</td>
+                                    <td>Quintal</td>
+                                    <td>2150.00</td>
+                                    <td>Ganjam</td>
+                                    <td>Odisha</td>
+                                    <td>India</td>
+                                    <td><span class="badge bg-label-success me-1">Active</span></td>
+                                    <td>
+                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                        <div class="clearfix">
+                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
                         </div>
-                      </div>
                     </div>
-                    <div class="row mb-3">
-                      <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Purchase Dept</label>
-                      <div class="col-sm-10">
-                        <div class="input-group input-group-merge">
-                          <span id="basic-icon-default-fullname2" class="input-group-text"
-                            ><i class="bx bx-user"></i
-                          ></span>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="basic-icon-default-fullname"
-                            placeholder="John Doe"
-                            aria-label="John Doe"
-                            aria-describedby="basic-icon-default-fullname2"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                      <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Manager Store</label>
-                      <div class="col-sm-10">
-                        <div class="input-group input-group-merge">
-                          <span id="basic-icon-default-fullname2" class="input-group-text"
-                            ><i class="bx bx-user"></i
-                          ></span>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="basic-icon-default-fullname"
-                            placeholder="John Doe"
-                            aria-label="John Doe"
-                            aria-describedby="basic-icon-default-fullname2"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  <div class="row justify-content-end">
-                    <div class="col-sm-10">
-                      <button type="submit" class="btn btn-danger">Save</button>
-                    </div>
-                  </div>
-                 
-                </form>
+                </div>        
               </div>
             </div>
           </div>
-        </div>
-      </div> 
+          
            <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
