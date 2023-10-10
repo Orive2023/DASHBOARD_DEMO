@@ -119,9 +119,14 @@
   .input-group {
     margin: 2rem 0;
   }
-  .input-group input::placeholder{
+
+  /* .input-group input::placeholder{
     padding: 20px;
-} 
+}  */
+
+.input-group input{
+  padding-left: 40px;
+}
 
     /* --------------css for icons------------- */
 
@@ -151,6 +156,7 @@
     color:#212529;
     background-color:#fff; 
     margin-top: 5px;
+    padding-left: 40px;
   }
   .mb-3 img{
     position: absolute;

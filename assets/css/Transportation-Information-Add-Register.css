@@ -120,9 +120,14 @@
     margin: 2rem 0;
   }
 
-  .input-group input::placeholder{
+  /* .input-group input::placeholder{
     padding: 20px;
-  } 
+}  */
+
+.input-group input{
+  padding-left: 40px;
+}
+
   
    /* --------------css for icons------------- */
   
