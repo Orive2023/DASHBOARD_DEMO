@@ -991,14 +991,14 @@
            <div class="col-md-6 col-lg-4 mb-3">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">Transportation</h5>
-                <h6 class="card-subtitle text-muted">Vechicle Details:</h6>
+                <h5 class="card-title skeleton">Transportation</h5>
+                <h6 class="card-subtitle text-muted skeleton">Vechicle Details:</h6>
                 <img
-                  class="img-fluid d-flex mx-auto my-4"
+                  class="img-fluid d-flex mx-auto my-4 skeleton"
                   src="/transportation.jpg"
                   alt="Card image cap"
                 />
-                <p class="card-text">Transportation is the centre of the world. It is the glue of our daily lives. When it goes well, we don’t see it.</p>
+                <p class="card-text">Some beautiful paths can't be discovered without getting lost.</p>
                 <a href="Transportation-Information-Add-Register.html">
                   <button type="button" class="btn btn-danger" >Add</button>
                 </a>
@@ -1042,6 +1042,15 @@
             <!-- / Footer -->
 
               <!-- Core JS -->
+               <!-- script for skeleton -->
+    <script>
+      const allskeleton = document.querySelectorAll('.skeleton')
+      window.addEventListener('load',function() {
+        allskeleton.forEach(item =>{
+          item.classList.remove('skeleton')
+        })
+      }) 
+    </script>
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>

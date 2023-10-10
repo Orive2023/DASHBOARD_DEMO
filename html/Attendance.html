@@ -991,10 +991,10 @@
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 mb-3">
                   <div class="card h-100">
-                    <img class="card-img-top" src="../assets/img/elements/mna.jpg" alt="Card image cap" />
+                    <img class="card-img-top skeleton" src="../assets/img/elements/mna.jpg" alt="Card image cap" />
                     <div class="card-body">
-                      <h5 class="card-title">Attendance</h5>
-                      <p class="card-text">
+                      <h5 class="card-title skeleton">Attendance</h5>
+                      <p class="card-text skeleton">
                         Attendance is the concept of people, individually or as a group, appearing at a location for a previously scheduled event. 
                       </p>
                       <a href="Add-Attendance.html" class="btn btn-outline-primary">Attendance</a>
@@ -1003,10 +1003,10 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-3">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../assets/img/elements/am.jpg" alt="Card image cap" />
+                        <img class="card-img-top skeleton" src="../assets/img/elements/am.jpg" alt="Card image cap" />
                         <div class="card-body">
-                          <h5 class="card-title">Manage Attendance</h5>
-                          <p class="card-text">
+                          <h5 class="card-title skeleton">Manage Attendance</h5>
+                          <p class="card-text skeleton">
                             Attendance Management keeps track of your employee hours. It is the system you use to document the time your employees work and the time they take off.
                           </p>
                           <a href="Manage-Attendance.html" class="btn btn-outline-primary">Manage </a>
@@ -1015,10 +1015,10 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-3">
                     <div class="card h-100">
-                        <img class="card-img-top" src="../assets/img/elements/report.jpg" alt="Card image cap" />
+                        <img class="card-img-top skeleton" src="../assets/img/elements/report.jpg" alt="Card image cap" />
                         <div class="card-body">
-                          <h5 class="card-title">Attendance Report</h5>
-                          <p class="card-text">
+                          <h5 class="card-title skeleton">Attendance Report</h5>
+                          <p class="card-text skeleton">
                             It will include details such as the name of the employee, the days they have attended, the timeslots in which they were absent, and the current attendance status of the employee.
                           </p>
                           <a href="Attendance-Report.html" class="btn btn-outline-primary">Report</a>
@@ -1059,6 +1059,16 @@
             </footer>
             <!-- / Footer -->
               <!-- Core JS -->
+
+               <!-- script for skeleton -->
+    <script>
+      const allskeleton = document.querySelectorAll('.skeleton')
+      window.addEventListener('load',function() {
+        allskeleton.forEach(item =>{
+          item.classList.remove('skeleton')
+        })
+      }) 
+    </script>
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
