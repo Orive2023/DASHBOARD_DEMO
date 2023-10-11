@@ -1,165 +1,286 @@
 :root {
-    --primary-color: rgb(255, 0, 0);
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+  --primary-color: rgb(255, 0, 0);
+}
 
-  .menu-link{
-    text-decoration: none;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-  }
-  /* Global Stylings */
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  input {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-  }
-  
-  .width-50 {
-    width: 50%;
-  }
-  
-  .ml-auto {
-    margin-left: auto;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  /* Progressbar */
-  .progressbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    counter-reset: step;
-    margin: 2rem 0 4rem 2rem;
-  }
-  
-  .progressbar::before,
-  .progress {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 100%;
-    background-color: #dcdcdc;
-    z-index: -1;
-  }
-  
-  .progress {
-    background-color: var(--primary-color);
-    width: 0%;
-    transition: 0.3s;
-  }
-  
-  .progress-step {
-    width: 2.1875rem;
-    height: 2.1875rem;
-    background-color: #dcdcdc;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .progress-step::before {
-    counter-increment: step;
-    content: counter(step);
-  }
-  
-  .progress-step::after {
-    content: attr(data-title);
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    font-size: 0.85rem;
-    color: #666;
-  }
-  
-  .progress-step-active {
-    background-color: var(--primary-color);
-    color: #f3f3f3;
-  }
-  
-  /* Form */
-  .form {
-    /* width: clamp(320px, 30%, 430px); */
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 0.35rem;
-    padding: 1.5rem;
-  }
-  
-  .form-step {
-    display: none;
-    transform-origin: top;
-    animation: animate 0.5s;
-  }
-  
-  .form-step-active {
-    display: block;
-  }
-  
-  .input-group {
-    margin: 2rem 0;
-  }
-  
-  @keyframes animate {
-    from {
-      transform: scale(1, 0);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1, 1);
-      opacity: 1;
-    }
-  }
-  
-  /* Button */
-  .btns-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .btn {
-    padding: 0.75rem;
-    display: block;
-    text-decoration: none;
-    background-color: var(--primary-color);
-    /* background-color: blue; */
-    color: #f3f3f3;
-    text-align: center;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .btn:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
-    /* background-color: blue;
-    color: white; */
-  }
+.menu-link{
+  text-decoration: none;
+}
 
-  #payment{
-    margin-left: 10px;
+body {
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+/* Global Stylings */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem 2rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  /* width: clamp(320px, 30%, 430px); */
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+/* .input-group input::placeholder{
+  padding: 20px;
+}  */
+
+.input-group input{
+padding-left: 40px;
+}
+
+/* --------------css for icons------------- */
+
+.input-group i {
+  position: absolute;
+  margin-left:5px;
+  margin-top: 50px;
+}
+.input-group img{
+  position: absolute;
+  margin-left:5px;
+  margin-top: 45px;
+}
+/* .mb-3 i{
+  position: absolute;
+  margin: -110px;
+  margin-top: 38px;
+}
+.form-select1 {
+display:block;
+width:100%;
+padding:.375rem 2.25rem .375rem 1.75rem;
+-moz-padding-start:calc(0.75rem - 3px);
+font-size:1rem;
+font-weight:400;
+line-height:1.5;
+color:#212529;
+background-color:#fff; 
+margin-top: 5px;
+padding-left: 40px;
+}
+.mb-3 img{
+position: absolute;
+margin: -87px;
+margin-top: 38px;
+} */
+
+
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
   }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/*------------------ Button---------------------- */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+
+/* --------css for popup window-------- */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  padding: 10px 60px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+.popup{
+  width: 300px;
+  background: #e7dbdb;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+
+}
+
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background:red;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+
+} */
+
+
+/* -----------css for alreats----------- */
