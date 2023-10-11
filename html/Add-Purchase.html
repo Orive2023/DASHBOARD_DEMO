@@ -1062,15 +1062,35 @@
                         </div>
                         </div>
                         </div>
+                        <div class="row">
+                          <div class="col-sm-6">
+                          <div class="form-group row">
+                          <label for="chalan_no" class="col-sm-4 col-form-label">Country <i class="text-danger">*</i>
+                          </label>
+                          <div class="col-sm-6">
+                          <input type="text" tabindex="3" class="form-control" name="chalan_no" placeholder="Country" id="chalan_no" required="" aria-required="true">
+                          </div>
+                          </div>
+                          </div>
+                          <div class="col-sm-6">
+                          <div class="form-group row">
+                          <label for="adress" class="col-sm-4 col-form-label">State </label>
+                          <div class="col-sm-8">
+                          <input type="text" class="form-control" tabindex="4" id="adress" name="purchase_details" placeholder=" State" rows="1">
+                          </div>
+                          </div>
+                          </div>
+                          </div>
                         <br>
                         <div class="table-responsive">
                         <table class="table table-bordered table-hover" id="purchaseTable">
                         <thead class="table-header">
                         <tr>
                         <th class="text-center" width="20%">Item Information<i class="text-danger">*</i></th>
-                        <th class="text-center">Stock/Qnt</th>
+                        <th class="text-center">MSP Price</th>
                         <th class="text-center">Expiry Date</th>
                         <th class="text-center">Batch No<i class="text-danger">*</i></th>
+                        <th class="text-center">Unit<i class="text-danger">*</i></th>
                         <th class="text-center">Qnty <i class="text-danger">*</i>
                         </th>
                         <th class="text-center">Rate<i class="text-danger">*</i></th>
@@ -1091,7 +1111,7 @@
                         <input type="hidden" class="sl" value="1">
                         </td>
                         <td class="wt">
-                        <input type="text" id="available_quantity_1" class="form-control text-right stock_ctn_1" placeholder="0.00" readonly="">
+                        <input type="text" id="available_quantity_1" class="form-control text-right stock_ctn_1" placeholder="2150" readonly="">
                         </td>
                         <td class="wt">
                         <input type="text" id="expiry_date_1" autocomplete="off" class="form-control datepicker expiry_date_1 hasDatepicker" placeholder="Expiry Date" name="expiry_date[]">
@@ -1099,6 +1119,9 @@
                         <td class="wt">
                         <input type="text" id="batch_no_1" class="form-control text-right batch_no_1" placeholder="Batch No" name="batch_no[]" required="" aria-required="true">
                         </td>
+                        <td class="wt">
+                          <input type="text" id="batch_no_1" class="form-control text-right batch_no_1" placeholder="Unit" name="batch_no[]" required="" aria-required="true">
+                          </td>
                         <td class="text-right">
                         <input type="text" name="product_quantity[]" id="cartoon_1" required="" min="0" class="form-control text-right store_cal_1" onkeyup="calculate_store(1);" onchange="calculate_store(1);" placeholder="0.00" value="" tabindex="6" aria-required="true">
                         </td>
@@ -1134,7 +1157,7 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Total:</b></td>
+                        <td class="text-right" colspan="11"><b>Total:</b></td>
                         <td class="text-right">
                         <input type="text" id="Total" class="text-right form-control" name="total" value="0.00" readonly="readonly">
                         </td>
@@ -1143,7 +1166,7 @@
                         </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Purchase Discount:</b>
+                        <td class="text-right" colspan="11"><b>Purchase Discount:</b>
                         </td>
                         <td class="text-right">
                         <input type="text" id="discount" class="text-right form-control discount total_discount_val" onkeyup="calculate_store(1)" name="discount" placeholder="0.00" value="">
@@ -1152,33 +1175,33 @@
                         </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Total Discount:</b></td>
+                        <td class="text-right" colspan="11"><b>Total Discount:</b></td>
                         <td class="text-right">
                         <input type="text" id="total_discount_ammount" class="form-control text-right" name="total_discount" value="0.00" readonly="readonly">
                         </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Total VAT:</b></td>
+                        <td class="text-right" colspan="11"><b>Total VAT:</b></td>
                         <td class="text-right">
                         <input type="text" id="total_vat_amnt" class="form-control text-right" name="total_vat_amnt" value="0.00" readonly="readonly">
                         </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Grand Total:</b></td>
+                        <td class="text-right" colspan="11"><b>Grand Total:</b></td>
                         <td class="text-right">
                         <input type="text" id="grandTotal" class="text-right form-control grandTotalamnt" name="grand_total_price" placeholder="0.00" value="00" readonly="">
                         </td>
                         <td> </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Paid Amount:</b></td>
+                        <td class="text-right" colspan="11"><b>Paid Amount:</b></td>
                         <td class="text-right">
                         <input type="text" id="paidAmount" class="text-right form-control" onkeyup="invoice_paidamount()" name="paid_amount" placeholder="0.00" value="">
                         </td>
                         <td> </td>
                         </tr>
                         <tr>
-                        <td class="text-right" colspan="10"><b>Due Amount:</b></td>
+                        <td class="text-right" colspan="11"><b>Due Amount:</b></td>
                         <td class="text-right">
                         <input type="text" id="dueAmmount" class="text-right form-control" name="due_amount" value="0.00" readonly="readonly">
                         </td>
