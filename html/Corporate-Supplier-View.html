@@ -15,6 +15,17 @@
 
     <title>Dashboard - Annam</title>
 
+    <!-- for table -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- For Font Awesome -->
+    <script src="https://kit.fontawesome.com/db63c68c61.js" crossorigin="anonymous"></script>
+
     <meta name="description" content="" />
 
     <!-- Favicon -->
@@ -42,6 +53,7 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../assets/css/customer-supplier-view.css">  
     
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -994,18 +1006,33 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <p class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Supplier-Vendor /Supplier-Information /</span> View Corporate-Supplier</p>
-            <br><div style="margin: 10px; display: inline;">
-              <span style="border: 2px solid rgba(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"> <img src="/visible.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;">Column</a> <select for="dropdown" style="border: none; color: #696CFF;"></select></span>
-              <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/PRINT.png" alt="" height="12px" style="margin: 10px;"><a href="" style="text-align: center;"><a href="">Print</a></span>
-              <span style="border: 2px solid rgb(220, 220, 220, 0.5) ; padding: 4px; background-color: rgb(255, 255, 255);"><img src="/export.png" alt="" height="12px" style="margin: 10px; transform: rotate(-90deg);"><a href="" style="text-align: center;"></a><a href="">Export</a><select for="dropdown" style="border: none; color: #696CFF;"></select></span>
-            </div>
-            <div><span><input type="text" placeholder="search" id="search" name="search" style="border: 2px rgb(202, 202, 202, 0.3) solid;"></span>
-            </div>
+            <br>
+
             <br>
               <!-- Striped Rows -->
               <div class="card">
-                <h5 class="card-header">Corporation-Supplier List:</h5>
+                <h2 class="card-header">Corporation-Supplier List:</h2>
                 <div class="table-responsive text-nowrap">
+                  <button class="dt-button">
+                    <img src="/visible.png" alt="" height="20px">
+                    <span>Columns</span>
+                    <span>▼</span>
+                  </button>
+                  <button class="dt-button">
+                    <img src="/PRINT.png" alt="" height="20px">
+                    <span>Print</span>
+                    <span></span>
+                  </button>
+                  <button class="dt-button">
+                    <img src="/export.png" alt="" height="20px">
+                    <span>Export</span>
+                    <span>▼</span>
+                  </button>
+
+                  <div class="search-box">
+                    <i class="material-icons">&#xE8B6;</i>
+                    <input type="text" class="form-control"  placeholder="Search&hellip;">
+                  </div>
                   <table class="table table-striped">
                     <thead style="background-color: red;">
                       <tr>
@@ -1033,7 +1060,7 @@
                     </thead>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1.</strong></td>
+                        <td> <strong>1.</strong></td>
                         <td>00125648</td>
                         <td>Albert Cook</td>
                         <td>Berhampur</td>
@@ -1042,6 +1069,11 @@
                         <td>9337980017</td>
                         <td>sourav@gmail.com</td>
                         <td><span class="badge bg-label-primary me-1">Inactive</span></td>
+                        <td>
+                          <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                          <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -1062,7 +1094,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>2.</strong></td>
+                        <td><strong>2.</strong></td>
                         <td>00122563</td>
                         <td>Albert Rethu</td>
                         <td>Berhampur</td>
@@ -1071,6 +1103,11 @@
                         <td>9337980017</td>
                         <td>sourav@gmail.com</td>
                         <td><span class="badge bg-label-success me-1">Active</span></td>
+                        <td>
+                          <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                          <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -1089,44 +1126,27 @@
                             </div>
                           </div>
                         </td>
+                        
                       </tr>
                     </tbody>
                   </table>
+                  <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                    </ul>
+                </div>
                 </div>
               </div>
-              <!--/ Striped Rows -->
+              
               <br>
-            <div class="pagination_section" style="text-align: right;">
-              <a href="#">
-                  << Previous
-              </a>
-              <a href="#"
-                 title="Algorithm">
-                  1
-              </a>
-              <a href="#"
-                 title="DataStructure">
-                  2
-              </a>
-              <a href="#"
-                 title="Languages">
-                  3
-              </a>
-              <a href="#"
-                 title="Interview"
-                 class="active">
-                  4
-              </a>
-              <a href="#"
-                 title="practice">
-                  5
-              </a>
-              <a href="#">
-              Next >>
-              </a>
-          </div>
-           
-          <br>
+             
             
            <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
