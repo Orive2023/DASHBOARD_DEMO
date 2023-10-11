@@ -250,8 +250,7 @@ header h2 {
 .menu-sub a:hover{
   color: white;
 }
-
-/* pop up */
+/* ----------------pop---------------------- up */
       .popup {
           position: fixed;
           z-index: 1;
@@ -281,3 +280,7 @@ header h2 {
       h1 {
           color: green;
       }
+
+      /* --------------css for icon---------------- */
+
+      

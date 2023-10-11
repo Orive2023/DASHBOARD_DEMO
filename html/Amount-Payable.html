@@ -18,8 +18,12 @@
     <meta name="description" content="" />
 
     <link rel="stylesheet" href="../assets/css/Amount-Payable.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <script src="../assets/js/Corporate-Supplier-Add.js" defer></script>
+
+   <!--Form-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://kit.fontawesome.com/413a78bd3f.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/orive_logo.png" />
@@ -27,13 +31,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -46,6 +51,8 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -53,6 +60,13 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <style>
+      span{
+        color: red;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -1001,7 +1015,7 @@
             </div>
             </div>
             <!--Lay Out of Form Design-->
-            <form action="#" class="form">
+              <form action="#" name="myForm" class="form" onsubmit="return validateForm()" method="post">
               <h1 class="text-center" style="color: rgb(255, 0, 0);">Amount Payable</h1>
               <!-- Progress bar -->
               <div class="progressbar">
@@ -1017,82 +1031,99 @@
                 <div class="row">
                     <div class="col w-50">
                         <div class="input-group">
-                            <label for="vender name">Vender Name</label>
-                             <input type="text" name="vender name" id="vendername" />
+                          <i class="fa-solid fa-user"></i>
+                            <label for="vender name">Vendor Name<span> * </span></label>
+                             <input type="text" name="vender name" id="vendername" placeholder="Enter Vendor Name" required/>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-group">
-                            <label for="Vender ID">Vender ID/Name</label>
-                            <input type="Number" name="Vender Id" id="vender Id" />
+                          <i class="fa-regular fa-id-card"></i>
+                            <label for="Vender ID">Vendor ID<span> * </span></label>
+                            <input type="Number" name="Vendor Id" id="vendor Id" placeholder="Enter Vendor ID" required/>
                         </div>
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="text" name="emailAddress" id="emailAddress" />
+                  <i class="fa-solid fa-envelope"></i>
+                    <label for="emailAddress">Email Address<span> * </span></label>
+                    <input type="text" name="emailAddress" id="emailAddress" placeholder="Enter Email Address" required/>
                 </div>
                 <div class="input-group">
-                    <label for="Vender Address">Vender Address</label>
-                    <input type="Vender Address" name="Vender Address" id="Vender Address" />
+                  <i class="fa-solid fa-building"></i>
+                    <label for="Vender Address">Vendor Address<span> * </span></label>
+                    <input type="Vender Address" name="Vender Address" id="Vender Address" placeholder="Enter Vendor Address" required />
                 </div>
                 <div class="input-group">
-                    <label for="Invoice">Invoice Number</label>
-                    <input type="Text" name="Invoice" id="Invoice" />
+                  <img src="/assets/img/favicon/file check.png" alt="" height="19px" style="margin-left:5px;" >
+                    <label for="Invoice">Invoice Number<span> * </span></label>
+                    <input type="Text" name="Invoice" id="Invoice" placeholder="Enter Invoice Number" required/>
                 </div>
                 <div class="input-group">
-                    <label for="Invoice Date">Date</label>
-                    <input type="date" name="Invoice Date" id="invoice Date" />
+                  <i class="fa-solid fa-calendar-week"></i>
+                    <label for="Invoice Date">Date<span> * </span></label>
+                    <input type="date" name="Invoice Date" id="invoice Date" required/>
                 </div>
                 <div class="input-group">
-                    <label for="Due Date">Due Date</label>
-                    <input type="date" name="Due Date" id="Due Date" />
+                  <i class="fa-solid fa-calendar-week"></i>
+                    <label for="Due Date">Due Date<span> * </span></label>
+                    <input type="date" name="Due Date" id="Due Date" required />
                 </div>
                 <div class="input-group">
-                    <label for="mobileNumber">Mobile No</label>
-                    <input type="text" name="mobileNumber" id="mobileNumber" />
+                  <i class="fa-solid fa-mobile"></i>
+                    <label for="mobileNumber">Mobile No<span> * </span></label>
+                    <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter Mobile No" required/>
                 </div>
                 <div class="input-group">
-                    <label for="panNumber">Pan No</label>
-                    <input type="text" name="panNumber" id="panNumber" />
+                  <i class="fa-solid fa-address-card"></i>
+                    <label for="panNumber">PAN No<span> * </span></label>
+                    <input type="text" name="panNumber" id="panNumber" placeholder="Enter PAN No" required/>
                 </div>
                 <div class="input-group">
-                    <label for="adharNumber">Adhar No</label>
-                    <input type="text" name="adharNumber" id="adharNumber" />
+                  <i class="fa-solid fa-address-card"></i>
+                    <label for="adharNumber">Aadhaar No<span> * </span></label>
+                    <input type="text" name="adharNumber" id="adharNumber" placeholder="Enter Aadhaar No"/>
                 </div>
                 <div class="input-group">
-                    <label for="Purchase Order">Purchase Order</label>
-                    <input type="text" name="Purchase Order" id="Purchase Order" />
+                  <img src="/assets/img/icons/in-stock.png" alt="" height="19px" style="margin-left:5px;" >
+                    <label for="Purchase Order">Purchase Order <span> * </span></label>
+                    <input type="text" name="Purchase Order" id="Purchase Order" placeholder="Enter Purchase Order" required/>
                 </div>
                 <div class="input-group">
-                    <label for="Item/Service description">Item/Service description</label>
-                    <input type="text" name="Item/Service description" id="Item/Service description" />
+                  <img src="/assets/img/favicon/file check.png" alt="" height="19px" style="margin-left:5px;" >
+                    <label for="Item/Service description">Item/Service description<span> * </span></label>
+                    <input type="text" name="Item/Service description" id="Item/Service description" placeholder="Enter Service Description" required />
                 </div>
                 <div class="input-group">
-                    <label for="quantity">Quantity</label>
-                    <input type="Number" name="Quantity" id="Quantity" />
+                  <img src="/assets/img/icons/scale.png" alt="" height="19px" style="margin-left:5px;" >
+                    <label for="quantity">Quantity<span> * </span></label>
+                    <input type="Number" name="Quantity" id="Quantity" placeholder="Enter Quantity" required />
                 </div>
                 <div class="input-group">
-                    <label for="Unit Price">Unit Price</label>
-                    <input type="Unit Price" name="Unit Price" id="Unit Price" />
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <label for="Unit Price">Unit Price <span> * </span></label>
+                    <input type="Unit Price" name="Unit Price" id="Unit Price" placeholder="30,798" required/>
                 </div>
                 <div class="input-group">
-                    <label for="Subtotal">Sub Total</label>
-                    <input type="number" name="Subtotal" id="Subtotal" />
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <label for="Subtotal">Sub Total<span> * </span></label>
+                    <input type="number" name="Subtotal" id="Subtotal"placeholder="55,558" required />
                 </div>
+                <!-- <div class="input-group">
+                    <label for="Subtotal">Sub Total<span> * </span></label>
+                    <input type="number" name="Subtotal" id="Subtotal" placeholder="55,558" required/>
+                </div> -->
+
                 <div class="input-group">
-                    <label for="Subtotal">Sub Total</label>
-                    <input type="number" name="Subtotal" id="Subtotal" />
+                  <img src="/assets/img/icons/tax.png" alt="" height="20px" style="margin-left:5px;" >
+                    <label for="Tax">Tax<span> * </span></label>
+                    <input type="number" name="Tax" id="Tax" placeholder="Enter Tax" required/>
                 </div>
 
                 <div class="input-group">
-                    <label for="Tax">Tax</label>
-                    <input type="number" name="Tax" id="Tax" />
-                </div>
-
-                <div class="input-group">
-                    <label for="Total Ammount Due">Total Amount due</label>
-                    <input type="text" name="Total Amount due" id="Total Amount due" />
+                  <img src="/assets/img/icons/clock-time.png" alt="" height="20px" style="margin-left:5px;" >
+                    <label for="Total Ammount Due">Total Amount due<span> * </span></label>
+                    <input type="text" name="Total Amount due" id="Total Amount due" placeholder=" Enter Total Amount due" required />
                 </div>
 
 
@@ -1107,32 +1138,39 @@
             </div>
             <div class="form-step">
                 <div class="input-group">
-                  <label for="streetAddress1">Street Address 1</label>
-                  <input type="text" name="streetAddress1" id="streetAddress1" />
+                  <i class="fa-solid fa-building-circle-check"></i>
+                  <label for="streetAddress1">Street Address 1 <span> * </span></label>
+                  <input type="text" name="streetAddress1" id="streetAddress1" placeholder="Enter Street Address1" required/>
                 </div>
                 <div class="input-group">
-                  <label for="streetAddress2">Street Address 2</label>
-                  <input type="text" name="streetAddress2" id="streetAddress2" />
+                  <i class="fa-solid fa-building-circle-check"></i>
+                    <label for="streetAddress2">Street Address 2</label>
+                    <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Enter Street Address2 " />
                 </div>
                 <div class="input-group">
-                    <label for="city">City</label>
-                    <input type="text" name="city" id="city" />
+                  <img src="/assets/img/favicon/location.png" alt="" height="21px" style="padding-left: 3px;">
+                    <label for="city">City<span> * </span></label>
+                    <input type="text" name="city" id="city" placeholder="Enter City" required />
                   </div>
                   <div class="input-group">
-                    <label for="state">State</label>
-                    <input type="text" name="state" id="state" />
+                    <img src="/assets/img/favicon/map-location.png" alt="" height="19px">
+                    <label for="state">State<span> * </span></label>
+                    <input type="text" name="state" id="state" placeholder="Enter State" required/>
                   </div>
                   <div class="input-group">
-                    <label for="postalOrZipCode">Postal/ZipCode</label>
-                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" />
+                    <img src="/assets/img/favicon/mailbox.png" alt="" height="21px" style="margin-left: 6px;">
+                    <label for="postalOrZipCode">Postal/ZipCode<span> * </span></label>
+                    <input type="text" name="postalOrZipCode" id="postalOrZipCode" placeholder="Enter Postal Code" required/>
                   </div>
                   <div class="input-group">
-                  <label for="country">Country</label>
-                  <input type="text" name="country" id="country" />
+                    <i class="fa-solid fa-earth-asia"></i>
+                  <label for="country">Country<span> * </span></label>
+                  <input type="text" name="country" id="country" placeholder="Enter Country" required/>
                 </div>
                 <div class="input-group">
-                    <label for="typesOfAddress">Types Of Address</label>
-                    <input type="text" name="typesOfAddress" id="typesOfAddress" />
+                  <i class="fa-solid fa-building-circle-check"></i>
+                    <label for="typesOfAddress">Types Of Address<span> * </span></label>
+                    <input type="text" name="typesOfAddress" id="typesOfAddress" placeholder="Enter Types Of Address" required />
                   </div>
                 <div class="btns-group">
                   <a href="#" class="btn btn-prev" style="background-color: rgb(255, 0, 0); color: white;">Previous</a>
@@ -1143,11 +1181,11 @@
               <div class="form-step">
                 <br>
                 <div><!-- attachments -->
-                <label for="myfile">Attach Supporting Documents</label>
+                <label for="myfile">Attach Supporting Documents<span> * </span></label>
                 <input type="file" id="myfile" name="myfile"></div>
                 <br><br>
                 <div>
-                    <h5>Payment Method</h5>
+                    <h5>Payment Method<span> * </span></h5>
                     <select name="Payment" id="Payment Method">
                         <option value="Payment Method">Select Payment Type</option>
                         <option value="Payment Method">Check</option>
@@ -1159,65 +1197,80 @@
                   </div>
                   <br>
                 <div class="input-group">
-                  <label for="accountHolderName">Account Holder Name</label>
-                  <input type="date" name="accountHolderName" id="accountHolderName" />
+                  <i class="fa-solid fa-user"></i>
+                  <label for="accountHolderName">Account Holder Name <span> * </span></label>
+                  <input type="text" name="accountHolderName" id="accountHolderName" placeholder="Enter Account Holder Name" required/>
                 </div>
                 <div class="input-group">
-                    <label for="bankName">Bank Name</label>
-                    <input type="number" name="bankName" id="bankName" />
+                  <i class="fa-solid fa-building-columns"></i>
+                  <label for="bankName">Bank Name <span> * </span></label>
+                  <input type="number" name="bankName" id="bankName" placeholder="Enter Bank Name" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankBranch">Bank Branch</label>
-                    <input type="number" name="bankBranch" id="bankBranch" />
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="bankBranch">Bank Branch<span> * </span></label>
+                      <input type="number" name="bankBranch" id="bankBranch" placeholder="Enter Bank Branch" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankAccountNumber">Bank Account Number</label>
-                    <input type="number" name="bankAccountNumber" id="bankAccountNumber" />
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="bankAccountNumber">Bank Account Number <span> * </span></label>
+                      <input type="number" name="bankAccountNumber" id="bankAccountNumber" placeholder="Enter Bank Account No" required/>
                   </div>
                   <div class="input-group">
-                    <label for="bankAccountType">Bank Account Type</label>
-                    <input type="number" name="bankAccountType" id="bankAccountType" />
+                    <i class="fa-solid fa-building-columns" style="margin-left:5px; margin-top: 40px;"></i>
+                    <label for="exampleFormControlSelect1" class="form-label">Bank Account Type <span> * </span> </label> 
+                    <input type="number" name="bankAccountType" id="bankAccountType" placeholder="Enter Bank Account Type" required/>
                   </div>
                   <div class="input-group">
-                    <label for="swiftPerBicCode">SWIFT/BIC COde</label>
-                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" />
+                    <i class="fa-solid fa-building-columns"></i>
+                    <label for="swiftPerBicCode">SWIFT/BIC Code <span> * </span> </label>
+                    <input type="number" name="swiftPerBicCode" id="swiftPerBicCode" placeholder="Enter SWIFT Code" required />
                   </div>
                   <div class="input-group">
-                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code</label>
-                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" />
+                    <i class="fa-solid fa-building-columns"></i>
+                    <label for="bankRoutingPerSortCode">Bank Routing/Sort Code <span> * </span> </label>
+                    <input type="number" name="bankRoutingPerSortCode" id="bankRoutingPerSortCode" placeholder="Entre Bank Routing" required/>
                   </div>
                 <div class="input-group">
-                  <label for="ifscCode">IFSC Code</label>
-                  <input type="number" name="ifscCode" id="ifscCode" />
+                  <i class="fa-solid fa-building-columns"></i>
+                  <label for="ifscCode">IFSC Code <span> * </span> </label>
+                  <input type="number" name="ifscCode" id="ifscCode" placeholder="Enter IFSC Code" required />
                 </div>
                 <div class="input-group">
-                    <label for="micrNumber">MICR No</label>
-                    <input type="number" name="micrNumber" id="micrNumber" />
+                  <i class="fa-solid fa-building-columns"></i>
+                    <label for="micrNumber">MICR No <span> * </span> </label>
+                    <input type="number" name="micrNumber" id="micrNumber" placeholder="Enter MICR No" required/>
                   </div>
                   <div class="input-group">
-                    <label for="currency">Currency</label>
-                    <input type="number" name="currency" id="currency" />
+                    <img src="/assets/img/icons/different-currencies.png" alt="" height="21px" style="padding-left: 3px;">
+                    <label for="currency">Currency<span> * </span> </label>
+                    <input type="number" name="currency" id="currency" placeholder="Enter Currency" required/>
                   </div>
                   <div class="input-group">
-                    <label for="creditLimit">Credit Limit</label>
-                    <input type="number" name="creditLimit" id="creditLimit" />
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <label for="creditLimit">Credit Limit<span> * </span> </label>
+                    <input type="number" name="creditLimit" id="creditLimit" placeholder="Enter Credit Limit" required />
                   </div>
                   <div class="input-group">
-                    <label for="taxId">Tax Id</label>
-                    <input type="number" name="taxId" id="taxId" />
+                    <img src="/assets/img/icons/tax.png" alt="" height="21px" style="padding-left: 3px;">
+                    <label for="taxId">Tax ID<span> * </span> </label>
+                    <input type="number" name="taxId" id="taxId" placeholder="Enter Tax  ID" required/>
                   </div>
                   <div class="input-group">
-                    <label for="Paymet Reference">Payment Reference</label>
-                    <input type="text" name="Payment Refrence" id="Payment Reference" />
+                    <i class="fa-regular fa-id-card"></i>
+                    <label for="Paymet Reference">Payment Reference<span> * </span> </label>
+                    <input type="text" name="Payment Refrence" id="Payment Reference" placeholder="Enter Payment Reference" required/>
                   </div>
                   <div class="input-group">
-                    <label for="Department">Department Head Approval</label>
-                    <input type="checkbox" name="Payment Refrence" id="Payment Reference" />
+                    <!-- <img src="/assets/img/favicon/approved.png" alt="" height="21px" > -->
+                    <label for="Department">Department Head Approval<span> * </span> </label>
+                    <input type="checkbox" name="Payment Refrence" id="Payment Reference" placeholder="Enter Department Head Approval" required />
                     
                   </div>
                   <div class="input-group">
-                    <label for="Finance">Finance Department Approval</label>
-                    <input type="checkbox" name="Finance" id="Finance" />
+                    <!-- <img src="/assets/img/favicon/file check.png" alt="" height="21px" > -->
+                    <label for="Finance">Finance Department Approval<span> * </span> </label>
+                    <input type="checkbox" name="Finance" id="Finance" placeholder="Enter Finance Department Approval" required />
                    
                   </div>
 
