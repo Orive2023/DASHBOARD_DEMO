@@ -4,7 +4,7 @@
     width: 0;
     position: fixed;
     z-index: 1;
-    background-color: pink;
+    background-color: rgb(240, 186, 186);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -21,7 +21,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #000000;
     display: block;
     transition: 0.3s;
   }
