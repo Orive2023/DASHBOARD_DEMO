@@ -1046,12 +1046,27 @@
                   <div class="input-group">
                     <i class="fa-solid fa-address-book"></i>
                       <label for="fax">Person of Contact <span> * </span></label>
-                      <input type="text" name="poc" id="poc" placeholder="Enter Person Of Contacct" required/>
+                      <input type="text" name="poc" id="poc" placeholder="Enter Person Of Contact" required/>
                   </div>
                   <div class="input-group">
                       <label for="gstIn">GSTIN<span> * </span></label>
                       <img src="/assets/img/icons/tax.png" alt="" height="20px" style="margin-left:5px;" >
                       <input type="alphanumeric" name="gstIn" id="gstIn" placeholder="Enter GSTIN No" required/>
+                  </div>
+                  <div class="input-group">
+                    <img src="/assets/img/icons/tax.png" alt="" height="20px" style="margin-left:5px;" >
+                      <label for="cstNumber">CST No <span> * </span></label>
+                      <input type="text" name="cstNumber" id="cstNumber" placeholder="Enter CST No" required/>
+                  </div>
+                  <div class="input-group">
+                    <img src="/assets/img/icons/drug-lincense.png" alt="" height="20px" style="margin-left:5px;">
+                      <label for="drugLicenseNumber">Drug License No <span> * </span></label>
+                      <input type="text" name="drugLicenseNumber" id="drugLicenseNumber" placeholder="Enter Drug License No" required/>
+                  </div>
+                  <div class="input-group">
+                    <img src="/assets/img/icons/food-license.png" alt="" height="20px" style="margin-left:5px;">
+                      <label for="foodLicenseNumber">Food License No <span> * </span></label>
+                      <input type="text" name="foodLicenseNumber" id="foodLicenseNumber" placeholder="Enter Food License No" required/>
                   </div>
                   <div class="input-group">
                     <i class="fa-solid fa-envelope"></i>
@@ -1171,17 +1186,62 @@
                   <div class="input-group">
                     <i class="fa-solid fa-building-columns"></i>
                       <label for="bankName">Bank Name <span> * </span></label>
-                      <input type="number" name="bankName" id="bankName" placeholder="Enter Bank Name" required/>
+                      <input type="text" name="bankName" id="bankName" placeholder="Enter Bank Name" required/>
                   </div>
                   <div class="input-group">
                     <i class="fa-solid fa-building-columns"></i>
                       <label for="bankBranch">Bank Branch<span> * </span></label>
-                      <input type="number" name="bankBranch" id="bankBranch" placeholder="Enter Bank Branch" required/>
+                      <input type="text" name="bankBranch" id="bankBranch" placeholder="Enter Bank Branch" required/>
                   </div>
                   <div class="input-group">
                     <i class="fa-solid fa-building-columns"></i>
                       <label for="bankAccountNumber">Bank Account Number<span> * </span></label>
                       <input type="number" name="bankAccountNumber" id="bankAccountNumber" placeholder="Enter Bank Acount No" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="billCreditLimit">Bill Credit Limit <span> * </span></label>
+                      <input type="number" name="billCreditLimit" id="billCreditLimit" placeholder="Enter Bill Credit Limit" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="noOfCreditDays">No. of Credit Days <span> * </span></label>
+                      <input type="number" name="noOfCreditDays" id="noOfCreditDays" placeholder="Enter No of Credit Days" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="creditLimit">Credit Limit <span> * </span></label>
+                      <input type="number" name="creditLimit" id="creditLimit" placeholder="Enter Credit Limit" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="noOfPendingBills">No. of Pending Bills<span> * </span></label>
+                      <input type="number" name="noOfPendingBills" id="noOfPendingBills" placeholder="Enter No of Pending Bills" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="billingSeries">Billing Series<span> * </span></label>
+                      <input type="number" name="billingSeries" id="billingSeries" placeholder="Enter Billing Series" required/>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="purchaseSeries">Purchase Series<span> * </span></label>
+                      <input type="number" name="purchaseSeries" id="purchaseSeries" placeholder="Enter Purchase Series" required/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Debit/Credit<span> * </span> </label> 
+                    <i class="fa-solid fa-building-columns" style="margin-left: -85px;"></i>
+                    <select class="form-select1" id="exampleFormControlSelect1" aria-label="Default select example" >
+                      <option selected>select option menu</option>
+                      <option value="0">Debit</option>
+                      <option value="1">Credit</option>
+                    
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <i class="fa-solid fa-building-columns"></i>
+                      <label for="openingBalance">Opening Balance<span> * </span></label>
+                      <input type="number" name="openingBalance" id="openingBalance" placeholder="Enter Opening Balance" required/>
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlSelect1" class="form-label">Bank Account Type<span> * </span> </label>
